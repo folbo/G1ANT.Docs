@@ -1,6 +1,6 @@
 # Initial page
 
-``
+``C#
 public class Test
 {
     public int DoSomething(string a)
