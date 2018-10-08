@@ -1,6 +1,6 @@
 # Initial page
 
-``C#
+```C#
 public class Test
 {
     public int DoSomething(string a)
@@ -8,4 +8,4 @@ public class Test
         return 2 + int.Parse(a);
     }
 }
-``
+```
