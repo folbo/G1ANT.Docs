@@ -1,11 +1,21 @@
 # Initial page
 
-```C#
-public class Test
+```csharp
+public class Alibaba 
 {
-    public int DoSomething(string a)
+    public DoSomething(string a)
     {
-        return 2 + int.Parse(a);
+        return a.ToUpper();
     }
 }
+
 ```
+
+{% page-ref page="blabla.md" %}
+
+
+
+
+
+
+
