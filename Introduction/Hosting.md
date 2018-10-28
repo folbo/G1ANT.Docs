@@ -1,4 +1,4 @@
-﻿# Hosting
+# Hosting
 
 G1ANT.Robot has the ability to run on Physical and/or Virtual Machines. It usually resides on client’s servers, Virtual Machines or individual employees’ PCs (to support human assisted automations).
 
