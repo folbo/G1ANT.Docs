@@ -1,4 +1,4 @@
-﻿# Dictionary
+# Dictionary
 
 **G1ANT.Robot** = The program installed on a virtual machine or employee’s computer
 
