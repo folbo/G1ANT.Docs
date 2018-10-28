@@ -1,4 +1,4 @@
-﻿# Security
+# Security
 
 Here at G1ANT, we treat IT Security and Data Protection at the highest priority. To ensure full security of our clients, G1ANT.Robot has the following procedures implemented:
 
