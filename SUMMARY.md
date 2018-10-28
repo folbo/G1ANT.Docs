@@ -17,12 +17,16 @@
 * [Tutorials](Getting%20Started/Tutorials.md)
 * [Technical Support](Getting%20Started/Technical%20Support.md)
 
+### G1ANT Language
+
+* [G1ANT.Addon.AmazonS3](G1ANT.Addons/G1ANT.Addon.AmazonS3/README.md)
+
 ### G1ANT Addons
 
 * [G1ANT.Addon.AmazonS3](G1ANT.Addons/G1ANT.Addon.AmazonS3/README.md)
    * [Commands](G1ANT.Addons/G1ANT.Addon.AmazonS3/G1ANT.Addon.AmazonS3/Addon.md)
 * [G1ANT.Addon.GoogleDocs](G1ANT.Addons/G1ANT.Addon.GoogleDocs/README.md)
-   * [Commands](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/Addon.md)
+   ## [Commands](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/Addon.md)
       * [googlesheet.close](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetCloseCommand.md)
       * [googlesheet.download](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetDownloadCommand.md)
       * [googlesheet.findall](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetFindAllCommand.md)
@@ -41,8 +45,6 @@
       * [ping](G1ANT.Addons/G1ANT.Addon.Net/G1ANT.Addon.Net//Commands/PingCommand.md)
       * [rest](G1ANT.Addons/G1ANT.Addon.Net/G1ANT.Addon.Net//Commands/RestCommand.md)
       * [vnc.connect](G1ANT.Addons/G1ANT.Addon.Net/G1ANT.Addon.Net//Commands/VncConnectCommand.md)
-      
-### G1ANT Language
 
 ### G1ANT Robot
 
