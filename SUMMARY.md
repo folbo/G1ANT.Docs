@@ -59,7 +59,10 @@
 
 ### GitHub Repo Links
 
+* [Addons](Addons.md)
+* [Commands](Commands.md)
+* [Panels](Panels.md)
+* [Structures](Structures.md)
 * [Triggers](Triggers.md)
 * [Variables](Variables.md)
-
-
+* [Wizards](Wizards.md)
