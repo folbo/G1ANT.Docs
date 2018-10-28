@@ -23,9 +23,9 @@
 
 ### G1ANT Addons
 
-   # [G1ANT.Addon.AmazonS3](G1ANT.Addons/G1ANT.Addon.AmazonS3/README.md)
+* [G1ANT.Addon.AmazonS3](G1ANT.Addons/G1ANT.Addon.AmazonS3/README.md)
       * [Commands](G1ANT.Addons/G1ANT.Addon.AmazonS3/G1ANT.Addon.AmazonS3/Addon.md)
-## [G1ANT.Addon.GoogleDocs](G1ANT.Addons/G1ANT.Addon.GoogleDocs/README.md)
+* [G1ANT.Addon.GoogleDocs](G1ANT.Addons/G1ANT.Addon.GoogleDocs/README.md)
    * [Commands](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/Addon.md)
       * [googlesheet.close](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetCloseCommand.md)
       * [googlesheet.download](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetDownloadCommand.md)
@@ -37,7 +37,7 @@
       * [googlesheet.settitle](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetSetTitleCommand.md)
       * [googlesheet.setvalue](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetSetValueCommand.md)
       * [googlesheet.switch](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetSwitchCommand.md)
-## [G1ANT.Addon.Net](G1ANT.Addons/G1ANT.Addon.Net/README.md)
+* [G1ANT.Addon.Net](G1ANT.Addons/G1ANT.Addon.Net/README.md)
    * [Commands](G1ANT.Addons/G1ANT.Addon.Net/G1ANT.Addon.Net/Addon.md)
       * [as400.open](G1ANT.Addons/G1ANT.Addon.Net/G1ANT.Addon.Net//Commands/As400OpenCommand.md)
       * [is.accessible](G1ANT.Addons/G1ANT.Addon.Net/G1ANT.Addon.Net//Commands/IsAccessibleCommand.md)
