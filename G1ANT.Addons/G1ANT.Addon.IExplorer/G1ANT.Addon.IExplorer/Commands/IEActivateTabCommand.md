@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-ie.activatetab  phrase ‴‴ 
+ie.activatetab  phrase ‴‴
 ```
 
 **Description:**
 
-Command `ie.activatetab` allows to activate Internet Explorer tab for further use by ie commands. Before using this command, "ie.attach":{TOPIC-LINK+command-ie-attach} command has to be invoked. 
+Command `ie.activatetab` allows to activate Internet Explorer tab for further use by ie commands. Before using this command, "ie.attach":{TOPIC-LINK+command-ie-attach} command has to be invoked.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -22,7 +22,7 @@ Command `ie.activatetab` allows to activate Internet Explorer tab for further us
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.IExplorer.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer)
 
 **Example 1:**
 
@@ -34,15 +34,12 @@ ie.activatetab ‴g1ant‴ by ‴url‴
 ie.detach
 ```
 
- 
-
 **Example 2:**
 
 ```G1ANT
 ie.attach phrase ‴amazon‴ by ‴title‴
 ie.gettitle result ♥title
 dialog ♥title
-ie.activatetab phrase ‴bing‴ by ‴title‴ 
+ie.activatetab phrase ‴bing‴ by ‴title‴
 ```
-
 

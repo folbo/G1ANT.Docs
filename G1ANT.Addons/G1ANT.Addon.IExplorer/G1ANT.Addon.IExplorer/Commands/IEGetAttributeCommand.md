@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-ie.getattribute  name ‴‴  search ‴‴ 
+ie.getattribute  name ‴‴  search ‴‴
 ```
 
 **Description:**
@@ -23,7 +23,7 @@ Command `ie.getattribute` allows to get attribute's value of a specified element
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.IExplorer.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer)
 
 **Example 1:**
 
@@ -38,5 +38,4 @@ ie.open url ‴google.com‴
 ie.getattribute name ‴role‴ search ‴lst-ib‴ by ‴id‴ result ♥title
 dialog ♥title
 ```
-
 

@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-image.find  image1 ‴‴ 
+image.find  image1 ‴‴
 ```
 
 **Description:**
@@ -29,11 +29,11 @@ Command `image.find` allows to find provided image in another image (or part of 
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Images.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Images
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Images](https://github.com/G1ANT-Robot/G1ANT.Addon.Images)
 
 **Example 1:**
 
-Here we will attempt to find G1ANT.png image at current focused screen. 
+Here we will attempt to find G1ANT.png image at current focused screen.
 
 ```G1ANT
 image.find image1 ‴C:\G1ant.png‴ image2 ‴‴ screensearcharea ‴‴ relative false
@@ -42,7 +42,7 @@ dialog ♥result
 
 **Example 2:**
 
-Here we will attempt to find G1antLogo.png image within another picture. 
+Here we will attempt to find G1antLogo.png image within another picture.
 
 ```G1ANT
 image.find image1 ‴C:\G1antLogo.png‴ image2 ‴C:\temp\G1antFull.png‴ relative false

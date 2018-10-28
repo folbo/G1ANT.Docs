@@ -21,7 +21,7 @@ Command `word.gettext` allows to copy text from a Word document.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.MSOffice.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice)
 
 **Example 1:**
 
@@ -36,7 +36,7 @@ word.open path ‴C:\Users\user1\Documents\test.docx‴
 **Example 2:**
 
 In this example we are opening word using `word.open` command, then we are inserting text into the opened Word instance using `word.inserttext` command. After that we are saving the file at a chosen direction and closing Word.
-When we open the file again using `word.open`  command, you can see when the `word.gettext` command becomes useful: G1ANT.Robot can read the thext from the file, save it in a variable- in our case its name is: '♥copiedText' and perform further actions on the text. We are only dialoging it in the dialog window in this example. 
+When we open the file again using `word.open`  command, you can see when the `word.gettext` command becomes useful: G1ANT.Robot can read the thext from the file, save it in a variable- in our case its name is: '♥copiedText' and perform further actions on the text. We are only dialoging it in the dialog window in this example.
 
 ```G1ANT
 word.open
@@ -47,5 +47,4 @@ word.open path ‴C:\test\test.docx‴ timeout 10000
 word.gettext result ♥copiedText
 dialog ♥copiedText
 ```
-
 

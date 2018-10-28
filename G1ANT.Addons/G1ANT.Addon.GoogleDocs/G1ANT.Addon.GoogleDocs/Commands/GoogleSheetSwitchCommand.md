@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-googlesheet.switch  id ‴‴ 
+googlesheet.switch  id ‴‴
 ```
 
 **Description:**
 
-Command `googlesheet.switch` allows to switch between opened Google Sheets instances. 
+Command `googlesheet.switch` allows to switch between opened Google Sheets instances.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -22,7 +22,7 @@ Command `googlesheet.switch` allows to switch between opened Google Sheets insta
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.GoogleDocs.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs](https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs)
 
 **Example 1:**
 

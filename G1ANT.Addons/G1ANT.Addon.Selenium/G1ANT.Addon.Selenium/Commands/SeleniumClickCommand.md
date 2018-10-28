@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-selenium.click  search ‴‴ 
+selenium.click  search ‴‴
 ```
 
 **Description:**
 
-Command `selenium.click` clicks an element on an active webpage. 
+Command `selenium.click` clicks an element on an active webpage.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -22,7 +22,7 @@ Command `selenium.click` clicks an element on an active webpage.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Selenium.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium)
 
 **Example 1:**
 
@@ -33,7 +33,6 @@ selenium.open type ‴chrome‴ url ‴https://www.cia.gov/library/publications/
 window title ‴✱Factbook✱‴ style ‴maximize‴
 selenium.click search ‴printVersion‴ by ‴class‴
 keyboard ⋘CTRL+P⋙
-keyboard ⋘ENTER⋙ 
+keyboard ⋘ENTER⋙
 ```
-
 

@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-selenium.activatetab  search ‴‴  
+selenium.activatetab  search ‴‴ 
 ```
 
 **Description:**
 
-Command `selenium.activatetab` activates browser's tab. 
+Command `selenium.activatetab` activates browser's tab.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -22,16 +22,16 @@ Command `selenium.activatetab` activates browser's tab.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Selenium.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium)
 
 **Example 1:**
 
 In order to check how this command works, we should open the browser first, then open a few new tabs. `selenium.activatetab` will open tab based on the values of **search** and **by** arguments.
 
 ```G1ANT
-selenium.open type ‴firefox‴ url ‴wp.pl‴ result wp
- selenium.newtab url ‴facebook.com‴
- selenium.newtab url ‴google.com‴
- dialog message ‴newtab works if google.com is opened‴
- selenium.activatetab search ‴wp‴ by ‴url‴
+selenium.open type ‴firefox‴ url ‴wp.pl‴
+selenium.newtab url ‴facebook.com‴
+selenium.newtab url ‴google.com‴
+dialog message ‴newtab works if google.com is opened‴
+selenium.activatetab search ‴wp‴ by ‴url‴
 ```

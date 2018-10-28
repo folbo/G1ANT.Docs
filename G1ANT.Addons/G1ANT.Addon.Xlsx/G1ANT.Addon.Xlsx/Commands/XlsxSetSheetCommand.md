@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-xlsx.setsheet 
+xlsx.setsheet
 ```
 
 **Description:**
@@ -22,7 +22,7 @@ Command `xlsx.setsheet` allows to set active sheet to work with.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Xlsx.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx](https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx)
 
 **Example 1:**
 

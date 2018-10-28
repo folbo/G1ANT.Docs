@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-googlesheet.download  path ‴‴ 
+googlesheet.download  path ‴‴
 ```
 
 **Description:**
 
-Command `googlesheet.download` allows to download the whole spreadsheet. 
+Command `googlesheet.download` allows to download the whole spreadsheet.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -23,7 +23,7 @@ Command `googlesheet.download` allows to download the whole spreadsheet.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.GoogleDocs.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs](https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs)
 
 **Example 1:**
 
@@ -35,9 +35,7 @@ googlesheet.close id ♥sheetHandle
 
 To use `googlesheet.download` command, you first need to open the file that you want to download the path from. While opening, you need to give the id of the file. You can find the id here:
 
- 
-
-`googlesheet.download` will save this file to a chosen path on your computer. `path` argument expects a place where the file should be downloaded, `type` argument expects either 'xlsx' or 'pdf' value for file extension. 
+`googlesheet.download` will save this file to a chosen path on your computer. `path` argument expects a place where the file should be downloaded, `type` argument expects either 'xlsx' or 'pdf' value for file extension.
 Remember that while choosing a path, you need to create the name of the file with certain extension- ‴C:\tests\file.xlsx‴ - in this case 'file.xlsx'. G1ANT.Robot will create an Excel file.
 
 **Example 2:**

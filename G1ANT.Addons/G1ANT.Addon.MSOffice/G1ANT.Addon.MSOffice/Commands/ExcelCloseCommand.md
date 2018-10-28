@@ -20,7 +20,7 @@ Command `excel.close` closes currently active Excel instance.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.MSOffice.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice)
 
 **Example 1:**
 
@@ -30,8 +30,7 @@ excel.close
 
 In this example the currently active Excel workbook is closed.
 
-Example 2
-
+**Example 2:**
 ```G1ANT
 excel.open result ♥excelHandle1
 excel.open result ♥excelHandle2

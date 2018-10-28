@@ -10,7 +10,6 @@ ocrabbyy.close
 
 Command `ocrabbyy.close` allows to close all documents processed by abbyy engine.
 
-
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
 |`document`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no |  | Id of a document to be closed, if not specified, G1ANT.Robot closes all documents and unloads abbyy engine. |
@@ -22,7 +21,7 @@ Command `ocrabbyy.close` allows to close all documents processed by abbyy engine
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Ocr.AbbyyFineReader.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader)
 
 **Example 1:**
 

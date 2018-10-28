@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-selenium.type  text ‴‴  search ‴‴ 
+selenium.type  text ‴‴  search ‴‴
 ```
 
 **Description:**
 
-Command `selenium.type` types text into an element. 
+Command `selenium.type` types text into an element.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -23,7 +23,7 @@ Command `selenium.type` types text into an element.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Selenium.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium)
 
 **Example 1:**
 

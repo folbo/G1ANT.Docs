@@ -25,12 +25,12 @@ Command `ocrgoogle.findpoint` allows to find the text on the active screen and r
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Ocr.Google.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.Google
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.Google](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.Google)
 
 **Example 1:**
 
 In order to use any ocrgoogle. command, it is necessary to be logged in to Google Cloud Platform. Please see "ocrgoogle.login":{TOPIC-LINK+ocrgoogle-login} command to see how to create an account and log in.
-In this example we are opening G1ANT website, then logging in to Google Cloud Platform to be able to use `ocrgoogle.findpoint` command. It searches for chosen word, in our case- 'Robotise' and saves it inside of a variable thanks to **result** argument. 
+In this example we are opening G1ANT website, then logging in to Google Cloud Platform to be able to use `ocrgoogle.findpoint` command. It searches for chosen word, in our case- 'Robotise' and saves it inside of a variable thanks to **result** argument.
 
 ```G1ANT
 chrome http://g1ant.com/
@@ -38,5 +38,4 @@ ocrgoogle.login jsoncredential ‴0b7239b2d48b60d4b5bc45c5297e57002f611e6x‴
 ocrgoogle.findpoint ‴Robotise‴ result ♥foundtext
 dialog ♥foundtext
 ```
-
 

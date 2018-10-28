@@ -8,7 +8,7 @@ word.replace  from ‴‴  to ‴‴
 
 **Description:**
 
-Command `word.replace` allows to replace any word in document. 
+Command `word.replace` allows to replace any word in document.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -24,7 +24,7 @@ Command `word.replace` allows to replace any word in document.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.MSOffice.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice)
 
 **Example 1**:
 
@@ -36,5 +36,4 @@ word.replace from ‴Saving‴ to ‴Killing‴ matchcase false wholewords true
 ```
 
 The example above shows how to open word document, insert text to it and replace a word in the text. We firstly create a variable ♥toInsert where we store the text that we want to insert later. Then we open word using `word.open` command. `word.replace` allows us to change the word "saving" to "killing".
-
 

@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-ie.click  search ‴‴ 
+ie.click  search ‴‴
 ```
 
 **Description:**
@@ -23,7 +23,7 @@ Command `ie.click` clicks an element on an active webpage.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.IExplorer.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer)
 
 **Example 1:**
 
@@ -43,9 +43,8 @@ In this example, `ie.click` command will find the search button by its id. In or
 ```G1ANT
 ie.open url ‴duckduckgo.com‴
 window ‴✱internet explo✱‴
-ie.click search ‴search_button_homepage‴ by ‴id‴ 
+ie.click search ‴search_button_homepage‴ by ‴id‴
 keyboard text ‴anglerfish‴
-ie.click search ‴search_button_homepage‴ by ‴id‴ 
+ie.click search ‴search_button_homepage‴ by ‴id‴
 ```
-
 

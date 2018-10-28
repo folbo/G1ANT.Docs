@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-word.runmacro  name ‴‴ 
+word.runmacro  name ‴‴
 ```
 
 **Description:**
 
-Command `word.runmacro` allows to run macro in currently active Word instance. 
+Command `word.runmacro` allows to run macro in currently active Word instance.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -22,7 +22,7 @@ Command `word.runmacro` allows to run macro in currently active Word instance.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.MSOffice.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice)
 
 **Example 1**:
 
@@ -33,5 +33,4 @@ word.open
 word.runmacro name ‴Align_Right‴
 ```
 
- 
 In this example a new Word document is opened, and a previously defined macro is initialised. This macro aligns the text (and the cursor) on the right side of the page.

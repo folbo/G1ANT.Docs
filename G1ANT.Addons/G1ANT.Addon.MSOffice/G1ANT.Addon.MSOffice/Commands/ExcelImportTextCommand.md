@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-excel.importtext path ‴‴ 
+excel.importtext path ‴‴
 ```
 
 **Description:**
 
-Command `excel.importtext` allows to set a data connection between text file and the specified destination in an active sheet and import data into it. 
+Command `excel.importtext` allows to set a data connection between text file and the specified destination in an active sheet and import data into it.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -26,7 +26,7 @@ Command `excel.importtext` allows to set a data connection between text file and
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.MSOffice.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice)
 
 **Example 1:**
 
@@ -37,8 +37,6 @@ excel.importtext path ‴C:\programs\data.csv‴ destination ‴D5‴ result ♥
 excel.importtext path ‴C:\programs\data.csv‴ destination ‴4//5‴ result ♥size
 ```
 
- 
-
 **Example 2:**
 
 ```G1ANT
@@ -48,5 +46,4 @@ dialog ‴Rows imported: ♥importerRows; Columns imported: ♥importedColumns�
 excel.save path ‴C:\Tests\import_test.xlsx‴
 excel.close
 ```
-
 

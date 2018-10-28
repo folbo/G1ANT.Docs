@@ -23,7 +23,7 @@ Command `ocrabbyy.filter` allows to filter text from a document by font style. R
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Ocr.AbbyyFineReader.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader)
 
 **Example 1:**
 
@@ -32,7 +32,6 @@ In order to use `ocrabbyy.filter` command, we first need to process the file usi
 ```G1ANT
 ocrabbyy.processfile path ‴♥environment⟦HOMEDRIVE⟧♥environment⟦HOMEPATH⟧\Tests\document2.jpg‴ result ♥file1
 ocrabbyy.filter documentid ♥file1 filter ‴bold‴ result ♥documentFiltered
-dialog ♥documentFiltered 
+dialog ♥documentFiltered
 ```
-
 

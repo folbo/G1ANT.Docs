@@ -22,14 +22,14 @@ Command `excel.getrow` gets all used cells of the specified row.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.MSOffice.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice)
 
 **Example:**
 
 ```G1ANT
 excel.open
 window title ‴✱Excel‴
-keyboard ‴THE wild bee reels from bough to bough ⋘DOWN⋙With his furry coat and his gauzy wing. ⋘DOWN⋙Now in a lily-cup, and now THE wild bee reels from bough to bough ⋘DOWN⋙Setting a jacinth bell a-swing,  ⋘DOWN⋙In his wandering; ⋘DOWN⋙Sit closer love: it was here I trow ⋘DOWN⋙I made that vow⋘DOWN⋙With his furry coat and his gauzy wing. ,‴ 
+keyboard ‴THE wild bee reels from bough to bough ⋘DOWN⋙With his furry coat and his gauzy wing. ⋘DOWN⋙Now in a lily-cup, and now THE wild bee reels from bough to bough ⋘DOWN⋙Setting a jacinth bell a-swing,  ⋘DOWN⋙In his wandering; ⋘DOWN⋙Sit closer love: it was here I trow ⋘DOWN⋙I made that vow⋘DOWN⋙With his furry coat and his gauzy wing. ,‴
 keyboard ⋘ENTER⋙
 excel.getrow row ‴3‴ result ♥rowInput
 dialog ♥rowInput

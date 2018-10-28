@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-ie.attach  phrase ‴‴ 
+ie.attach  phrase ‴‴
 ```
 
 **Description:**
 
-Command `ie.attach` allows to attach G1ANT.Robot to running Internet Explorer instance. This command invocation is required for other ie commands to work properly. This command activates tab with specified phrase.
+Command `ie.attach` allows to attach G1ANT.Robot to running Internet Explorer instance. This command invocation is required for other ie commands to work properly if you haven't used ie.open command before (which opens IE and attaches to it). This command also activates tab with a specified phrase.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -23,7 +23,7 @@ Command `ie.attach` allows to attach G1ANT.Robot to running Internet Explorer in
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.IExplorer.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer)
 
 **Example 1:**
 
@@ -33,8 +33,6 @@ This example attaches G1ANT.Robot to Internet Explorer.
 ie.attach phrase ‴Google‴
 ie.detach
 ```
-
- 
 
 **Example 2:**
 
@@ -50,5 +48,4 @@ ie.seturl url ‴duckduckgo.com‴
 ie.gettitle result ♥title2
 dialog ♥title2
 ```
-
 

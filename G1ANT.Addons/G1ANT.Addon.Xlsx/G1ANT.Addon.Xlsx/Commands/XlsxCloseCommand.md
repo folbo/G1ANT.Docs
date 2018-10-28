@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-xlsx.close 
+xlsx.close
 ```
 
 **Description:**
@@ -21,11 +21,11 @@ Command `xlsx.close` allows to save changes and close .xlsx and .xls file extens
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Xlsx.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx](https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx)
 
 **Example 1:**
 
-Document with .xlsx file extension, which was opened as first one, is now being closed. 
+Document with .xlsx file extension, which was opened as first one, is now being closed.
 
 ```G1ANT
 xlsx.close
@@ -44,7 +44,7 @@ xlsx.close id ♥444
 ```G1ANT
 xlsx.open path ‴C:\Tests\Book1.xlsx‴ result ♥xlsHandle
 xlsx.open path ‴C:\Tests\Book2.xlsx‴ result ♥xlsHandle2
-xlsx.close id ♥xlsHandle 
+xlsx.close id ♥xlsHandle
 ```
 
 The command is called `xlsx.close` but can work both on .xls and .xlsx file extensions.

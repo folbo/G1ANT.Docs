@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-selenium.open  type ‴mozilla‴ 
+selenium.open  type ‴mozilla‴
 ```
 
 **Description:**
 
-Command `selenium.open` opens new instance of chosen web browser and optionally navigates to specified url address. 
+Command `selenium.open` opens new instance of chosen web browser and optionally navigates to specified url address.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -24,15 +24,13 @@ Command `selenium.open` opens new instance of chosen web browser and optionally 
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Selenium.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium)
 
 **Example 1:**
 
 ```G1ANT
 selenium.open type ‴firefox‴ url ‴https://www.google.co.uk/search?q=g1ant‴
 ```
-
- 
 
 **Example 2:**
 

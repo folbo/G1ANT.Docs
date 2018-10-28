@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-ocrtesseract.fromscreen  area ‴‴ 
+ocrtesseract.fromscreen  area ‴‴
 ```
 
 **Description:**
@@ -25,7 +25,7 @@ Required argument: area.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Ocr.Tesseract.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.Tesseract
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.Tesseract](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.Tesseract)
 
 **Example 1:**
 
@@ -34,7 +34,6 @@ In our example, we are firstly opening G1ANT website using `ie.open` command. Ou
 ```G1ANT
 ie.open url ‴g1ant.com‴
 ocrtesseract.fromscreen area ‴507⫽392⫽1628⫽888‴ relative false result ♥area timeout 5000
-dialog ♥area 
+dialog ♥area
 ```
-
 

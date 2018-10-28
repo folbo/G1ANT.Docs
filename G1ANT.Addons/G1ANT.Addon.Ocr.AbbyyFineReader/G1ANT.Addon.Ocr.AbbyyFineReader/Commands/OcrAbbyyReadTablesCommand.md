@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-ocrabbyy.readtables  
+ocrabbyy.readtables 
 ```
 
 **Description:**
@@ -22,18 +22,17 @@ Command `ocrabbyy.readtables` allows to read the content of all tables existing 
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Ocr.AbbyyFineReader.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader)
 
 **Example 1:**
 
-In order to use `ocrabbyy.readtables` command, we first need to type `ocrabbyy.processfile` which opens certain file. 
-Then `ocrabbyy.readtables` allows G1ANT.Robot to read every table data and store it in a variable using **result** argument or process it further (inject the information in some other program like Excel). 
-It is not necessary to specify **documentid**, if not given, G1ANT.Robot will perform tasks on recently processed file. In our example we are only using `dialog` command to see the content of the table. It will appear as a list separated by: ❚ 
+In order to use `ocrabbyy.readtables` command, we first need to type `ocrabbyy.processfile` which opens certain file.
+Then `ocrabbyy.readtables` allows G1ANT.Robot to read every table data and store it in a variable using **result** argument or process it further (inject the information in some other program like Excel).
+It is not necessary to specify **documentid**, if not given, G1ANT.Robot will perform tasks on recently processed file. In our example we are only using `dialog` command to see the content of the table. It will appear as a list separated by: ❚
 
 ```G1ANT
 ocrabbyy.processfile path ‴♥environment⟦HOMEDRIVE⟧♥environment⟦HOMEPATH⟧\Tests\document6.jpg‴ result ♥file1
 ocrabbyy.readtables result ♥tables
-dialog ♥tables 
+dialog ♥tables
 ```
-
 

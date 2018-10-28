@@ -25,30 +25,29 @@ Command `watson.classifyimage` allows to capture part of the screen and classify
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Watson.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Watson
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Watson](https://github.com/G1ANT-Robot/G1ANT.Addon.Watson)
 
 **Generating apikey**
 
 In order to generate the required argument- apikey for `watson.classifyimage` command, we need to follow the instructions below:
 
-1. Log in to IBM Watson account under this link: 'https://console.bluemix.net/login' using previously created account. In order to see how to create an account, please go to "watson commands":{TOPIC-LINK+watson-commands}. 
+1. Log in to IBM Watson account under this link: 'https://console.bluemix.net/login' using previously created account. In order to see how to create an account, please go to "watson commands":{TOPIC-LINK+watson-commands}.
 2. Press **create resource** button
- 
+
 3. Hover over and press **Visual Recognition** option
- 
+
 4. Choose **PLAN**
- 
+
 5. Press **Create** button
- 
+
 6.Go to **Service credentials** on the left side menu tab
- 
+
 7. Press **New credential** button
- 
+
 8.Press **Add** button
- 
+
 9. Press **view credential**
 10. Now you can see an **apikey** that can be used in `watson.classifyimage` command
- 
 
 **Example 1:**
 
@@ -56,9 +55,7 @@ In order to generate the required argument- apikey for `watson.classifyimage` co
 watson.classifyimage rectangle ‴480⫽244⫽1439⫽848‴ relative false
 ```
 
- 
-
-results in below classification: 
+results in below classification:
 orange:0,911;citrus:0,927;fruit:0,927;navel orange:0,748;vitamin:0,554;orange color:1;
 
 **Example 2:**
@@ -67,7 +64,5 @@ orange:0,911;citrus:0,927;fruit:0,927;navel orange:0,748;vitamin:0,554;orange co
 watson.classifyimage rectangle ‴480⫽244⫽1439⫽848‴ relative false threshold 0.9
 ```
 
- 
-
-results in below classification: 
+results in below classification:
 owl:0,961;bird of prey:0,962;bird:0,962;animal:0,962;

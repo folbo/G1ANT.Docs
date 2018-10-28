@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-googlesheet.close 
+googlesheet.close
 ```
 
 **Description:**
@@ -21,7 +21,7 @@ Command `googlesheet.close` allows to close Google Sheets instance.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.GoogleDocs.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs](https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs)
 
 **Example 1:**
 

@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-googlesheet.find  value ‴‴  
+googlesheet.find  value ‴‴ 
 ```
 
 **Description:**
 
-Command `googlesheet.find` allows to find in which cell (i.e A4) specified value is typed in. 
+Command `googlesheet.find` allows to find in which cell (i.e A4) specified value is typed in.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -23,7 +23,7 @@ Command `googlesheet.find` allows to find in which cell (i.e A4) specified value
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.GoogleDocs.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs](https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs)
 
 **Example 1:**
 
@@ -37,5 +37,4 @@ googlesheet.close id ♥sheetHandle timeout 10000
 ```
 
 In order to use `googlesheet.find` open a googlesheet document first, then use `googlesheet.find` to search for certain value. In our example we would like to know which cell has the value of ‘Time Sheet’.
-
 

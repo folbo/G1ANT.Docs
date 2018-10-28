@@ -8,7 +8,7 @@ word.inserttext  text ‴‴
 
 **Description:**
 
-Command `word.inserttext` allows to insert text inside of a Word document. 
+Command `word.inserttext` allows to insert text inside of a Word document.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -22,7 +22,7 @@ Command `word.inserttext` allows to insert text inside of a Word document.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.MSOffice.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice)
 
 **Example 1:**
 
@@ -33,8 +33,6 @@ In this example we are assigning text to a variable and then inserting it to the
 word.open path ‴C:\Users\diana\Desktop\Cokolwiek.docx‴ result ♥wordHandleTest
 word.inserttext text ♥toInsert replacealltext true
 ```
-
- 
 
 **Example 2:**
 

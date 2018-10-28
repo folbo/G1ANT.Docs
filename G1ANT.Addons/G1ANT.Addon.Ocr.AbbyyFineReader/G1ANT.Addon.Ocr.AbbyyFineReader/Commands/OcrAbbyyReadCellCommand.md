@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-ocrabbyy.readcell  documentid ‴‴  tableindex ‴‴  position ‴‴ 
+ocrabbyy.readcell  documentid ‴‴  tableindex ‴‴  position ‴‴
 ```
 
 **Description:**
@@ -25,23 +25,20 @@ Command `ocrabbyy.readcell` allows to read row column indexed cell from specific
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Ocr.AbbyyFineReader.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader)
 
 **Example 1:**
 
-In order to use `ocrabbyy.readcell` command, we first need to type `ocrabbyy.processfile` which opens certain file. 
-Then `ocrabbyy.readcell` allows G1ANT.Robot to read every cell data and store it in a variable using **result** argument or process it further (inject the information in some other program like Excel). In our example we are only using `dialog` command to see the content of chosen cell's position. It will appear as a list separated by: ❚ The **position** argument takes value in form of ‴1,2‴- in this case 1 is the position of rows and 2 is the position of columns. 
+In order to use `ocrabbyy.readcell` command, we first need to type `ocrabbyy.processfile` which opens certain file.
+Then `ocrabbyy.readcell` allows G1ANT.Robot to read every cell data and store it in a variable using **result** argument or process it further (inject the information in some other program like Excel). In our example we are only using `dialog` command to see the content of chosen cell's position. It will appear as a list separated by: ❚ The **position** argument takes value in form of ‴1,2‴- in this case 1 is the position of rows and 2 is the position of columns.
 
 ```G1ANT
 ocrabbyy.processfile path ‴♥environment⟦HOMEDRIVE⟧♥environment⟦HOMEPATH⟧\Tests\document6.jpg‴ result ♥file1
 ocrabbyy.readcell tableindex 1 result ♥res position ‴1,2‴
-dialog ♥res 
+dialog ♥res
 ```
 
-This is the file we are processing, position  ‴1,2‴ marked with red: 
-
- 
+This is the file we are processing, position  ‴1,2‴ marked with red:
 
 This is the result of `ocrabbyy.readcell tableindex 1 result ♥res position ‴1,2‴`
-
 

@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-selenium.waitforvalue  script ‴‴  expectedvalue ‴‴ 
+selenium.waitforvalue  script ‴‴  expectedvalue ‴‴
 ```
 
 **Description:**
 
-Command `selenium.waitforvalue` waits for javascript code to return specified value. 
+Command `selenium.waitforvalue` waits for javascript code to return specified value.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -22,7 +22,7 @@ Command `selenium.waitforvalue` waits for javascript code to return specified va
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Selenium.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium)
 
 **Example 1:**
 
@@ -30,7 +30,7 @@ See: https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium
 
 ```G1ANT
 selenium.open type ‴chrome‴ url ‴google.com‴
-selenium.waitforvalue script ‴return document.querySelectorAll('#lst-ib').length &gt; 0‴ expectedvalue ‴true‴ timeout 20000 
+selenium.waitforvalue script ‴return document.querySelectorAll('#lst-ib').length &gt; 0‴ expectedvalue ‴true‴ timeout 20000
 selenium.type text ‴fluffy robots‴ search ‴lst-ib‴ by ‴id‴
 selenium.close
 ```

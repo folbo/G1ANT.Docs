@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-googlesheet.gettitle 
+googlesheet.gettitle
 ```
 
 **Description:**
 
-Command `googlesheet.gettitle` allows to get title of an opened Google Sheets instance. 
+Command `googlesheet.gettitle` allows to get title of an opened Google Sheets instance.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -21,7 +21,7 @@ Command `googlesheet.gettitle` allows to get title of an opened Google Sheets in
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.GoogleDocs.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs](https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs)
 
 **Example 1:**
 
@@ -31,13 +31,10 @@ Before we are able to get a title of a Google Sheet file, we need to open it fir
 googlesheet.open id ‴1gKFnrtZ-kzijNeIpYxln6PZS0z5btyHjoW1vZhCZ58c‴ result ♥sheetHandle
 googlesheet.gettitle result ♥title
 dialog ♥title
-googlesheet.close id ♥sheetHandle timeout 10000 
+googlesheet.close id ♥sheetHandle timeout 10000
 ```
 
 G1ANT.Robot will read the title of Google Sheet.
 
- 
-
 We can store it in a variable and perform different actions on it. Here we are only making a dialog window show it.
-
 

@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-image.expected  image1 ‴‴ 
+image.expected  image1 ‴‴
 ```
 
 **Description:**
@@ -26,7 +26,7 @@ Command `image.expected` allows to confirm if image1 is exactly the same as imag
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Images.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Images
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Images](https://github.com/G1ANT-Robot/G1ANT.Addon.Images)
 
 **Example 1:**
 

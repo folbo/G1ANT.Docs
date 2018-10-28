@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-ie.saveas  path ‴‴ 
+ie.saveas  path ‴‴
 ```
 
 **Description:**
@@ -21,7 +21,7 @@ Command `ie.saveas` allows to automatically save file to specified directory onc
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.IExplorer.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer)
 
 **Example 1:**
 
@@ -29,14 +29,12 @@ See: https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer
 ie.saveas path ‴C:\Download\file1‴
 ```
 
- 
-
 **Example 2:**
 
 In this example G1ANT.Robot will open the specified IE instance. `delay` command is crutial while using `ie.saveas` command, because sometimes the browser does not load quickly enough before G1ANT.Robot executes the  `ie.saveas` command, which may cause an error occur.
 
 ```G1ANT
-ie.open url ‴http://www.opera.com/pl/computer/thanks?ni=stable&amp;os=windows‴ nowait false 
+ie.open url ‴http://www.opera.com/pl/computer/thanks?ni=stable&amp;os=windows‴ nowait false
 autodetachonclose false result ♥IeG1ant
 delay 2
 ie.saveas path ‴C:\Users\diana\Desktop\opera.exe‴

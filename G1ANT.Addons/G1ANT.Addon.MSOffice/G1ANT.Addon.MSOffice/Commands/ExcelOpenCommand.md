@@ -24,17 +24,15 @@ Command `excel.open` allows to open a new Excel instance.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.MSOffice.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice)
 
 **Example 1:**
 
 Here document.xlsx is being open with activated sheet_number_223 and the result is assigned to ♥excelId1 variable.
 
 ```G1ANT
-excel.open path ‴C:\programs\document.xlsx‴ sheet ‴sheet_number_223‴ result ♥excelId1 
+excel.open path ‴C:\programs\document.xlsx‴ sheet ‴sheet_number_223‴ result ♥excelId1
 ```
-
- 
 
 **Example 2:**
 
@@ -52,7 +50,7 @@ If you choose that `excel.open` command works in background, you will not notice
 excel.open inbackground true
 excel.setvalue value ‴Random Text‴ row 1 colname A
 excel.save path ‴C:\Tests\test.xlsx‴
-excel.close 
+excel.close
 ```
 
 **Example 4:**

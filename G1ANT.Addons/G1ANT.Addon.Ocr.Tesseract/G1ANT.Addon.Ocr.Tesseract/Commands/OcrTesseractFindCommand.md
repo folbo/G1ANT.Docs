@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-ocrtesseract.find  search ‴‴ 
+ocrtesseract.find  search ‴‴
 ```
 
 **Description:**
@@ -25,7 +25,7 @@ Command `ocrtesseract.find` allows to find the text on the active screen and it 
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Ocr.Tesseract.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.Tesseract
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.Tesseract](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.Tesseract)
 
 **Example 1:**
 
@@ -33,9 +33,8 @@ In this example we are opening G1ANT website firstly using `ie.open` command. Th
 
 ```G1ANT
 ie.open url ‴g1ant.com‴
-ocrtesseract.find search ‴Robotise‴ area ‴791⫽340⫽1663⫽672‴ relative false result ♥ocrof 
+ocrtesseract.find search ‴Robotise‴ area ‴791⫽340⫽1663⫽672‴ relative false result ♥ocrof
 timeout 4000
-dialog ♥ocrof 
+dialog ♥ocrof
 ```
-
 

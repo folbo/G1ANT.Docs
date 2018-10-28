@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-excel.runmacro  name ‴‴ 
+excel.runmacro  name ‴‴
 ```
 
 **Description:**
 
-Command `excel.runmacro` allows to run macro in currently active excel program. 
+Command `excel.runmacro` allows to run macro in currently active excel program.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -23,22 +23,67 @@ Command `excel.runmacro` allows to run macro in currently active excel program.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.MSOffice.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice)
+
+**Quick Excel set up before we start with macros:**
 
 **Example 1:**
 
+The first example will multiply values from one column by 2 and inserts results in a second column. Please find this "excel-macros.xlsx":{DOCUMENT-LINK+excel-macros} file and download it. There you can see two columns: "Numbers" (which contain some random values) and "Results of Multiplication" (which will contain results of multiplication once we have run the macro).
+
+The easiest way to add a macro is to record a macro.
+
+Please click "Record Macro" (make sure you have Developer tab opened), specify some name for your macro for example "Multiplication", focus B2 cell, insert "=" and click A2 cell, insert "**2", click "enter" and then expand values from B2 cell to B6 in order to have all result values in a B column. Finally, click "Stop Recording" in "Code" section.
+
+Now whenever you want, you can click "Macros" in "Code" section and click "run" so you will have those results inserted and updated even when you change values in an A column. Please, clear contents of B2:B6 cells for further purpose.
+
+Let's try the second way of adding a macro.
+
+Please open "Visual Basic" in "Code" section, expand "Modules", double click "Module 1"  and here you should have your generated code inserted depending on how you have recorded your macro. I have such code:
+
 ```G1ANT
-excel.runmacro name ‴macro1‴ args ‴1,2‴
+Sub Multiplication()
+'
+' Multiplication Macro
+'
+'
+    Range("B2").Select
+    ActiveCell.FormulaR1C1 = "=RC[-1]**2"
+    Range("B2").Select
+    Selection.AutoFill Destination:=Range("B2:B6"), Type:=xlFillDefault
+    Range("B2:B6").Select
+End Sub
 ```
 
-
-In this example a previously defined "macro1" macro is run. The first column is multiplied by argument 1 (1) and copied to column D, and then it is multiplied by argument 2 (2) and copied to column E.
-
- 
-
-**Example 2:**
+Note, that there are two types of macros that you can run - "Function" which returns some value and "Sub" which may perform some action in Excel.
+We've had Sub Multiplication(), so let's add another type of macro  this time - "Function" which returns some value. Please, paste the code below to try it out:
 
 ```G1ANT
-excel.open path ‴C:\Tests\macros.xlsm‴
-excel.runmacro name ‴multiply‴
+Function test() As Single
+    test = 10
+End Function
 ```
+
+This will return value of test. In order to see if it worked, let's add another Sub which will print value of test into a message box:
+
+```G1ANT
+Sub Message()
+MsgBox ("Some example number: " + CStr(test()))
+End Sub
+```
+
+Let's save it, close Microsoft Visual Basic and save Excel under the ".xlsm" extension (so that it supports macros) and close Excel.
+
+Please, open G1ANT.Robot, paste this code and run it:
+
+```G1ANT
+excel.open ‴C:\Users\a\Desktop\Wiktoria\Macro-Examples.xlsm‴
+window ✱Excel
+excel.runmacro ‴Multiplication‴
+excel.runmacro ‴Test‴ result ♥macroResult
+excel.runmacro ‴Message‴
+dialog ♥macroResult
+```
+
+Make sure that the path to your excel file is accurate after the excel.open command.
+excel.runmacro command may have the result argument specified when macro that it runs is a Function one, not a Sub one.

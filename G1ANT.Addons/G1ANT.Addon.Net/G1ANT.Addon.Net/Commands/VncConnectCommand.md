@@ -24,7 +24,7 @@ Command `vnc.connect` allows to connect to machine with running VNC server using
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Net.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Net
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Net](https://github.com/G1ANT-Robot/G1ANT.Addon.Net)
 
 **Example 1:**
 

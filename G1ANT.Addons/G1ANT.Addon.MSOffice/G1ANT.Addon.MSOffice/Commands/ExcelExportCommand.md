@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-excel.export path ‴‴  
+excel.export path ‴‴ 
 ```
 
 **Description:**
@@ -21,7 +21,7 @@ Command `excel.export` exports currently active excel workbook to either **.pdf 
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.MSOffice.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice)
 
 **Example 1:**
 
@@ -37,7 +37,7 @@ excel.export path ‴FileName2.pdf‴ type ‴pdf‴
 
 **Example 2:**
 
-It is very important that you type the file extension while giving the path value. In our example 'startrek.pdf' or 'startrek.xlsx'. 
+It is very important that you type the file extension while giving the path value. In our example 'startrek.pdf' or 'startrek.xlsx'.
 
 ```G1ANT
 excel.open path ‴C:\Tests\startrek.xlsx‴ result ♥excelHandle

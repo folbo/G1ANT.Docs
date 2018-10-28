@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-ie.runscript  script ‴‴ 
+ie.runscript  script ‴‴
 ```
 
 **Description:**
 
-Command `ie.runscript` allows to execute script on the currently attached Internet Explorer instance. After successful evaluation you can get the result from a variable. 
+Command `ie.runscript` allows to execute script on the currently attached Internet Explorer instance. After successful evaluation you can get the result from a variable.
 Please be aware that only the first called function of the script might be evaluated as a result and if you want to get multiple results, compose script which returns all values as json or another single string solution in one function.
 
 | Argument | Type | Required | Default Value | Description |
@@ -23,7 +23,7 @@ Please be aware that only the first called function of the script might be evalu
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.IExplorer.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer)
 
 **Example 1:**
 
@@ -31,8 +31,6 @@ See: https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer
 ie.open
 ie.runscript ‴alert("Hello world!");‴
 ```
-
- 
 
 **Example 2:**
 
@@ -61,16 +59,12 @@ function thisWillNotReturn(){
 }
 ```
 
- 
-
 ```G1ANT
 text.read filename ‴C:\Users\dell\Documents\G1ANT.Robot\test.js‴ result ♥script
 ie.open
-ie.runscript ♥script 
+ie.runscript ♥script
 dialog ♥result
 ```
-
- 
 
 **Example 3:**
 

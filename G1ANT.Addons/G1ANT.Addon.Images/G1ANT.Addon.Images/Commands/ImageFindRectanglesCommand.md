@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-image.find  image1 ‴‴  image2 ‴‴  rectangle ‴‴  relative ‴‴  result ♥variablename  
+image.find  image1 ‴‴  image2 ‴‴  rectangle ‴‴  relative ‴‴  result ♥variablename 
 timeout 5000  if true  errorjump ➜labelname  errormessage ‴‴
 ```
 

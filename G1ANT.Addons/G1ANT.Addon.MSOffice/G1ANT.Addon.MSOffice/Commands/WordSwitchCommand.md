@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-word.switch  id ‴‴ 
+word.switch  id ‴‴
 ```
 
 **Description:**
 
-Command `word.switch` allows to switch between Word windows. 
+Command `word.switch` allows to switch between Word windows.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -22,7 +22,7 @@ Command `word.switch` allows to switch between Word windows.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.MSOffice.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice)
 
 **Example 1**:
 
@@ -33,8 +33,6 @@ word.open result ♥1
 word.open result ♥2
 word.switch id ♥1
 ```
-
- 
 
 In this example the Word window no 1 has been activated.
 

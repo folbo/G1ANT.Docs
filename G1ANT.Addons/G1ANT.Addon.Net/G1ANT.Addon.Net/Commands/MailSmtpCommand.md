@@ -29,11 +29,11 @@ Command `mail.smtp` allows sending mail from specified email address to specifie
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Net.dll**.
-` See: https://github.com/G1ANT-Robot/G1ANT.Addon.Net
+` See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Net](https://github.com/G1ANT-Robot/G1ANT.Addon.Net)
 
 **Example 1:**
 
 ```G1ANT
-mail.smtp login ‴test‴ password ‴testpass123‴ host ‴test.com‴ port 25 from ‴test‴ to 
+mail.smtp login ‴test‴ password ‴testpass123‴ host ‴test.com‴ port 25 from ‴test‴ to
 ‴test2`test.com‴ subject ‴something‴ body ‴testtest‴ attachments ‴C:\tests\test.png‴
 ```

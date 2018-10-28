@@ -20,18 +20,16 @@ Command `is.accessible` allows to check if host is accessible.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Net.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Net
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Net](https://github.com/G1ANT-Robot/G1ANT.Addon.Net)
 
 **Example 1**:
 
 This example checks whether google.com is accessible using `is.accessible` command, then result("true") is displayed in `dialog` command.
 
 ```G1ANT
-is.accessible hostname ‴www.google.com‴ result ♥result 
+is.accessible hostname ‴www.google.com‴ result ♥result
 dialog ♥result
 ```
-
- 
 
 **Example 2:**
 

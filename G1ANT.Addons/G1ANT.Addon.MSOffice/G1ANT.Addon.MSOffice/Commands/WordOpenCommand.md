@@ -22,7 +22,7 @@ Command `word.open` opens Word program.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.MSOffice.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice)
 
 **Example 1:**
 
@@ -34,7 +34,7 @@ word.open path ‴C:\programs\document.docx‴ result ♥wId1
 
 **Example 2:**
 
-This example opens Word document using `word.open` command. 
+This example opens Word document using `word.open` command.
 
 ```G1ANT
 word.open

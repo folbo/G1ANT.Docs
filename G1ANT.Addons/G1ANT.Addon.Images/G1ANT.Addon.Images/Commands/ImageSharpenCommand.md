@@ -22,16 +22,13 @@ Command `image.sharpen` allows to sharpen image.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Images.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Images
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Images](https://github.com/G1ANT-Robot/G1ANT.Addon.Images)
 
 **Example 1:**
 
 ```G1ANT
-image.sharpen path ‴C:\Users\user1\Downloads\Screenshot_33.png‴ outputpath ‴C:\Users\user1\Downloads\Screenshot_33_sharp.png‴ 
+image.sharpen path ‴C:\Users\user1\Downloads\Screenshot_33.png‴ outputpath ‴C:\Users\user1\Downloads\Screenshot_33_sharp.png‴
 ```
 
- 
-
-Sharpened image: 
-
+Sharpened image:
 

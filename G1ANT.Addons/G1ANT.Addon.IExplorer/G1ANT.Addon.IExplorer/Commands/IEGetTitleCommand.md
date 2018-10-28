@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-ie.gettitle 
+ie.gettitle
 ```
 
 **Description:**
@@ -21,7 +21,7 @@ Command `ie.gettitle` allows to get title of currently attached Internet Explore
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.IExplorer.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer)
 
 **Example 1**:
 
@@ -31,18 +31,16 @@ This example opens Internet Explorer on with URL ‴https://www.google.pl/‴ `i
 ie.open
 ie.seturl ‴https://www.google.pl/‴
 ie.gettitle result ♥result
-dialog ♥result 
+dialog ♥result
 ```
 
  
-
 
 **Example 2:**
 
 ```G1ANT
 ie.open url ‴g1ant.com‴ nowait false autodetachonclose false result ♥IeHandle
 ie.gettitle result ♥title
-dialog ♥title 
+dialog ♥title
 ```
-
 

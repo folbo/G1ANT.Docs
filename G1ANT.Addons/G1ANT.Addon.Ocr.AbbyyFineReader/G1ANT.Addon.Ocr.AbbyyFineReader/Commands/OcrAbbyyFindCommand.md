@@ -3,7 +3,7 @@
 **Syntax:**
 
 ```G1ANT
-ocrabbyy.find  search ‴‴  documentid ‴‴ 
+ocrabbyy.find  search ‴‴  documentid ‴‴
 ```
 
 **Description:**
@@ -23,4 +23,4 @@ Command `ocrabbyy.find` allows to find the text on the active screen and return 
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Ocr.AbbyyFineReader.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader)

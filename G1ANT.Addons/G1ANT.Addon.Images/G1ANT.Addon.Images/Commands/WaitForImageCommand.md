@@ -28,7 +28,7 @@ Command `waitfor.image` allows to wait for specified image within another image 
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Images.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Images
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Images](https://github.com/G1ANT-Robot/G1ANT.Addon.Images)
 
 **Example 1**:
 
@@ -43,5 +43,4 @@ selenium.open type ‴firefox‴ url ‴duckduckgo.com‴
 waitfor.image image ‴C:\Users\diana\Pictures\Screenshot_33.png‴ relative false threshold 0 centerresult true result ♥point timeout 5000
 dialog ♥point
 ```
-
 

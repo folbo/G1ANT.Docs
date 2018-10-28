@@ -8,7 +8,7 @@ selenium.setattribute  name ‴‴ search ‴‴
 
 **Description:**
 
-Command `selenium.setattribute` sets specified attribute of specified element. 
+Command `selenium.setattribute` sets specified attribute of specified element.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -24,24 +24,22 @@ Command `selenium.setattribute` sets specified attribute of specified element.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Selenium.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium)
 
 **Example 1:**
- 
+
 ```G1ANT
 selenium.open type ‴firefox‴ url ‴duckduckgo.com‴
 selenium.setattribute name ‴class‴ value ‴hidden‴ search ‴logo_homepage_link‴ by ‴id‴
 ```
 
 This command enables to search for certain element on a web page and set an attribute for it. In our example we are causing the logo disappear by setting a 'hidden' class for the logo.
-To set an attribute we need to catch an element first. In order to do that, please check developer tools. 
+To set an attribute we need to catch an element first. In order to do that, please check developer tools.
 
 **search** argument expects the value of **by** argument, which could be 'id', 'class', etc. In our case the value of **search** argument is ‴logo_homepage_link‴
-**name** argument expects 'class', 'id', etc. and **value** argument defines what should happen with the element that we catch.  
+**name** argument expects 'class', 'id', etc. and **value** argument defines what should happen with the element that we catch. 
 HTML tag for the logo is:
 `&lt;a id = "logo_homepage_link" class = "logo_homepage" href = "/about"&gt;&lt;/a&gt;`
-
- 
 
 **Example 2:**
 

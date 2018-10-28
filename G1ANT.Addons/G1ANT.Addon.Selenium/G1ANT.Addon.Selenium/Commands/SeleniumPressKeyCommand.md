@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-selenium.presskey  key ‴‴  search ‴‴ 
+selenium.presskey  key ‴‴  search ‴‴
 ```
 
 **Description:**
 
-Command `selenium.presskey` types text into element. 
+Command `selenium.presskey` types text into element.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -23,7 +23,7 @@ Command `selenium.presskey` types text into element.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Selenium.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium)
 
 **Example 1:**
 
@@ -38,8 +38,5 @@ selenium.open type ‴firefox‴ url ‴duckduckgo.com‴
 First open a browser using `selenium.open` command.
 Then use `selenium.type` command to  type a phrase you want to search - ‴whale sharks‴ and then find an element where the phrase will be typed ‴search_form_homepage‴. You can find the element using developer tools in your web browser. ‴whale sharks‴ will be typed inside of the search window that you chose by id.
 
- 
-
 The `selenium.open` command becomes handy now that you want to choose the 'search button' in the browser. Use developer tools in your web browser to choose the element and use it as the value for 'search' argument. Then type the 'key' argument. Usually you would use 'enter' as the value, but any button can be used. If you use 'enter' as in the example, G1ANT.Robot will press the search button for you automatically.
-
 

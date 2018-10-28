@@ -3,13 +3,13 @@
 **Syntax:**
 
 ```G1ANT
-xlsx.getvalue  row ‴‴ colname ‴‴ 
+xlsx.getvalue  row ‴‴ colname ‴‴
 ```
 
-or 
+or
 
 ```G1ANT
-xlsx.getvalue  row ‴‴ colindex ‴‴ 
+xlsx.getvalue  row ‴‴ colindex ‴‴
 ```
 
 **Description:**
@@ -29,14 +29,14 @@ Command `xlsx.getvalue` allows to get value of specified cell in .xlsx file.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Xlsx.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx](https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx)
 
 **Example 1:**
 
 Here the value of cell 'A1' will be read and stored in 'result' variable.
 
 ```G1ANT
-xlsx.getvalue row 1 colname a 
+xlsx.getvalue row 1 colname a
 ```
 
 **Example 2:**

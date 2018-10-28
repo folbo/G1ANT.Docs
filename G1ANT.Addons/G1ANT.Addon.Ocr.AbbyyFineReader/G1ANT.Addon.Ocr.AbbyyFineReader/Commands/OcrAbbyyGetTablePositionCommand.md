@@ -24,7 +24,7 @@ Command `ocrabbyy.gettableposition ` allows to find indexes.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Ocr.AbbyyFineReader.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader)
 
 **Example 1:**
 
@@ -43,7 +43,6 @@ ocrabbyy.gettableposition search documentid ♥file1 ‴Sergio‴ tableindex 0 r
 Displaying result:
 
 ```G1ANT
-dialog ♥position 
+dialog ♥position
 ```
-
 

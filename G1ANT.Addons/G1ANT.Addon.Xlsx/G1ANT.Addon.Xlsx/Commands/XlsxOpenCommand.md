@@ -23,10 +23,10 @@ Command `xlsx.open` allows to open .xlsx files, and set the first sheet in the d
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Xlsx.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx](https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx)
 
 This command is contained in **G1ANT.Addon.Xlsx.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx](https://github.com/G1ANT-Robot/G1ANT.Addon.Xlsx)
 
 **Example 1:**
 
@@ -41,7 +41,7 @@ xlsx.open path ‴C:\programs\document.xlsx‴ result ♥excelId1
 In this example while the `accessmode` argument is set to 'read' G1ANT.Robot will only open the file without posibility to modify it.
 
 ```G1ANT
-xlsx.open path ‴C:\Tests\test.xlsx‴ accessmode ‴read‴ 
+xlsx.open path ‴C:\Tests\test.xlsx‴ accessmode ‴read‴
 ```
 
 **Example 3:**
