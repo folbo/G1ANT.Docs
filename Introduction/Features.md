@@ -1,4 +1,4 @@
-﻿# Features
+# Features
 
 G1ANT.Robot software can work with any system and it does not require any changes to legacy systems’ setup and configuration. Instead, it works as a bridge between various platforms, allowing the automation to be done faster than traditional re-engineering.
 
