@@ -19,7 +19,16 @@
 
 ### G1ANT Language
 
-* [G1ANT.Addon.AmazonS3](G1ANT.Addons/G1ANT.Addon.AmazonS3/README.md)
+* [Commands](G1ANT.Language/Commands)
+   * [chrome](G1ANT.Language/Commands/chrome.md)
+   * [color-expected](G1ANT.Language/Commands/color-expected.md)
+   * [color-find](G1ANT.Language/Commands/color-find.md)
+   * [color](G1ANT.Language/Commands/color.md)
+   * [database](G1ANT.Language/Commands/database.md)
+   * [delay](G1ANT.Language/Commands/delay.md)
+   * [dialog-ask](G1ANT.Language/Commands/dialog-ask.md)
+   * [dialog](G1ANT.Language/Commands/dialog.md)
+* [Control Flow Commands](G1ANT.Language/Control-Flow-Commands)
 
 ### G1ANT Addons
 
