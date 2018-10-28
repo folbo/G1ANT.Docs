@@ -1,6 +1,6 @@
 # Summary
 
-* [Welcome!](README.md)
+* [Hi There and Welcome to G1ANT.Robot!](README.md)
 * [Introduction](Introduction)
    * [Overview](Introduction/Overview.md)
 * [Triggers](Triggers.md)
