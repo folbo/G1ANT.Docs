@@ -57,6 +57,8 @@
 
 ### G1ANT Robot
 
+* [G1ANT.Robot](G1ANT.Robot/G1ANT.Robot/G1ANT.Robot/Addon.md)
+
 ### GitHub Repo Links
 
 * [Addons](Addons.md)
