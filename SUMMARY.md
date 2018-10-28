@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [Intro](README.md)
    * [Overview](Introduction/Overview.md)
 * [Triggers](Triggers.md)
 * [Variables](Variables.md)
