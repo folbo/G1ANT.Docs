@@ -1,5 +1,7 @@
 # Summary
 
+### Introduction
+
 * [Hi There and Welcome to G1ANT.Robot](README.md)
 * [Introduction](Introduction)
    * [Overview](Introduction/Overview.md)
@@ -8,6 +10,9 @@
    * [Hosting](Introduction/Hosting.md)
    * [Security](Introduction/Security.md)
    * [Dictionary](Introduction/Dictionary.md)
+   
+### Getting Started
+   
 * [Getting Started](Getting%20Started)
    * [Installation](Getting%20Started/Installation.md)
    * [Tutorials](Getting%20Started/Tutorials.md)
