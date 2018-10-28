@@ -3,6 +3,8 @@
 * [Hi There and Welcome to G1ANT.Robot](README.md)
 * [Introduction](Introduction)
    * [Overview](Introduction/Overview.md)
+   * [Features](Introduction/Features.md)
+   * [System and Hardware Requirements](Introduction/System%20and%20Hardware%20Requirements.md)
 * [Triggers](Triggers.md)
 * [Variables](Variables.md)
 * [G1ANT Addons](G1ANT%20Addons/G1ANT%20Addons.md)
