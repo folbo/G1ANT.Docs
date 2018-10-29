@@ -20,7 +20,7 @@
 
 ## G1ANT Tutorials
 
-* [Welcome to Darek's Tutorials](G1ANT%20Tutorials/README.md)
+* [Darek's Tutorials](G1ANT%20Tutorials/README.md)
    * [Tutorial 1](G1ANT%20Tutorials/010.md)
    * [Tutorial 2](G1ANT%20Tutorials/020.md)
    * [Tutorial 3](G1ANT%20Tutorials/030.md)
