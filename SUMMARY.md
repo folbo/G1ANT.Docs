@@ -77,6 +77,11 @@
     * [ping](g1ant-addons/g1ant.addon.net/addon/pingcommand.md)
     * [rest](g1ant-addons/g1ant.addon.net/addon/restcommand.md)
     * [vnc.connect](g1ant-addons/g1ant.addon.net/addon/vncconnectcommand.md)
+* [G1ANT.Addon.Ocr.Tesseract](G1ANT.Addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Addon.md)
+  * [Commands](G1ANT.Addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Commands)
+    * [ocrtesseract.find](G1ANT.Addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Commands/OcrTesseractFindCommand.md)
+    * [ocrtesseract.fromscreen](G1ANT.Addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Commands/OcrTesseractFromScreenCommand.md)
+
 
 ## G1ANT Robot
 
