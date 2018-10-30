@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-googlesheet.settitle  title ‴‴  
+googlesheet.settitle  title ‴‴ 
 ```
 
 **Description:**
 
-Command `googlesheet.settitle` allows to open a new Google Sheets instance. 
+Command `googlesheet.settitle` allows to set a title of a Google Sheet file.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -21,7 +21,7 @@ Command `googlesheet.settitle` allows to open a new Google Sheets instance.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.GoogleDocs.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs](https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs)
 
 **Example 1:**
 
@@ -40,8 +40,5 @@ googlesheet.close id ♥sheetHandle timeout 10000
 
 The title of our Google Sheet was 'KingOfTheTests'
 
- 
-
 Changing the title of a Google Sheet document to 'Test2017' using `googlesheet.settitle` command
-
 

@@ -1,18 +1,19 @@
-# googlesheet.switch
+# googlesheet.download
 
 **Syntax:**
 
 ```G1ANT
-googlesheet.switch  id ‴‴
+googlesheet.download  path ‴‴
 ```
 
 **Description:**
 
-Command `googlesheet.switch` allows to switch between opened Google Sheets instances.
+Command `googlesheet.download` allows to download the whole spreadsheet.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`id`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes |  | title of Google Sheets instance that will be activated |
+|`path`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes |  | destination on your computer where the file will be saved |
+|`type`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no | xlsx | type of file extension, could be '.pdf' or '.xlsx' |
 |`result`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥result](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  | name of variable where command's result will be stored |
 |`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
 |`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
@@ -27,16 +28,22 @@ See: [https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs](https://github.com/
 **Example 1:**
 
 ```G1ANT
-googlesheet.open id ‴1gKFnrtZ-kzijNeIpYxln6PZS0z5btyHjoW1vZhCZ58c‴ result ♥sheetHandle1
-googlesheet.gettitle result ♥title
-dialog ♥title
-googlesheet.open id ‴17LyNRs5K0St74MMnBDSX4hrzACjGfddOokNM_3hS4sg‴ result ♥sheetHandle2
-googlesheet.gettitle result ♥title
-dialog ♥title
-googlesheet.switch id ♥sheetHandle1
-googlesheet.gettitle result ♥title
-dialog ♥title
-googlesheet.close id ♥sheetHandle1 timeout 10000
+googlesheet.open id ‴1w5iopoKzgALxC1Qumtzvmc4VkXPq6kgkxieISibBpTs‴ result ♥sheetHandle
+googlesheet.download path ‴C:\tests\file.xlsx‴ type ‴xlsx‴
+googlesheet.close id ♥sheetHandle
 ```
 
-In order to use `googlesheet.switch` command you need to have at least two Google Sheets opened. You switch between them by assigning a `result` argument to them while using `googlesheet.open` command and then using it as value for an `id` argument in `googlesheet.switch`
+To use `googlesheet.download` command, you first need to open the file that you want to download the path from. While opening, you need to give the id of the file. You can find the id here:
+
+`googlesheet.download` will save this file to a chosen path on your computer. `path` argument expects a place where the file should be downloaded, `type` argument expects either 'xlsx' or 'pdf' value for file extension.
+Remember that while choosing a path, you need to create the name of the file with certain extension- ‴C:\tests\file.xlsx‴ - in this case 'file.xlsx'. G1ANT.Robot will create an Excel file.
+
+**Example 2:**
+
+G1ANT.Robot will create a pdf file.
+
+```G1ANT
+googlesheet.open id ‴1w5iopoKzgALxC1Qumtzvmc4VkXPq6kgkxieISibBpTs‴ result ♥sheetHandle
+googlesheet.download path ‴C:\tests\file.pdf‴ type ‴pdf‴
+googlesheet.close id ♥sheetHandle
+```

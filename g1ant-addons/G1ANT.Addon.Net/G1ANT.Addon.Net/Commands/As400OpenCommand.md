@@ -21,7 +21,7 @@ Command `as400.open` allows to open terminal to work with IBM AS/400 robot.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Net.dll.**
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Net
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Net](https://github.com/G1ANT-Robot/G1ANT.Addon.Net)
 
 **Example:**
 
@@ -30,5 +30,4 @@ Here is simple connection with AS/400 robot.
 ```G1ANT
 as400.open host ‴pub400.com‴
 ```
-
 

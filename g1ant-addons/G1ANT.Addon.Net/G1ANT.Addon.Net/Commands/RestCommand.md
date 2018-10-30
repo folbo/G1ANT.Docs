@@ -26,7 +26,7 @@ Command `rest` prepares a request to the desired URL with selected method. Multi
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.Net.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.Net
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.Net](https://github.com/G1ANT-Robot/G1ANT.Addon.Net)
 
 **Example 1:**
 
@@ -35,8 +35,6 @@ rest method ‴get‴ url ‴https://httpbin.org/get‴ headers ‴type1:xml‴ 
 dialog ♥result
 ```
 
- 
-
 **Example 2:**
 
 ```G1ANT
@@ -44,13 +42,10 @@ rest method ‴post‴ url ‴https://httpbin.org/post‴ parameters ‴par1:val
 dialog ♥result
 ```
 
- 
-
 **Example 3:**
 
 ```G1ANT
 rest method ‴get‴ url ‴https://httpbin.org/get‴ result ♥result timeout 5000
-dialog ♥result 
+dialog ♥result
 ```
-
 

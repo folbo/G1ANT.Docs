@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-googlesheet.open  id ‴‴ 
+googlesheet.open  id ‴‴
 ```
 
 **Description:**
 
-Command `googlesheet.open` allows to open a new Google Sheets instance. 
+Command `googlesheet.open` allows to open a new Google Sheets instance.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -23,13 +23,11 @@ Command `googlesheet.open` allows to open a new Google Sheets instance.
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.GoogleDocs.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs](https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs)
 
 **Example 1:**
 
 While opening, you need to give the id of the file. In this example we are using some random id of a Googlesheet that you you don't have access to, it is just to give you an idea where to find it. You can find the id here (just copy and paste the numbers between slashes):
-
- 
 
 ```G1ANT
 googlesheet.open id ‴1w5iopoKzgALxC1Qumtzvmc4VkXPq6kgkxieISibBpTs‴ result ♥sheetHandle

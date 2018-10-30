@@ -3,12 +3,12 @@
 **Syntax:**
 
 ```G1ANT
-googlesheet.getvalue  range ‴‴  
+googlesheet.getvalue  range ‴‴ 
 ```
 
 **Description:**
 
-Command `googlesheet.getvalue` this command allows to get value from opened Google Sheets instance. 
+Command `googlesheet.getvalue` this command allows to get value from opened Google Sheets instance.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
@@ -23,7 +23,7 @@ Command `googlesheet.getvalue` this command allows to get value from opened Goog
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
 
 This command is contained in **G1ANT.Addon.GoogleDocs.dll**.
-See: https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs
+See: [https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs](https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs)
 
 **Example 1:**
 
@@ -35,5 +35,4 @@ googlesheet.getvalue range ‴B16:B19‴ result ♥values
 dialog ♥values
 googlesheet.close id ♥sheetHandle timeout 10000
 ```
-
 
