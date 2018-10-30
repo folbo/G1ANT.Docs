@@ -18,7 +18,7 @@
 
 ## G1ANT Tutorials
 
-* [For Beginners](g1ant-tutorials/g1ant-tutorials/README.md)
+* [Robot For Beginners](g1ant-tutorials/g1ant-tutorials/README.md)
   * [1.  Your First Program](g1ant-tutorials/g1ant-tutorials/010.md)
   * [2.  Texts Containing Spaces](g1ant-tutorials/g1ant-tutorials/020.md)
   * [3.  Using Special Keys](g1ant-tutorials/g1ant-tutorials/030.md)
