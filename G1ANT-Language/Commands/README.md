@@ -1,3 +1,3 @@
-# G1ANT.Addon.Core Commands
+ G1ANT.Addon.Core Commands
 
 basic commands
