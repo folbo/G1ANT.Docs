@@ -16,6 +16,12 @@
 * [Installation](getting-started/installation.md)
 * [Technical Support](getting-started/technical-support.md)
 
+## G1ANT.Robot Window
+
+* [Menu](g1ant.robot-window/menu.md)
+* [Toolbar](g1ant.robot-window/toolbar.md)
+* [Panels](g1ant.robot-window/panels.md)
+
 ## G1ANT Tutorials
 
 * [Robot For Beginners](g1ant-tutorials/g1ant-tutorials/README.md)
