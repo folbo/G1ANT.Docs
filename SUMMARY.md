@@ -79,10 +79,10 @@
        * [ping](G1ANT.Addons/G1ANT.Addon.Net/G1ANT.Addon.Net//Commands/PingCommand.md)
        * [rest](G1ANT.Addons/G1ANT.Addon.Net/G1ANT.Addon.Net//Commands/RestCommand.md)
        * [vnc.connect](G1ANT.Addons/G1ANT.Addon.Net/G1ANT.Addon.Net//Commands/VncConnectCommand.md)
-* [G1ANT.Addon.Ocr.Tesseract](G1ANT.Addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/README.md)
-  * [Commands](G1ANT.Addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Commands/README.md)
-    * [ocrtesseract.find](G1ANT.Addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Commands/OcrTesseractFindCommand.md)
-    * [ocrtesseract.fromscreen](G1ANT.Addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Commands/OcrTesseractFromScreenCommand.md)
+* [G1ANT.Addon.Ocr.Tesseract](g1ant-addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/README.md)
+  * [Commands](g1ant-addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Commands/README.md)
+    * [ocrtesseract.find](g1ant-addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Commands/OcrTesseractFindCommand.md)
+    * [ocrtesseract.fromscreen](g1ant-addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Commands/OcrTesseractFromScreenCommand.md)
 
 ## G1ANT Robot
 
