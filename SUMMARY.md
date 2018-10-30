@@ -14,9 +14,7 @@
 ## Getting Started
 
 * [Installation](getting-started/installation.md)
-* [Tutorials](getting-started/tutorials.md)
 * [Technical Support](getting-started/technical-support.md)
-* [Test page](getting-started/test-page.md)
 
 ## G1ANT Tutorials
 
