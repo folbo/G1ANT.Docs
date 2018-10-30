@@ -51,7 +51,11 @@
   * [delay](g1ant-language/commands/delay.md)
   * [dialog-ask](g1ant-language/commands/dialog-ask.md)
   * [dialog](g1ant-language/commands/dialog.md)
-* [Control Flow Commands](g1ant-language/control-flow-commands.md)
+* [Control Flow Commands](g1ant-language/control-flow-commands/README.md)
+  * [call](g1ant-language/control-flow-commands/call.md)
+  * [jump](g1ant-language/control-flow-commands/jump.md)
+  * [loop](g1ant-language/control-flow-commands/loop.md)
+  * [procedure](g1ant-language/control-flow-commands/procedure.md)
 
 ## G1ANT Addons
 
