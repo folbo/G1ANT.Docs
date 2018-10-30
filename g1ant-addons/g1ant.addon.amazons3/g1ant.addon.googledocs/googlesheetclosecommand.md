@@ -1,19 +1,18 @@
-# delay
+# googlesheet.close
 
 **Syntax:**
 
 ```text
-delay
+googlesheet.close
 ```
 
 **Description:**
 
-Command `delay` allows to suspend robot for a specified time in seconds and milliseconds, before it proceeds to the next action.
+Command `googlesheet.close` allows to close Google Sheets instance.
 
 | Argument | Type | Required | Default Value | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| `seconds` | [integer](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/integer.md) | no | 1 | time in seconds for a robot to wait before it proceeds to the next line of code |
-| `milliseconds` | [integer](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/integer.md) | no | 0 | time in milliseconds added to previously specified time in seconds for a robot to wait before it proceeds to the next line of code |
+| `id` | [integer](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/integer.md) | no |  | id of spreadsheet that we are closing, id can be saved in a variable while using `googlesheet.open` command |
 | `if` | [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
 | `timeout` | [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md) | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
 | `errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no |  | name of the label to jump to if given `timeout` expires |
@@ -21,15 +20,23 @@ Command `delay` allows to suspend robot for a specified time in seconds and mill
 
 For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md) manual page.
 
-This command is contained in **G1ANT.Language.dll.**
+This command is contained in **G1ANT.Addon.GoogleDocs.dll**. See: [https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs](https://github.com/G1ANT-Robot/G1ANT.Addon.GoogleDocs)
 
-**Example:**
-
-This example opens notepad program \("program":{TOPIC-LINK+command-program} command\) and writes "Hello" \("keyboard":{TOPIC-LINK+command-keyboard} command\) after 4 seconds and 500 milliseconds.
+**Example 1:**
 
 ```text
-program name ‴notepad‴
-delay 4 milliseconds 500
-keyboard text ‴Hello!‴
+googlesheet.open id ‴1w5iopoKzgALxC1Qumtzvmc4VkXPq6kgkxieISibBpTs‴ result ♥sheetHandle
+googlesheet.close id ♥sheetHandle timeout 10000
+```
+
+In order to use `googlesheet.close`, open Google Sheets first using `googlesheet.open` command. Assign the path to the `result` argument so that it is stored in a variable. `googlesheet.close` command expects to get the `id` of a Google Sheet that you want to close. The value of `id` has to be stored in a variable.
+
+**Example 2:**
+
+In this example G1ANT.Robot will close instance of Google Sheet recently used in the sript.
+
+```text
+googlesheet.open id ‴1w5iopoKzgALxC1Qumtzvmc4VkXPq6kgkxieISibBpTs‴
+googlesheet.close
 ```
 
