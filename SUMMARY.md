@@ -80,7 +80,7 @@
        * [rest](G1ANT.Addons/G1ANT.Addon.Net/G1ANT.Addon.Net//Commands/RestCommand.md)
        * [vnc.connect](G1ANT.Addons/G1ANT.Addon.Net/G1ANT.Addon.Net//Commands/VncConnectCommand.md)
 * [G1ANT.Addon.Ocr.Tesseract](g1ant-addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/README.md)
-  * [Commands](g1ant-addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Commands/README.md)
+  * [Commands](g1ant-addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/README.md)
     * [ocrtesseract.find](g1ant-addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Commands/OcrTesseractFindCommand.md)
     * [ocrtesseract.fromscreen](g1ant-addons/G1ANT.Addon.Ocr.Tesseract/G1ANT.Addon.Ocr.Tesseract/Commands/OcrTesseractFromScreenCommand.md)
 
