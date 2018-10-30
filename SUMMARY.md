@@ -60,7 +60,7 @@
 ## G1ANT Addons
 
 * [G1ANT.Addon.AmazonS3](G1ANT.Addons/G1ANT.Addon.AmazonS3/README.md)
-       * [Commands](G1ANT.Addons/G1ANT.Addon.AmazonS3/G1ANT.Addon.AmazonS3/Addon.md)
+    * [Commands](G1ANT.Addons/G1ANT.Addon.AmazonS3/G1ANT.Addon.AmazonS3/Addon.md)
  * [G1ANT.Addon.GoogleDocs](G1ANT.Addons/G1ANT.Addon.GoogleDocs/README.md)
     * [Commands](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/README.md)
        * [googlesheet.close](G1ANT.Addons/G1ANT.Addon.GoogleDocs/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetCloseCommand.md)
