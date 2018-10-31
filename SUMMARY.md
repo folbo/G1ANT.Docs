@@ -23,7 +23,7 @@
 * [Toolbar](g1ant.robot-window/toolbar.md)
 * [Panels](g1ant.robot-window/panels.md)
 * [Auxiliary Windows](g1ant.robot-window/auxiliary-windows/README.md)
-  * [Find](g1ant.robot-window/auxiliary-windows/special.md)
+  * [Find and Replace](g1ant.robot-window/auxiliary-windows/special.md)
 
 ## G1ANT Tutorials
 
@@ -67,11 +67,11 @@
 ## G1ANT Addons
 
 * [G1ANT.Addon.AmazonS3](g1ant-addons/g1ant.addon.amazons3/README.md)
-  * [Commands](g1ant-addons/g1ant.addon.amazons3/addon.md)
+  * [Commands](g1ant-addons/g1ant.addon.amazons3/commands.md)
 * [G1ANT.Addon.GoogleDocs](g1ant-addons/g1ant.addon.googledocs/README.md)
   * [Commands](g1ant-addons/g1ant.addon.googledocs/g1ant.addon.googledocs/README.md)
-    * [googlesheet.close](g1ant-addons/g1ant.addon.googledocs/g1ant.addon.googledocs/googlesheetclosecommand.md)
-    * [googlesheet.download](g1ant-addons/g1ant.addon.googledocs/g1ant.addon.googledocs/googlesheetdownloadcommand.md)
+    * [googlesheet.close](g1ant-addons/g1ant.addon.googledocs/g1ant.addon.googledocs/googlesheet.close.md)
+    * [googlesheet.download](g1ant-addons/g1ant.addon.googledocs/g1ant.addon.googledocs/googlesheet.download.md)
     * [googlesheet.findall](g1ant-addons/g1ant.addon.googledocs/g1ant.addon.googledocs/googlesheet.findall.md)
     * [googlesheet.find](g1ant-addons/g1ant.addon.googledocs/g1ant.addon.googledocs/googlesheet.find.md)
     * [googlesheet.gettitle](g1ant-addons/g1ant.addon.googledocs/g1ant.addon.googledocs/googlesheet.gettitle.md)
@@ -81,17 +81,13 @@
     * [googlesheet.setvalue](g1ant-addons/g1ant.addon.googledocs/g1ant.addon.googledocs/googlesheet.setvalue.md)
     * [googlesheet.switch](g1ant-addons/g1ant.addon.googledocs/g1ant.addon.googledocs/googlesheet.switch.md)
 * [G1ANT.Addon.Net](g1ant-addons/g1ant.addon.net/README.md)
-  * [Commands](g1ant-addons/g1ant.addon.net/commands/README.md)
-    * [as400.open](g1ant-addons/g1ant.addon.net/commands/as400.open.md)
-    * [is.accessible](g1ant-addons/g1ant.addon.net/commands/is.accessible.md)
-    * [mail.smtp](g1ant-addons/g1ant.addon.net/commands/mail.smtp.md)
-    * [ping](g1ant-addons/g1ant.addon.net/commands/ping.md)
-    * [rest](g1ant-addons/g1ant.addon.net/commands/rest.md)
-    * [vnc.connect](g1ant-addons/g1ant.addon.net/commands/vnc.connect.md)
+  * [Commands](g1ant-addons/g1ant.addon.ocr.tesseract/commands/README.md)
+    * [ocrtesseract.find](g1ant-addons/g1ant.addon.ocr.tesseract/commands/ocrtesseract.find.md)
+    * [ocrtesseract.fromscreen](g1ant-addons/g1ant.addon.ocr.tesseract/commands/ocrtesseract.fromscreen.md)
 * [G1ANT.Addon.Ocr.Tesseract](g1ant-addons/g1ant.addon.ocr.tesseract/README.md)
   * [Commands](g1ant-addons/g1ant.addon.ocr.tesseract/commands/README.md)
-    * [ocrtesseract.find](g1ant-addons/g1ant.addon.ocr.tesseract/commands/ocrtesseractfindcommand.md)
-    * [ocrtesseract.fromscreen](g1ant-addons/g1ant.addon.ocr.tesseract/commands/ocrtesseractfromscreencommand.md)
+    * [ocrtesseract.find](g1ant-addons/g1ant.addon.ocr.tesseract/commands/ocrtesseract.find.md)
+    * [ocrtesseract.fromscreen](g1ant-addons/g1ant.addon.ocr.tesseract/commands/ocrtesseract.fromscreen.md)
 
 ## GitHub Repo Links
 
