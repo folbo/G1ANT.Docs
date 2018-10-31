@@ -1,4 +1,4 @@
-# G1ANT.Addon.Ocr.Tesseract
+# Commands
 
 | Name | Description |
 | :--- | :--- |
