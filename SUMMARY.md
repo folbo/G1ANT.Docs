@@ -22,8 +22,8 @@
 * [Menu](g1ant.robot-window/menu.md)
 * [Toolbar](g1ant.robot-window/toolbar.md)
 * [Panels](g1ant.robot-window/panels.md)
-* [Auxiliary Windows](g1ant.robot-window/special-windows/README.md)
-  * [Find](g1ant.robot-window/special-windows/special.md)
+* [Auxiliary Windows](g1ant.robot-window/auxiliary-windows/README.md)
+  * [Find](g1ant.robot-window/auxiliary-windows/special.md)
 
 ## G1ANT Tutorials
 
