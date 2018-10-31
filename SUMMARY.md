@@ -18,31 +18,34 @@
 
 ## G1ANT.Robot Window
 
+* [Overview](g1ant.robot-window/overview.md)
 * [Menu](g1ant.robot-window/menu.md)
 * [Toolbar](g1ant.robot-window/toolbar.md)
 * [Panels](g1ant.robot-window/panels.md)
+* [Auxiliary Windows](g1ant.robot-window/special-windows/README.md)
+  * [Find](g1ant.robot-window/special-windows/special.md)
 
 ## G1ANT Tutorials
 
-* [Robot For Beginners](g1ant-tutorials/README.md)
-  * [1.  Your First Program](g1ant-tutorials/010.md)
-  * [2.  Texts Containing Spaces](g1ant-tutorials/020.md)
-  * [3.  Using Special Keys](g1ant-tutorials/030.md)
-  * [4.  Selecting Menu Items in an Application](g1ant-tutorials/040.md)
-  * [5.  Focusing on the Right Window](g1ant-tutorials/050.md)
-  * [6.  Using Variables](g1ant-tutorials/060.md)
-  * [7.  Bad Characters!](g1ant-tutorials/061.md)
-  * [8.  C It In](g1ant-tutorials/062.md)
-  * [9.  Practical Variable](g1ant-tutorials/065.md)
-  * [10.  Looping Things](g1ant-tutorials/070.md)
-  * [11.  Repetitive Tasks as Procedures](g1ant-tutorials/080.md)
-  * [12.  Procedures with Parameters](g1ant-tutorials/090.md)
-  * [13.  Jump Around](g1ant-tutorials/100.md)
-  * [14.  List Your Variables](g1ant-tutorials/110.md)
-  * [15.  Replacing and Adding Elements to a List](g1ant-tutorials/120.md)
-  * [16.  All Mixed Up](g1ant-tutorials/130.md)
-  * [17.  Variables As List Parameters](g1ant-tutorials/140.md)
-  * [18.  A Loop for Each List](g1ant-tutorials/150.md)
+* [Robot For Beginners](g1ant-tutorials/g1ant-tutorials/README.md)
+  * [1.  Your First Program](g1ant-tutorials/g1ant-tutorials/010.md)
+  * [2.  Texts Containing Spaces](g1ant-tutorials/g1ant-tutorials/020.md)
+  * [3.  Using Special Keys](g1ant-tutorials/g1ant-tutorials/030.md)
+  * [4.  Selecting Menu Items in an Application](g1ant-tutorials/g1ant-tutorials/040.md)
+  * [5.  Focusing on the Right Window](g1ant-tutorials/g1ant-tutorials/050.md)
+  * [6.  Using Variables](g1ant-tutorials/g1ant-tutorials/060.md)
+  * [7.  Bad Characters!](g1ant-tutorials/g1ant-tutorials/061.md)
+  * [8.  C It In](g1ant-tutorials/g1ant-tutorials/062.md)
+  * [9.  Practical Variable](g1ant-tutorials/g1ant-tutorials/065.md)
+  * [10.  Looping Things](g1ant-tutorials/g1ant-tutorials/070.md)
+  * [11.  Repetitive Tasks as Procedures](g1ant-tutorials/g1ant-tutorials/080.md)
+  * [12.  Procedures with Parameters](g1ant-tutorials/g1ant-tutorials/090.md)
+  * [13.  Jump Around](g1ant-tutorials/g1ant-tutorials/100.md)
+  * [14.  List Your Variables](g1ant-tutorials/g1ant-tutorials/110.md)
+  * [15.  Replacing and Adding Elements to a List](g1ant-tutorials/g1ant-tutorials/120.md)
+  * [16.  All Mixed Up](g1ant-tutorials/g1ant-tutorials/130.md)
+  * [17.  Variables As List Parameters](g1ant-tutorials/g1ant-tutorials/140.md)
+  * [18.  A Loop for Each List](g1ant-tutorials/g1ant-tutorials/150.md)
 
 ## G1ANT Language
 

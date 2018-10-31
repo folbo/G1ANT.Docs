@@ -18,7 +18,7 @@ Supported client OS:
 ## Hardware Requirements
 
 * Processor: 1GHz
-* RAM: 512 MB
+* RAM: 512MB
 * Disk space \(minimum\):
   * 32-bit 4.5GB
   * 64-bit 4.5GB

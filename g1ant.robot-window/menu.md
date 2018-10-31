@@ -1,8 +1,10 @@
 # Menu
 
-### Tasks
+![](../.gitbook/assets/menu.jpg)
 
-This menu, usually called **File** in other applications, is used to start a new task or open an existing one, and save your work to a file. It also allows to show statistical info about the project.
+### Process
+
+This menu, usually called **File** in other applications, is used to start a new process or open an existing one, and save your work to a file. It also allows to show statistical info about the project.
 
 ### Edit
 
@@ -10,11 +12,15 @@ A commonly known menu to perform actions using Clipboard, undo/redo operations, 
 
 ### View
 
-From this menu, you can choose which panels should be displayed in the program window.DebugProvides tools for running and debugging your robot script.
+From this menu, you can choose which panels should be displayed in the program window.
+
+### Debug
+
+Provides tools for running and debugging your robot script.
 
 ### Insert
 
-Allows to insert special objects \(such as program names, mouse position or captured image\) and symbols used in G1ANT.Robot language into your code.
+Allows to insert special objects \(such as program names, mouse position or captured image\) and symbols used in G1ANT language into your code.
 
 ### Triggers
 

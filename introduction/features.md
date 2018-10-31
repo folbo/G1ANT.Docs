@@ -16,7 +16,7 @@ Not only is G1ANT.Robot able to handle commonly available popular solutions, but
 
 #### An Easy-to-Learn Programming Language
 
-The language used to write automated processes is very intuitive and easy to learn for an average computer user. G1ANT.Robot script language does not require any programming skills.
+The language used to write automated processes is very intuitive and easy to learn for an average computer user. G1ANT script language does not require any programming skills.
 
 #### Automatic Email Creation
 
@@ -29,14 +29,6 @@ G1ANT.Robot has built-in triggers, which can automatically trigger relevant task
 #### Supports Non-Linear Process Scenarios
 
 Often we have to deal with situations, where the next step of a task depends on the result of the previous one. G1ANT.Robot can execute a non-linear process by adding different actions, which are dependent on the outcome of the preceding action.
-
-#### Version Control
-
-Every task is recorded in the Dashboard \(SQL Server\). The history of processes is stored there. Also, loop invariants check the versions of currently running robots, and in case there is an issue, the task is restarted.
-
-#### Keyboard and Mouse Recorder
-
-G1ANT.Robot has built in recording and playback feature for simple processes, which is particularly helpful for someone who’s not very technical: just start recording and perform the processes on a computer using mouse and keyboard as you would normally do.
 
 #### Implement Your Own Features
 
