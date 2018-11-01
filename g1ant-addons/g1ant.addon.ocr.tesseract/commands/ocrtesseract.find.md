@@ -1,2 +1,0 @@
-# ocrtesseract.find
-
