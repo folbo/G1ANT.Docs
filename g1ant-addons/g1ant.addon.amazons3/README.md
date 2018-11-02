@@ -1,4 +1,4 @@
-# G1ANT.Addon.Amazons3
+# G1ANT.Addon.AmazonS3
 
 
 

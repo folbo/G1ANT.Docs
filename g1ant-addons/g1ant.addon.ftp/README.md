@@ -4,7 +4,7 @@ Some FTP commands to use with G1ANT.Robot
 
 Example usage in G1ANT Robot:
 
-```text
+```
 ftp.init host ‴ftp.cs.brown.edu‴ user ‴anonymous‴ password ‴user@host.pl‴ 
 
 ftp.get remotefile ‴pub/pscover-1.0.tar.Z‴ localfile  ‴c:\test.txt‴ 

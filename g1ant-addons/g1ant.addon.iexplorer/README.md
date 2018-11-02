@@ -1,4 +1,3 @@
-# G1ANT.Addon.Iexplorer
+# G1ANT.Addon.IExplorer
 
 Welcome to the G1ANT Party!
-
