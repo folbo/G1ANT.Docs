@@ -12,7 +12,7 @@ Macro special characters `⊂⊃` allow to include C\# code in between them. The
 
 ### **Example** 1
 
-In this example, use C\# snippet to display current date and hour. In order to do this, you also convert this C\# data type to a G1ANT type called `datetime`.
+In this example, you will use a C\# snippet to display current date and hour. In order to do this, you will also convert this C\# data type to a G1ANT type called `datetime`.
 
 ```text
 ♥macro = ⟦datetime⟧⊂DateTime.Now⊃
@@ -29,5 +29,5 @@ dialog ♥macro
 dialog ♥factorial
 ```
 
-In this example you insert a C\# macro code straight into G1ANT.Robot — it's contained within `⊂⊃` characters. Using delegates `(new Func<object,object>((x)=>{ x ...; x...; return x;})).Invoke(♥value)` is a method enabling the insertion of more statements into one macro. Inserting C\# macros is an advanced tool in G1ANT.Robot that expects prior knowledge of C\#.
+Here, you are inserting a C\# macro code straight into G1ANT.Robot — it's contained within `⊂⊃` characters. Using delegates `(new Func<object,object>((x)=>{ x ...; x...; return x;})).Invoke(♥value)` is a method enabling the insertion of more statements into one macro. Inserting C\# macros is an advanced tool in G1ANT.Robot that expects prior knowledge of C\#.
 
