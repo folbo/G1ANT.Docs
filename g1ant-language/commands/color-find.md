@@ -1,12 +1,12 @@
 # color-find
 
-**Syntax:**
+## **Syntax**
 
 ```text
 color.find  color ‴‴  position ‴‴  direction ‴‴
 ```
 
-**Description:**
+## **Description**
 
 Command `color.find` allows to capture first pixel in a specified directory starting from predefined position that matches specified color.
 
@@ -26,7 +26,7 @@ For more information about `if`, `timeout`, `errorjump` and `errormessage` argum
 
 This command is contained in **G1ANT.Language.dll.**
 
-**Example:**
+### **Example**
 
 This example shows how to find the first pixel which has required color \(‴FFFFFF‴ - white in this case\), starting from position X=50, Y=500 and going down.
 

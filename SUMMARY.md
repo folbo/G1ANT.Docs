@@ -70,6 +70,8 @@
   * [jump](g1ant-language/control-flow-commands/jump.md)
   * [loop](g1ant-language/control-flow-commands/loop.md)
   * [procedure](g1ant-language/control-flow-commands/procedure.md)
+* [Special Characters](g1ant-language/special-characters/README.md)
+  * [Comment](g1ant-language/special-characters/comment.md)
 
 ## G1ANT Addons
 
