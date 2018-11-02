@@ -10,7 +10,7 @@
 
 You can define array variables \(lists\) in G1ANT.Language. An array is used to store multiple values, which can then be passed to a command. It is not possible to use multiple variable types in the same list.
 
-`❚` — an array separator — is available from `Insert/Array Separator` menu or with **Ctrl+\** keyboard shortcut.
+An array separator `❚` is available from `Insert/Array Separator` menu or with **Ctrl+\** keyboard shortcut.
 
 ### **Example 1**
 
