@@ -58,60 +58,60 @@ Here are the shortcuts involving Windows logo key, which can be used in Windows 
 
 | Keys | Function |
 | :--- | :--- |
-|Win+F1|Open Windows Help and sUpport|
-|Win|Display or hide the Start screen|
-|Win+B|Set focus in the notification area|
-|Win+C|Open Charms|
-|Win+D|Display and hide the desktop|
-|Win+E|Open File Explorer|
-|Win+F|Open the Search charm and search for files|
-|Win+H|Open the Share charm|
-|Win+I|Open the Settings charm|
-|Win+K|Open the Devices charm|
-|Win+L|Lock your PC or switch people|
-|Win+M|Minimize all windows|
-|Win+O|Lock device orientation|
-|Win+P|Choose a presentation display mode|
-|Win+Q|Open the Search charm to search everywhere or within the open app (if the app sUpports app search)|
-|Win+R|Open the Run dialog box|
-|Win+S|Open the Search charm to search Windows and the web|
-|Win+T|Cycle through apps on the taskbar|
-|Win+U|Open Ease of Access CEnter|
-|Win+V|Cycle through notifications|
-|Win+Shift+V|Cycle through notifications in reverse order|
-|Win+W|Open the Search charm and search for settings|
-|Win+X|Open the Quick Link menu|
-|Win+Z|Show the commands available in the app|
-|Win+,|Temporarily peek at the desktop|
-|Win+PAUSE|Display the System Properties dialog box|
-|Win+Ctrl+F|Search for PCs (if you’re on a network)|
-|Win+Shift+M|Restore minimized windows on the desktop|
-|Win+(number 1-9)|Open the desktop and start the app pinned to the taskbar in the position indicated by the number. If the app is already running, it switches to that app.|
-|Win+Shift+(number 1-9)|Open the desktop and start a new instance of the app pinned to the taskbar in the position indicated by the number|
-|Win+Ctrl+(number 1-9)|Open the desktop and switch to the last active window of the app pinned to the taskbar in the position indicated by the number|
-|Win+Alt+(number 1-9)|Open the desktop and open the Jump List for the app pinned to the taskbar in the position indicated by the number|
-|Win+Ctrl+Shift+(number 1-9)|Open the desktop and open a new instance of the app located at the given position on the taskbar as an administrator|
-|Win+Tab|Cycle through recently used apps (except desktop apps)|
-|Win+Ctrl+Tab|Cycle through recently used apps (except desktop apps)|
-|Win+Shift+Tab|Cycle through recently used apps (except desktop apps) in reverse order|
-|Win+Ctrl+B|Switch to the app that displayed a message in the notification area|
-|Win+Up Arrow|Maximize the window|
-|Win+Down Arrow|Remove current app from screen or minimize the desktop window|
-|Win+Left Arrow|Maximize the app or desktop window to the Left side of the screen|
-|Win+Right Arrow|Maximize the app or desktop window to the Right side of the screen|
-|Win+Home|Minimize all but the active desktop window (restores all windows on second stroke)|
-|Win+Shift+Up Arrow|Stretch the desktop window to the top and bottom of the screen|
-|Win+Shift+Down Arrow|Restore/minimize active desktop windows vertically, maintaining width|
-|Win+Shift+Left Arrow or Right Arrow|Move an app or window in the desktop from one monitor to another|
-|Win+Spacebar|Switch input language and keyboard layout|
-|Win+Ctrl+Spacebar|Change to a previously selected input|
-|Win+Enter|Open Narrator|
-|Win+Shift+.|Cycle through open apps|
-|Win+.|Cycle through open apps|
-|Win+/|Initiate IME reconversion|
-|Win+Alt+Enter|Open WindowsMedia CEnter|
-|Win++/-|Zoom in or out using Magnifier|
-|Win+ESC|Exit Magnifier|
+| **Win+F1** | Open Windows Help and support |
+| **Win** | Display or hide the Start screen |
+| **Win+B** | Set focus in the notification area |
+| **Win+C** | Open Charms |
+| **Win+D** | Display and hide the desktop |
+| **Win+E** | Open File Explorer |
+| **Win+F** | Open the Search charm and search for files |
+| **Win+H** | Open the Share charm |
+| **Win+I** | Open the Settings charm |
+| **Win+K** | Open the Devices charm |
+| **Win+L** | Lock your PC or switch people |
+| **Win+M** | Minimize all windows |
+| **Win+O** | Lock device orientation |
+| **Win+P** | Choose a presentation display mode |
+| **Win+Q** | Open the Search charm to search everywhere or within the open app \(if the app supports app search\) |
+| **Win+R** | Open the Run dialog box |
+| **Win+S** | Open the Search charm to search Windows and the web |
+| **Win+T** | Cycle through apps on the taskbar |
+| **Win+U** | Open Ease of Access Center |
+| **Win+V** | Cycle through notifications |
+| **Win+Shift+V** | Cycle through notifications in reverse order |
+| **Win+W** | Open the Search charm and search for settings |
+| **Win+X** | Open the Quick Link menu |
+| **Win+Z** | Show the commands available in the app |
+| **Win+,** \(comma\) | Temporarily peek at the desktop |
+| **Win+Pause** | Display the System Properties dialog box |
+| **Win+Ctrl+F** | Search for PCs \(if you’re on a network\) |
+| **Win+Shift+M** | Restore minimized windows on the desktop |
+| **Win+\(**number **1-9\)** | Open the desktop and start the app pinned to the taskbar in the position indicated by the number. If the app is already running, it switches to that app. |
+| **Win+Shift+\(**number **1-9\)** | Open the desktop and start a new instance of the app pinned to the taskbar in the position indicated by the number |
+| **Win+Ctrl+\(**number **1-9\)** | Open the desktop and switch to the last active window of the app pinned to the taskbar in the position indicated by the number |
+| **Win+Alt+\(**number **1-9\)** | Open the desktop and open the Jump List for the app pinned to the taskbar in the position indicated by the number |
+| **Win+Ctrl+Shift+\(**number **1-9\)** | Open the desktop and open a new instance of the app located at the given position on the taskbar as an administrator |
+| **Win+Tab** | Cycle through recently used apps \(except desktop apps\) |
+| **Win+Ctrl+Tab** | Cycle through recently used apps \(except desktop apps\) |
+| **Win+Shift+Tab** | Cycle through recently used apps \(except desktop apps\) in reverse order |
+| **Win+Ctrl+B** | Switch to the app that displayed a message in the notification area |
+| **Win+Up Arrow** | Maximize the window |
+| **Win+Down Arrow** | Remove current app from screen or minimize the desktop window |
+| **Win+Left Arrow** | Maximize the app or desktop window to the Left side of the screen |
+| **Win+Right Arrow** | Maximize the app or desktop window to the Right side of the screen |
+| **Win+Home** | Minimize all but the active desktop window \(restores all windows on second stroke\) |
+| **Win+Shift+Up Arrow** | Stretch the desktop window to the top and bottom of the screen |
+| **Win+Shift+Down Arrow** | Restore/minimize active desktop windows vertically, maintaining width |
+| **Win+Shift+Left Arrow** or **Right Arrow** | Move an app or window in the desktop from one monitor to another |
+| **Win+Spacebar** | Switch input language and keyboard layout |
+| **Win+Ctrl+Spacebar** | Change to a previously selected input |
+| **Win+Enter** | Open Narrator |
+| **Win+Shift+.** \(period\) | Cycle through open apps |
+| **Win+.** \(period\) | Cycle through open apps |
+| **Win+/** | Initiate IME reconversion |
+| **Win+Alt+Enter** | Open Windows Media Ce,nter |
+| **Win+ +/-** \(plus or minus sign\) | Zoom in or out using Magnifier |
+| **Win+Esc** | Exit Magnifier |
 {% endtab %}
 {% endtabs %}
 
