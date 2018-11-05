@@ -2,7 +2,7 @@
 
 
 
-|  |  |
+|Keys|Function|
 | :--- | :--- |
 |F1|Display Help|
 |F2|Rename the selected item|
@@ -49,6 +49,3 @@
 |RIGHT ARROW|Open the next menu to the right, or open a submenu|
 |LEFT ARROW|Open the next menu to the left, or close a submenu|
 |ESC|Stop or leave the current task|
-
-|  |  |
-
