@@ -298,60 +298,10 @@ _**Table 5.** Lazy quantifiers_
 |`(?<x>-<y>exp) or (?-<y>exp)`|Balancing group. It allows named capture groups to be manipulated on a push down/pop up stack and can be used, for example, to search for matching parentheses, which is otherwise not possible with regular expressions.|
 |`(?im-nsx:exp)`|Change the regular expression options for the subexpression exp|
 |`(?im-nsx)`|Change the regular expression options for the rest of the enclosing group|
-|`(?(exp)yes|no)`|The subexpression exp is treated as a zero-width positive lookahead. If it matches at this point, the subexpression ‘yes’ becomes the next match, otherwise no is used.|
+|`(?(exp)yes\|no)`|The subexpression exp is treated as a zero-width positive lookahead. If it matches at this point, the subexpression ‘yes’ becomes the next match, otherwise no is used.|
 |`(?(exp)yes)`|Same as above but with an empty no expression|
-|`(?(name)yes|no)`|This is the same syntax as the preceding case. If name is a valid group name, the yes expression is matched if the named group had a successful match, otherwise the no expression is matched.|
+|`(?(name)yes\|no)`|This is the same syntax as the preceding case. If name is a valid group name, the yes expression is matched if the named group had a successful match, otherwise the no expression is matched.|
 |`(?(name)yes)`|Same as above but with an empty no expression|
 
-`\a` Bell character
-
-`\b` Normally a word boundary, but within a character class it means backspace
-
-`\t` Tab
-
-`\r` Carriage return
-
-`\v` Vertical tab
-
-`\f` Form feed
-
-`\n` New line
-
-`\e` Escape
-
-`\nnn` Character whose ASCII octal code is nnn
-
-`\xnn` Character whose hexadecimal code is nn
-
-`\unnnn` Character whose Unicode is nnnn
-
-`\cN` Control N character, for example carriage return \(Ctrl-M\) is \cM
-
-`\A` Beginning of a string \(like ^ but does not depend on the multiline option\)
-
-`\Z` End of string or before \n at end of string \(ignores multiline\)
-
-`\z` End of string \(ignores multiline\)
-
-`\G` Beginning of the current search
-
-`\pname` Any character from the Unicode class named name, for example \pIsGreek
-
-`(?>exp)` Greedy subexpression, also known as a non-backtracking subexpression. This is matched only once and then does not participate in backtracking.
-
-`(?<x>-<y>exp) or (?-<y>exp)` Balancing group. It allows named capture groups to be manipulated on a push down/pop up stack and can be used, for example, to search for matching parentheses, which is otherwise not possible with regular expressions.
-
-`(?im-nsx:exp)` Change the regular expression options for the subexpression exp
-
-`(?im-nsx)` Change the regular expression options for the rest of the enclosing group
-
-`(?(exp)yes|no)` The subexpression exp is treated as a zero-width positive lookahead. If it matches at this point, the subexpression ‘yes’ becomes the next match, otherwise no is used.
-
-`(?(exp)yes)` Same as above but with an empty no expression
-
-`(?(name)yes|no)` This is the same syntax as the preceding case. If name is a valid group name, the yes expression is matched if the named group had a successful match, otherwise the no expression is matched.
-
-`(?(name)yes)` Same as above but with an empty no expression
-
-Table 6. Everything we left out. The left-hand column shows the number of an example in the project file that illustrates this construct.
+_**Table 6.** Everything we left out. The left-hand column shows the number of an example in the project file that illustrates this construct._
 
