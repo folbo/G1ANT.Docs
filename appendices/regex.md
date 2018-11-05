@@ -14,13 +14,13 @@ _Find elvis_
 
 This is a perfectly valid regular expression that searches for an exact sequence of characters. In .NET, options can be set to ignore the case of characters, so this expression will match “Elvis”, “ELVIS”, or “eLvIs”. Note it will also match the last five letters of the word “pelvis”. We can improve the expression as follows:
 
-2. `\belvis\b`
+1. `\belvis\b`
 
 _Find elvis as a whole word_
 
 Now things are getting a little more interesting. The `\b` is a special code that means, “match the position at the beginning or end of any word”. This expression will only match complete words spelled “elvis” with any combination of lowercase or capital letters.
 
-3. `\belvis\b.*\balive\b`
+1. `\belvis\b.*\balive\b`
 
 _Find text with “elvis” followed by “alive”_
 
@@ -34,13 +34,13 @@ Let’s try another example.
 
 A Web page collects a customer’s seven-digit phone number and we want to verify that the phone number is in the correct format, say “xxx-xxxx”, where each “x” is a digit. The following expression will search through text looking for such string:
 
-4. `\b\d\d\d-\d\d\d\d`
+1. `\b\d\d\d-\d\d\d\d`
 
 _Find seven-digit phone number_
 
 Each `\d` means “match any single digit”. The `-` has no special meaning and is interpreted literally, matching a hyphen. To avoid repetition, use a shorthand notation that means the same thing:
 
-5. `\b\d{3}-\d4`
+1. `\b\d{3}-\d4`
 
 _Find a seven-digit phone number in a better way_
 
@@ -54,19 +54,19 @@ Let’s explore some of the basics of regular expressions in .NET.
 
 You should get to know a few characters with special meaning. You have already learned about `\b`, `.`, `*`, and `\d`. To match any whitespace characters, like spaces, tabs, and newlines, use `\s` . Similarly, `\w` matches any alphanumeric character.
 
-6. `\ba\w*\b`
+1. `\ba\w*\b`
 
 _Find words that start with the letter “a”_
 
 This works by searching for the beginning of a word \(\b\), then the letter “a”, then any number of repetitions of alphanumeric characters \(\w\*\), then the end of a word \(\b\).
 
-7. `\d+`
+1. `\d+`
 
 _Find repeated strings of digits_
 
 Here, the “+” is similar to “\*”, except it requires at least one repetition.
 
-8. `\b\w6\b`
+1. `\b\w6\b`
 
 _Find six letter words_
 
@@ -82,13 +82,13 @@ Try these in Expresso and start experimenting by inventing your own expressions.
 | `^` | Match the beginning of the string |
 | `$` | Match the end of the string |
 
- _Table 1. Commonly used special characters for regular expressions_
+_Table 1. Commonly used special characters for regular expressions_
 
 **At the beginning**
 
 The special characters `^` and `$` are used when looking for something that must start at the beginning of the text and/or end at the end of the text. This is especially useful for validating input in which the entire text must match a pattern. For example, to validate a seven-digit phone number, use:
 
-9. `^\d{3}-\d4$`
+1. `^\d{3}-\d4$`
 
 _Validate a seven-digit phone number_
 
@@ -96,7 +96,7 @@ This is the same as example \(5\) but forced to fill the whole text string, with
 
 #### **Escaped characters**
 
-A problem occurs if user wants to match one of the special characters, like ““ or “$”. Use the backslash to remove the special meaning. Thus, “\”, “\.”, and “\\”, match the literal characters “^”, “.”, and “\”, respectively.
+A problem occurs if user wants to match one of the special characters, like ““ or “$”. Use the backslash to remove the special meaning. Thus, “\”, “.”, and “\”, match the literal characters “^”, “.”, and “\”, respectively.
 
 #### **Repetitions**
 
@@ -116,13 +116,10 @@ A problem occurs if user wants to match one of the special characters, like “�
 
 Table 2. Commonly used quantifiers
 
-10. `\b\w{5,6}\b` Find all five and six letter words
-
-11. `\b\d{3}\s\d{3}-\d4` Find ten digit phone numbers
-
-12. `\d{3}-\d2-\d4` Social security number
-
-13. `^\w*` The first word in the line or in the text
+1. `\b\w{5,6}\b` Find all five and six letter words
+2. `\b\d{3}\s\d{3}-\d4` Find ten digit phone numbers
+3. `\d{3}-\d2-\d4` Social security number
+4. `^\w*` The first word in the line or in the text
 
 Try the last example with and without setting the “Multiline” option, which changes the meaning of “^”.
 
@@ -132,7 +129,7 @@ Finding more complex set of characters can be done by listing the desired charac
 
 Complex expression that searches for telephone numbers:
 
-14. `\(?\d{3}[) ]\s?\d{3}[- ]\d4` A ten digit phone number
+1. `\(?\d{3}[) ]\s?\d{3}[- ]\d4` A ten digit phone number
 
 This expression will find phone numbers in several formats, like “\(800\) 325-3535” or “650 555 1212”. The “\\(?” searches for zero or one left parentheses, “\[\) \]” searches for a right parenthesis or a space. The “\s?” searches for zero or one whitespace characters. Note, it will also find cases like “650\) 555-1212” in which the parenthesis is not balanced. Below are some alternatives to eliminate this problem.
 
@@ -154,31 +151,31 @@ The following table shows how to search for a character that is NOT a member of 
 
 Table 3. How to specify what you don’t want
 
-15. `\S+` All strings that do not contain whitespace characters
+1. `\S+` All strings that do not contain whitespace characters
 
 **Alternatives**
 
 To switch between several alternatives, allowing a match if either one is satisfied, use the pipe “\|” symbol to separate the alternatives. For example, Zip Codes come in two flavors, one with 5 digits, the other with 9 digits and a hyphen. We can find either with this expression:
 
-16. `\b\d5-\d4\b|\b\d5\b` Five and nine digit Zip Codes
+1. `\b\d5-\d4\b|\b\d5\b` Five and nine digit Zip Codes
 
 When using alternatives, the order is important since the matching algorithm will attempt to match the leftmost alternative first. If the order is reversed in this example, the expression will only find the 5 digit Zip Codes and fail to find the 9 digit ones. Alternatives can be used to improve the expression for ten digit phone numbers, allowing the area code to appear either delimited by whitespace or parenthesis:
 
-17. `(\(\d{3}\)|\d{3})\s?\d{3}[- ]\d4` Ten digit phone numbers, a better way
+1. `(\(\d{3}\)|\d{3})\s?\d{3}[- ]\d4` Ten digit phone numbers, a better way
 
 #### Grouping
 
 Parentheses can be used to delimit a subexpression to allow repetition or other special treatment. For example:
 
-18. `(\d{1,3}\.){3}\d{1,3}` A simple IP address finder
+1. `(\d{1,3}\.){3}\d{1,3}` A simple IP address finder
 
-The first part of the expression searches for a one to three digit number followed by a literal period “\.”. This is enclosed in parentheses and repeated three times using the “{3}” quantifier, followed by the same expression without the trailing period.
+The first part of the expression searches for a one to three digit number followed by a literal period “.”. This is enclosed in parentheses and repeated three times using the “{3}” quantifier, followed by the same expression without the trailing period.
 
 Note, this example allows IP addresses with arbitrary one, two, or three digit numbers separated by periods even though a valid IP address cannot have numbers larger than 255. It would be useful to arithmetically compare a captured number N to enforce N&lt;256, but this is not possible with regular expressions alone.
 
 The below example tests various alternatives based on the starting digits to guarantee the limited range of numbers by pattern matching. This shows that an expression can become cumbersome even when looking for a pattern that is simple to describe.
 
-19. `((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)` IP finder
+1. `((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)` IP finder
 
 Expresso has a feature that diagrams expressions in a Tree structure, explaining what each piece means. When debugging an expression, this can help zoom in on the part that is causing trouble. Try this by selecting example \(17\) and then using the Analyze button. Select nodes in the tree and expand them to explore the structure of this regular expression as shown in the figure. After highlighting a node, the Partial Match or Exclude Match buttons can also be used to run a match using just the highlighted portion of the regular expression or using the regular expression with the highlighted portion excluded.
 
@@ -186,13 +183,13 @@ When subexpressions are grouped with parentheses, the text that matches the sube
 
 A “backreference” is used to search for a recurrence of previously matched text that has been captured by a group. For example, “\1” means, “match the text that was captured by group 1”. Here is an example:
 
-20. `\b(\w+)\b\s*\1\b` Find repeated words
+1. `\b(\w+)\b\s*\1\b` Find repeated words
 
 This works by capturing a string of at least one alphanumeric character within group 1 “\(\w+\)”, but only if it begins and ends a word. It then looks for any amount of whitespace “\s\*” followed by a repetition of the captured text “\1” ending at the end of a word.
 
 It is possible to override the automatic numbering of groups by specifying an explicit name or number. In the above example, instead of writing the group as “\(\w+\)”, it is possible to write it as “\(?\w+\)” to name this capture group “Word”. A backreference to this group is written “\k“. For example:
 
-21. `\b(?<Word>\w+)\b\s*\k<Word>\b` Capture repeated word in a named group
+1. `\b(?<Word>\w+)\b\s*\k<Word>\b` Capture repeated word in a named group
 
 Test this in Expresso and expand the match results to see the contents of the named group.
 
@@ -230,39 +227,38 @@ The next four are so-called lookahead or lookbehind assertions. They look for th
 
 “\(?=exp\)” is the “zero-width positive lookahead assertion”. It matches a position in the text that precedes a given suffix, but doesn’t include the suffix in the match:
 
-22. `\b\w+(?=ing\b)` The beginning of words ending with “ing”
+1. `\b\w+(?=ing\b)` The beginning of words ending with “ing”
 
 “\(?&lt;=exp\)” is the “zero-width positive lookbehind assertion”. It matches the position following a prefix, but does not include the prefix in the match:
 
-23. `(?<=\bre)\w+\b` The end of words starting with “re”
+1. `(?<=\bre)\w+\b` The end of words starting with “re”
 
 An example that could be used repeatedly to insert commas into numbers in groups of three digits:
 
-24. `(?<=\d)\d{3}\b` Three digits at the end of a word, preceded by a digit
+1. `(?<=\d)\d{3}\b` Three digits at the end of a word, preceded by a digit
 
 An example that looks for both a prefix and a suffix:
 
-25. `(?<=\s)\w+(?=\s)` Alphanumeric strings bounded by whitespace
+1. `(?<=\s)\w+(?=\s)` Alphanumeric strings bounded by whitespace
 
 **Negative Lookaround**
 
 How to verify that a character is not present, without matching anything? For example, searching for words in which the letter “q” is not followed by the letter “u”:
 
-26. `\b\w*q[^u]\w*\b` Words with “q” followed by NOT “u”
+1. `\b\w*q[^u]\w*\b` Words with “q” followed by NOT “u”
 
 Note, it fails when “q” is the last letter of a word, as in “Iraq”. This is because “\[^q\]” always matches a character. If “q” is the last character of the word, it will match the white space character that follows, so in the example the expression ends up matching two whole words. Negative lookaround solves this problem because it matches a position and does not consume any text. As with positive lookaround, it can also be used to match the position of an arbitrarily complex subexpression, rather than just a single character:
 
-27. `\b\w*q(?!u)\w*\b` Search for words with “q” not followed by “u”
+1. `\b\w*q(?!u)\w*\b` Search for words with “q” not followed by “u”
 
 “Zero-width negative lookahead assertion”, “\(?!exp\)”, was used, which succeeds only if the suffix “exp” is not present.
 
-28. `\d{3}(?!\d)` Three digits not followed by another digit
+1. `\d{3}(?!\d)` Three digits not followed by another digit
 
 “\(?&lt;!exp\)”, the “zero-width negative lookbehind assertion” can be used, to search for a position in the text at which the prefix “exp” is not present:
 
-29. `(?<![a-z ])\w7` Strings of 7 alphanumerics not preceded by a letter or space
-
-30. `(?<=<(\w+)>).*(?=<\/\1>)` Text between HTML tags
+1. `(?<![a-z ])\w7` Strings of 7 alphanumerics not preceded by a letter or space
+2. `(?<=<(\w+)>).*(?=<\/\1>)` Text between HTML tags
 
 This searches for an HTML tag using lookbehind and the corresponding closing tag using lookahead, thus capturing the intervening text but excluding both tags.
 
@@ -270,7 +266,7 @@ This searches for an HTML tag using lookbehind and the corresponding closing tag
 
 Another use of parentheses is to include comments using the “\(?\#comment\)” syntax. A better method is to set the “Ignore Pattern Whitespace” option, which allows whitespace to be inserted in the expression and then ignored when the expression is used. With this option set, anything following a number sign “\#” at the end of each line of text is ignored. For example, we can format the preceding example like this:
 
-31. Text between HTML tags, with comments
+1. Text between HTML tags, with comments
 
 ```text
 (?<=    # Search for a prefix, but exclude it
@@ -290,11 +286,11 @@ Another use of parentheses is to include comments using the “\(?\#comment\)”
 
 When a regular expression has a quantifier that can accept a range of repetitions \(like “.\*”\), the normal behavior is to match as many characters as possible. Consider the following regular expression:
 
-32. `a.*b` The longest string starting with a and ending with b
+1. `a.*b` The longest string starting with a and ending with b
 
 If this is used to search the string “aabab”, it will match the entire string “aabab”. This is called “greedy” matching. Sometimes, “lazy” matching is preferred in which a match using the minimum number of repetitions is found. All the quantifiers in Table 2 can be turned into “lazy” quantifiers by adding a question mark “?”. Thus “\*?” means “match any number of repetitions, but use the smallest number of repetitions that still leads to a successful match”. Lazy version of example \(32\):
 
-33. `a.*?b` The shortest string starting with a and ending with b
+1. `a.*?b` The shortest string starting with a and ending with b
 
 If applied this to the same string “aabab” it will first match “aab” and then “ab”.
 

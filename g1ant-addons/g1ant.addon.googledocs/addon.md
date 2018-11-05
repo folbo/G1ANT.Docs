@@ -1,4 +1,4 @@
-# Commands
+# Addon
 
 | Name | Description |
 | :--- | :--- |
