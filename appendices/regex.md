@@ -275,6 +275,7 @@ _**Table 5.** Lazy quantifiers_
 
 #### **Other expressions**
 
+|Expression|Function|
 | :--- | :--- |
 |`\a`|Bell character|
 |`\b`|Normally a word boundary, but within a character class it means backspace|
