@@ -248,4 +248,6 @@
 
 * [Windows Keyboard Shortcuts](appendices/windows-keyboard-shortcuts.md)
 * [Regex](appendices/regex.md)
+* [Including C\# Macros](appendices/including-c-macros.md)
+* [Additional Information](appendices/additional-information.md)
 
