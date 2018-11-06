@@ -1,4 +1,4 @@
-# System and Hardware Requirements
+# Requirements
 
 ## Software Requirements
 

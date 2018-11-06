@@ -6,7 +6,7 @@
 
 * [Overview](introduction/overview.md)
 * [Features](introduction/features.md)
-* [System and Hardware Requirements](introduction/system-and-hardware-requirements.md)
+* [Requirements](introduction/requirements.md)
 * [Hosting](introduction/hosting.md)
 * [Security](introduction/security.md)
 * [Dictionary](introduction/dictionary.md)
@@ -14,7 +14,7 @@
 ## Getting Started
 
 * [Installation](getting-started/installation.md)
-* [Technical Support](getting-started/technical-support.md)
+* [Support](getting-started/support.md)
 
 ## G1ANT.Robot Window
 
@@ -34,25 +34,25 @@
 
 ## G1ANT Tutorials
 
-* [Robot For Beginners](g1ant-tutorials/robot-for-beginners/README.md)
-  * [1.  Your First Program](g1ant-tutorials/robot-for-beginners/1.-your-first-program.md)
-  * [2.  Texts Containing Spaces](g1ant-tutorials/robot-for-beginners/2.-texts-containing-spaces.md)
-  * [3.  Using Special Keys](g1ant-tutorials/robot-for-beginners/3.-using-special-keys.md)
-  * [4.  Selecting Menu Items in an Application](g1ant-tutorials/robot-for-beginners/4.-selecting-menu-items-in-an-application.md)
-  * [5.  Focusing on the Right Window](g1ant-tutorials/robot-for-beginners/5.-focusing-on-the-right-window.md)
-  * [6.  Using Variables](g1ant-tutorials/robot-for-beginners/6.-using-variables.md)
-  * [7.  Bad Characters!](g1ant-tutorials/robot-for-beginners/7.-bad-characters.md)
-  * [8.  C It In](g1ant-tutorials/robot-for-beginners/8.-c-it-in.md)
-  * [9.  Practical Variable](g1ant-tutorials/robot-for-beginners/9.-practical-variable.md)
-  * [10.  Looping Things](g1ant-tutorials/robot-for-beginners/10.-looping-things.md)
-  * [11.  Repetitive Tasks as Procedures](g1ant-tutorials/robot-for-beginners/11.-repetitive-tasks-as-procedures.md)
-  * [12.  Procedures with Parameters](g1ant-tutorials/robot-for-beginners/12.-procedures-with-parameters.md)
-  * [13.  Jump Around](g1ant-tutorials/robot-for-beginners/13.-jump-around.md)
-  * [14.  List Your Variables](g1ant-tutorials/robot-for-beginners/14.-list-your-variables.md)
-  * [15.  Replacing and Adding Elements to a List](g1ant-tutorials/robot-for-beginners/15.-replacing-and-adding-elements-to-a-list.md)
-  * [16.  All Mixed Up](g1ant-tutorials/robot-for-beginners/16.-all-mixed-up.md)
-  * [17.  Variables As List Parameters](g1ant-tutorials/robot-for-beginners/17.-variables-as-list-parameters.md)
-  * [18.  A Loop for Each List](g1ant-tutorials/robot-for-beginners/18.-a-loop-for-each-list.md)
+* [For Beginners](g1ant-tutorials/for-beginners/README.md)
+  * [1.  Your First Program](g1ant-tutorials/for-beginners/1.-your-first-program.md)
+  * [2.  Texts Containing Spaces](g1ant-tutorials/for-beginners/2.-texts-containing-spaces.md)
+  * [3.  Using Special Keys](g1ant-tutorials/for-beginners/3.-using-special-keys.md)
+  * [4.  Selecting Menu Items in an Application](g1ant-tutorials/for-beginners/4.-selecting-menu-items-in-an-application.md)
+  * [5.  Focusing on the Right Window](g1ant-tutorials/for-beginners/5.-focusing-on-the-right-window.md)
+  * [6.  Using Variables](g1ant-tutorials/for-beginners/6.-using-variables.md)
+  * [7.  Bad Characters!](g1ant-tutorials/for-beginners/7.-bad-characters.md)
+  * [8.  C It In](g1ant-tutorials/for-beginners/8.-c-it-in.md)
+  * [9.  Practical Variable](g1ant-tutorials/for-beginners/9.-practical-variable.md)
+  * [10.  Looping Things](g1ant-tutorials/for-beginners/10.-looping-things.md)
+  * [11.  Repetitive Tasks as Procedures](g1ant-tutorials/for-beginners/11.-repetitive-tasks-as-procedures.md)
+  * [12.  Procedures with Parameters](g1ant-tutorials/for-beginners/12.-procedures-with-parameters.md)
+  * [13.  Jump Around](g1ant-tutorials/for-beginners/13.-jump-around.md)
+  * [14.  List Your Variables](g1ant-tutorials/for-beginners/14.-list-your-variables.md)
+  * [15.  Replacing and Adding Elements to a List](g1ant-tutorials/for-beginners/15.-replacing-and-adding-elements-to-a-list.md)
+  * [16.  All Mixed Up](g1ant-tutorials/for-beginners/16.-all-mixed-up.md)
+  * [17.  Variables As List Parameters](g1ant-tutorials/for-beginners/17.-variables-as-list-parameters.md)
+  * [18.  A Loop for Each List](g1ant-tutorials/for-beginners/18.-a-loop-for-each-list.md)
 
 ## G1ANT Language
 
@@ -234,6 +234,13 @@
     * [xlsx.setvalue](g1ant-addons/g1ant.addon.xlsx/commands/xlsx.setvalue.md)
     * [xlsx.switch](g1ant-addons/g1ant.addon.xlsx/commands/xlsx.switch.md)
 
+## Appendices
+
+* [Windows Keyboard Shortcuts](appendices/windows-keyboard-shortcuts.md)
+* [Regex](appendices/regex.md)
+* [Including C\# Macros](appendices/including-c-macros.md)
+* [Additional Information](appendices/additional-information.md)
+
 ## GitHub Repo Links
 
 * [Addons](github-repo-links/addons.md)
@@ -243,11 +250,4 @@
 * [Triggers](github-repo-links/triggers.md)
 * [Variables](github-repo-links/variables.md)
 * [Wizards](github-repo-links/wizards.md)
-
-## Appendices
-
-* [Windows Keyboard Shortcuts](appendices/windows-keyboard-shortcuts.md)
-* [Regex](appendices/regex.md)
-* [Including C\# Macros](appendices/including-c-macros.md)
-* [Additional Information](appendices/additional-information.md)
 
