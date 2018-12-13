@@ -23,5 +23,5 @@ keyboard ♥text
 keyboard ⋘shift+up⋙
 ```
 
-![](https://manula.r.sizr.io/large/user/7252/img/keycode.png)
+![img](../../-assets/text.png)
 
