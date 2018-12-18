@@ -3,7 +3,7 @@
 
 | Name | Description |
 | ---- | ----------- |
-| [selenium.activatetab](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium/blob/master/G1ANT.Addon.Selenium/Commands/SeleniumActivateTabCommand.md) | Activates browser's tab. |
+| [selenium.activatetab](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium/blob/master/G1ANT.Addon.Selenium/Commands/SeleniumActivateTabCommand.md) | Activates browser&apos;s tab. |
 | [selenium.alertaction](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium/blob/master/G1ANT.Addon.Selenium/Commands/SeleniumAlertActionCommand.md) | Waits for the alert and perform specific action. |
 | [selenium.callfunction](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium/blob/master/G1ANT.Addon.Selenium/Commands/SeleniumCallFunctionCommand.md) | Calls function on specified element. |
 | [selenium.click](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium/blob/master/G1ANT.Addon.Selenium/Commands/SeleniumClickCommand.md) | Clicks event to element of an active webpage. |

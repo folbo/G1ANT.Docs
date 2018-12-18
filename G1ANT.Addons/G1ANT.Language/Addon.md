@@ -31,15 +31,15 @@
 | [for](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ForCommand.md) | Repeats inner block a specified number of times. |
 | [foreach](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ForEachCommand.md) | Repeats inner block for each element of the list. |
 | [if](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/IfCommand.md) | Repeats inner block until the test condition is false. |
-| [jump](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/JumpCommand.md) | This command allows to move robot's action to previously defined label located in entire task. |
+| [jump](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/JumpCommand.md) | This command allows to move robot&apos;s action to previously defined label located in entire task. |
 | [keyboard.capslock](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/KeyboardCapsLockCommand.md) | This command allows to either turn on or off the CapsLock key. |
 | [keyboard](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/KeyboardCommand.md) | This command allows to send keyboard actions to a window. |
 | [keyboard.numlock](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/KeyboardNumLockCommand.md) | This command allows to either turn on or off the NumLock key. |
 | [keyboard.scrolllock](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/KeyboardScrollLockCommand.md) | This command allows to either turn on or off the ScrollLock key. |
-| [label](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/LabelCommand.md) | This command allows to navigate and perform 'jump' actions within entire process. |
-| [➜](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/LabelWithSpecialCharCommand.md) | This command allows to navigate and perform 'jump' actions within entire process. |
+| [label](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/LabelCommand.md) | This command allows to navigate and perform &apos;jump&apos; actions within entire process. |
+| [➜](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/LabelWithSpecialCharCommand.md) | This command allows to navigate and perform &apos;jump&apos; actions within entire process. |
 | [list.add](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ListAddCommand.md) | Creates new list by adding two existing. |
-| [list.create](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ListCreateCommand.md) | Creates new list based on provided string which contains separators like \;'/[]\ |
+| [list.create](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ListCreateCommand.md) | Creates new list based on provided string which contains separators like \;&apos;/[]\ |
 | [list.indexof](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ListIndexOfCommand.md) | This command returs index of specified value in defined list. |
 | [list.remove](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ListRemoveCommand.md) | Removes all specified elements from list |
 | [lock](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/LockCommand.md) | This command allows to wait for specified locking phrase to be available for locking and locks it. |
@@ -98,7 +98,7 @@
 | [dictionary](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/DictionaryStructure.md) |  |
 | [error](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/ErrorStructure.md) |  |
 | [float](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/FloatStructure.md) |  |
-| [html](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/HtmlStructure.md) | For example: <html></html> |
+| [html](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/HtmlStructure.md) | For example: &lt;html&gt;&lt;/html&gt; |
 | [integer](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/IntegerStructure.md) | Represents signed integers with values that range from negative 2 |
 | [json](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/JsonStructure.md) | For example: {name: value} |
 | [label](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/LabelStructure.md) |  |
@@ -115,7 +115,7 @@
 | [time](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/TimeStructure.md) |  |
 | [variable](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/VariableStructure.md) |  |
 | [version](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/VersionStructure.md) |  |
-| [xml](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/XmlStructure.md) | For example: <?xml></xml> |
+| [xml](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/XmlStructure.md) | For example: &lt;?xml&gt;&lt;/xml&gt; |
 
 
 # All Triggers
@@ -142,7 +142,7 @@
 | [delayseconds](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DelaySecondsVariable.md) | Determines the time value for the delay command; the default value is 1000 ms. |
 | [delaystep](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DelayStepVariable.md) | Determines the delay value for a command to proceed; the default value is 500 ms. |
 | [environment](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/Environmentvariable.md) | Provides access to environment variables which are called by their respective names specified in the index. |
-| [executingtime](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/ExecutingTimeVariable.md) | Gives current script's execution time until the variable was read. |
+| [executingtime](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/ExecutingTimeVariable.md) | Gives current script&apos;s execution time until the variable was read. |
 | [instance](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/InstanceVariable.md) | Dictionary of parameters related to current process instance. |
 | [keyboardwait](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/KeyboardWaitVariable.md) | When the value is true |
 | [keydelay](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/KeyDelayVariable.md) | Determines the time between the consecutive text inputs generated by the keyboard command. |
