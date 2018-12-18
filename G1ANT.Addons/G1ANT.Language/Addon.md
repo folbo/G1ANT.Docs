@@ -16,7 +16,7 @@
 | [dashboard.progress](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DashboardProgressCommand.md) | This command sets progres of a bot (currently executing process |
 | [database](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DatabaseCommand.md) | Command that sets currently used database connection string |
 | [debug.trace](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DebugTraceCommand.md) | This command allows to trace value of specified variable |
-| [delay](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DelayCommand.md) | This command allows to suspend robot for a demanded amount of time \n(specified in seconds |
+| [delay](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DelayCommand.md) | This command allows to suspend robot for a demanded amount of time  (specified in seconds |
 | [dialog.ask](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogAskCommand.md) | This command allows to enter the text that will be assigned to the specified variable. |
 | [dialog](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogCommand.md) | This command allows to display Dialog Box with a custom message. Variables can be used within the message. |
 | [dialog.multiask](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogMultiAskCommand.md) | This command allows to display dialog for user to enter values |
@@ -53,14 +53,14 @@
 | [procedure](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ProcedureDefinitionCommand.md) |  |
 | [process.kill](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ProcessKillCommand.md) | Kills specified process. |
 | [program](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ProgramCommand.md) | This command allows to run executable file of a program installed on user’s system |
-| [random.string](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/RandomStringCommand.md) | This command allows to get random string with specified length. \nString can be generated using letters (uppercase too |
+| [random.string](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/RandomStringCommand.md) | This command allows to get random string with specified length.  String can be generated using letters (uppercase too |
 | [random.value](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/RandomValueCommand.md) | This command allows to get random integer value between [min |
 | [screenshot](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ScreenshotCommand.md) | This command allows to capture screen and save it to a chosen path. |
 | [shell](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ShellCommand.md) | This command allows to execute command line instructions |
 | [sql](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/SqlQueryCommand.md) | Query to execute |
 | [stop](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/StopCommand.md) | This command breaks the process and shows the dialog box message. |
 | [string.getsimilarity](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/StringGetSimilarityCommand.md) | Calculates percentage similarity of two strings. |
-| [task.include](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/TaskIncludeCommand.md) | This command allows to include a script from different process located on disk. \nThe script will be populated in the place where command task.include is called. |
+| [task.include](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/TaskIncludeCommand.md) | This command allows to include a script from different process located on disk.  The script will be populated in the place where command task.include is called. |
 | [test](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/TestCommand.md) | Testing condition. |
 | [text.download](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/TextDownloadCommand.md) | This command allows to download text content from the website and attach it to the variable. |
 | [text.find](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/TextFindCommand.md) | This command allows to search for text within text or variable and assign result to another variable. |

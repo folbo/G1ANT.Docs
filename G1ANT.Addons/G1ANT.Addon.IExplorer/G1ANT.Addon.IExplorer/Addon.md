@@ -20,3 +20,9 @@
 | [ie.switch](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer/blob/master/G1ANT.Addon.IExplorer/Commands/IESwitchCommand.md) | Switches context to already opened/attached Internet Explorer instance |
 | [ie.waitforcomplete](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer/blob/master/G1ANT.Addon.IExplorer/Commands/IEWaitForCompleteCommand.md) | This command waits until page reaches completed state |
 | [ie.waitforvalue](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer/blob/master/G1ANT.Addon.IExplorer/Commands/IEWaitForValueCommand.md) | This command keeps on executing specified javascript until specified value is returned |
+
+# All Variables
+
+| Name | Description |
+| ---- | ----------- |
+| [timeoutie](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer/blob/master/G1ANT.Addon.IExplorer/Variables/TimeoutIEVariable.md) | Determines the timeout value for the ie. commands; the default value is 20000 ms. |
