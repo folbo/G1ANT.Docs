@@ -3,7 +3,7 @@
 
 | Name | Description |
 | ---- | ----------- |
-| [ie.activatetab](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer/blob/master/G1ANT.Addon.IExplorer/Commands/IEActivateTabCommand.md) | This command allows to activate Internet Explorer tab for further use by ie commands. Before using this command |
+| [ie.activatetab](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer/blob/master/G1ANT.Addon.IExplorer/Commands/IEActivateTabCommand.md) | This command allows to activate Internet Explorer tab for further use by ie commands. Before using this command, &apos;ie.attach&apos; or &apos;ie.open&apos; command has to be invoked. |
 | [ie.attach](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer/blob/master/G1ANT.Addon.IExplorer/Commands/IEAttachCommand.md) | This command allows to attach G1ANT.Robot to running Internet Explorer instance. It activates tab with specified phrase. |
 | [ie.click](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer/blob/master/G1ANT.Addon.IExplorer/Commands/IEClickCommand.md) | This command allows to send click event to element of an active webpage. |
 | [ie.close](https://github.com/G1ANT-Robot/G1ANT.Addon.IExplorer/blob/master/G1ANT.Addon.IExplorer/Commands/IECloseCommand.md) | This command allows to close currently attached Internet Explorer instance. |

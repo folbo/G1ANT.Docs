@@ -34,7 +34,7 @@
 | [outlook.selectitem](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice/blob/master/G1ANT.Addon.MSOffice/Commands/OutlookSelectItemCommand.md) | This command selects mail or folder element in Outlook UI. |
 | [outlook.send](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice/blob/master/G1ANT.Addon.MSOffice/Commands/OutlookSendCommand.md) | This command to send a prepared earlier message by &apos;outlook.newmessage&apos;. |
 | [word.close](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice/blob/master/G1ANT.Addon.MSOffice/Commands/WordCloseCommand.md) | This command closes word pogram that is currently active. |
-| [word.export](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice/blob/master/G1ANT.Addon.MSOffice/Commands/WordExportCommand.md) | This command exports document from currently active word instance to specified file (in either pdf or xps format |
+| [word.export](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice/blob/master/G1ANT.Addon.MSOffice/Commands/WordExportCommand.md) | This command exports document from currently active word instance to specified file (in either pdf or xps format).  |
 | [word.gettext](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice/blob/master/G1ANT.Addon.MSOffice/Commands/WordGetTextCommand.md) | This command gets all text from current document. |
 | [word.inserttext](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice/blob/master/G1ANT.Addon.MSOffice/Commands/WordInsertTextCommand.md) | This command inserts text into current document. |
 | [word.open](https://github.com/G1ANT-Robot/G1ANT.Addon.MSOffice/blob/master/G1ANT.Addon.MSOffice/Commands/WordOpenCommand.md) | This command opens word program. |
