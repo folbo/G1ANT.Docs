@@ -1,30 +1,30 @@
 # break
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
 break
 ```
 
-**Description:**
+## Description
 
 The `break` command immediately exits current block and continues process execution.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-| `if` | bool | no | true | runs the command only if condition is true |
-| `timeout` | [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md) | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-| `errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if a command throws an exception |
-| `errorcall` | [procedure](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/procedure.md) | no | | name of the procedure to call if a command throws an exception |
-| `errorresult` | [error](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/error.md) | no | | name of a variable, which will store the returned exception |
-| `errormessage` | [text](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/text.md) | no | | message that will be shown in case error occurs and no errorjump argument is specified |
+| `if` | [bool](../structures/bool.md) | no | true | Executes the command only if a given condition is true |
 
-For more information about `if`, `timeout`, `errorjump`, `errorcall`, `errorresult` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md) manual page.
+For more information about the `if` argument, please see [Common Arguments](../appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll.**
-
-**Example 1:**
+### Example
 
 ```G1ANT
-break
+for counter ♥cnt from 1 to 20
+  if ⊂♥cnt==10⊃
+    dialog ‴break‴    
+    break
+  end if 
+end for
 ```
+
+As you can see from the above example, `break` will only affect the `if` block command, not the `for` loop, which continues execution after the message dialog is closed.

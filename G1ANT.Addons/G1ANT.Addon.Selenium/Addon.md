@@ -10,6 +10,7 @@
 | [selenium.close](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium/blob/master/G1ANT.Addon.Selenium/Commands/SeleniumCloseCommand.md) | Closes web browser. |
 | [selenium.closetab](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium/blob/master/G1ANT.Addon.Selenium/Commands/SeleniumCloseTabCommand.md) | Close current tab in current browser. |
 | [selenium.getattribute](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium/blob/master/G1ANT.Addon.Selenium/Commands/SeleniumGetAttributeCommand.md) | Gets specified attribute of specified element. |
+| [selenium.gettext](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium/blob/master/G1ANT.Addon.Selenium/Commands/SeleniumGetTextCommand.md) | Gets text of specified element. |
 | [selenium.gettitle](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium/blob/master/G1ANT.Addon.Selenium/Commands/SeleniumGetTitleCommand.md) | Gets title of currently active web browser instance. |
 | [selenium.newtab](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium/blob/master/G1ANT.Addon.Selenium/Commands/SeleniumNewTabCommand.md) | Creates new tab in current browser. |
 | [selenium.open](https://github.com/G1ANT-Robot/G1ANT.Addon.Selenium/blob/master/G1ANT.Addon.Selenium/Commands/SeleniumOpenCommand.md) | Opens new instance of chosen web browser and optionally navigate to specified url address. |
