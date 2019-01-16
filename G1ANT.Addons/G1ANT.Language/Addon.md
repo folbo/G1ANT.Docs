@@ -15,7 +15,6 @@
 | [continue](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ContinueCommand.md) | Stops executing current block and goes to next itereation |
 | [dashboard.progress](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DashboardProgressCommand.md) | This command sets progres of a bot (currently executing process) |
 | [database](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DatabaseCommand.md) | Command that sets currently used database connection string |
-| [debug.trace](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DebugTraceCommand.md) | This command allows to trace value of specified variable |
 | [delay](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DelayCommand.md) | This command allows to suspend robot for a demanded amount of time  (specified in seconds), before it proceeds to the next action. |
 | [dialog.ask](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogAskCommand.md) | This command allows to enter the text that will be assigned to the specified variable. |
 | [dialog](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogCommand.md) | This command allows to display Dialog Box with a custom message. Variables can be used within the message. |
@@ -140,7 +139,6 @@
 | [VariableName, ReadOnly = true, Tooltip = Reads the value of a specified key stored in the Credential Container.](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/CredentialVariable.md) | Reads the value of a specified key stored in the Credential Container. |
 | [dateformat](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DateFormatVariable.md) | Defines a date display format (eg. dd-MM-yyyy, dd.MM.yy, MM\\/dd\\/yy - note that the slash separator should be preceded with backslash or embraced with apostrophes: &apos;/&apos;). |
 | [date](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DateVariable.md) | Gives current date in the format defined with the dateformat variable. |
-| [debugkey](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DebugKeyVariable.md) |  |
 | [delayseconds](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DelaySecondsVariable.md) | Determines the time value for the delay command; the default value is 1000 ms. |
 | [delaystep](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DelayStepVariable.md) | Determines the delay value for a command to proceed; the default value is 500 ms. |
 | [environment](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/Environmentvariable.md) | Provides access to environment variables which are called by their respective names specified in the index. |
@@ -160,7 +158,6 @@
 | [timeoutchrome](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/TimeoutChromeVariable.md) | Determines the timeout value for the chrome command; the default value is 10000 ms. |
 | [timeoutcolorexpected](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/TimeoutColorExpectedVariable.md) | Determines the timeout value for the color.expected command; the default value is 10000. |
 | [timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/TimeoutCommandVariable.md) | Determines the timeout value for all commands; the default value is 5000 ms. |
-| [timeoutdebug](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/TimeoutDebugVariable.md) |  |
 | [timeoutfiledelete](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/TimeoutFileDeleteVariable.md) | Determines the timeout value for the file.delete command; the default value is 10000 ms. |
 | [timeoutfiledownload](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/TimeoutFileDownloadVariable.md) | Determines the timeout value for the file.download command; the default value is 10000 ms. |
 | [timeoutfileexists](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/TimeoutFileExistsVariable.md) | Determines the timeout value for the file.exists command; the default value is 10000 ms. |
@@ -178,3 +175,4 @@
 | ---- | ----------- |
 | [RDP Controller](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Wizards/RdpControllerWizard.md) |  |
 | [Windows Defender](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Wizards/WindowsDefenderWizard.md) |  |
+

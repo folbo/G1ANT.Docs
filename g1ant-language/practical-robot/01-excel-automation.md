@@ -1,14 +1,6 @@
-# Practical Robot: Real-Life Scenarios
+# Excel, Procedures and Loops
 
-One of the most typical examples of robotization on PCs is automating daily tasks, which are done in desktop apps. MS Office applications, for instance, have their own automation engine — Visual Basic macros — to help users change repetitive actions into code in the easiest possible way: by recording their activities in Word or Excel. This recorded actions can then be tweaked and edited in Visual Basic Editor.
-
-It’s a nice feature and lots of people use MS Office macros and VB scripts to ease their everyday chore, but when you want to do something outside of Microsoft’s behemoth suite, say, transfer some data from external sources such as a PDF attachment in an email client, into your Excel spreadsheet, you are left empty-handed.
-
-Well, you would be, if you were forced to rely solely on Microsoft’s solution. Fortunately, G1ANT.Robot is here to the rescue. We will show you how to use it effectively with your common desktop apps, MS Office included, and teach you some G1ANT.Language commands along the way.
-
-## Excel, Procedures and Loops
-
-Let’s start with automating Excel spreadsheets. Imagine you want to get data from one file and enter them into another, newly created file. For the purposes of this tutorial, create a folder called Data in your Documents (Windows 10) or My Documents (earlier Windows versions) folder and put this excel data file [data.xlsx](https://github.com/G1ANT-Robot/G1ANT.Tutorials/blob/master/-assets/data.xlsx) into it.
+Let’s start with automating Excel spreadsheets. Imagine you want to get data from one file and enter them into another, newly created file. For the purposes of this tutorial, create a folder called Data in your Documents (Windows 10) or My Documents (earlier Windows versions) folder and put this excel data file [data.xlsx](../../-assets/data.xlsx) into it.
 
 Since using the whole path to a file every time you want to refer to it is a bit tedious, robotizing this repetitive task would be a good starting point. All you have to do is to declare a new variable — named  `♥datafile1`, for example — with its value equal to the filepath.
 
@@ -24,11 +16,11 @@ This is how your filename variable would be declared in the script:
 ♥datafile1 = C:\Users\Username\Documents\Data\data.xlsx
 ```
 
-### Protect the Environment
+## Protect the Environment
 
 Can you spot a problem in the code above? Yes: it’s your user name! When you use such expression on your machine — your account, to be precise — everything is fine. Things get tough when you try to port this robot script somewhere else: you would have to change the filepath to include a correct Windows user name. Imagine doing this on many PCs…
 
-We predicted this scenario and provided a special variable `♥environment⟦⟧`, which reads specified environment variables of the host system (environment variables store system information of different type; read more on the `♥environment⟦⟧` variable [here](/g1ant-language/environment.md)). One of them, `USERPROFILE`, provides the full path to current user files. See what yours is:
+We predicted this scenario and provided a special variable `♥environment⟦⟧`, which reads specified environment variables of the host system (environment variables store system information of different type; read more on the `♥environment⟦⟧` variable [here](../appendices/environment.md)). One of them, `USERPROFILE`, provides the full path to current user files. See what yours is:
 
 ```G1ANT
 dialog ♥environment⟦USERPROFILE⟧
@@ -46,7 +38,7 @@ You have the path to your first Excel file specified in a variable. The second E
 ♥datafile2 = ♥environment⟦USERPROFILE⟧\Documents\Data\data2.xlsx
 ```
 
-### Excel-lent Commands
+## Excel-lent Commands
 
 Your robot should do the following steps in order to copy all cells with values from one spreadsheet to another:
 
@@ -133,7 +125,7 @@ excel.save ♥datafile2
 
 Now save the script and run it with **F9** key. Check your Data folder if the *data2.xlsx* file exists. It does! And it contains all the values from the first row of the source Excel spreadsheet.
 
-### More Rows, More Trouble
+## More Rows, More Trouble
 
 The code you created in the previous section is quite long. You can see that it’s very repetitive in most of its part: 12 lines out of 17 are practically the same and differ only in incremental arguments. Imagine how this script would look like if you were to execute the full algorithm and copy all rows, not just one: this 12 lines repeated 5 times.
 
@@ -141,7 +133,7 @@ Luckily, there’s a way to avoid this repetitions. You can take parts of code t
 
 Start with deleting the file *data2.xlsx* created with G1ANT.Robot. Then open a new script window or clear existing one. You can leave first two lines with filepath `♥datafile` variables.
 
-### Procedures Solve Everything
+## Procedures Solve Everything
 
 Procedures are sets of commands in our programming language. Sometimes the robot scripts are so long and complicated that splitting them into small, named pieces is almost inevitable. Look at the algorithm again: these seven steps are in fact three job sets: file operations (open/save), copying cell values, entering  these values.
 
@@ -206,7 +198,7 @@ end
 
 Excel files often are filled with lots of data — they tend to have many rows and it would take the programmer too many hours to write the code that would process the spreadsheet row by row. Besides, the script would be too long.
 
-### Killer Loops
+## Killer Loops
 
 But these repetitive actions can be automated with loops. As its name implies, a loop is a set of actions that are repeated specified or indefinite (infinite) number of times. In case of this example, a loop could solve the problem of calling your get/set values procedures again for the next row to be processed.
 

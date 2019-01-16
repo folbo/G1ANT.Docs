@@ -14,10 +14,3 @@
 | [Structures](https://github.com/G1ANT-Robot/G1ANT.Robot/blob/master/G1ANT.Robot/Panels/StructuresPanel.md) |  |
 | [Symbols](https://github.com/G1ANT-Robot/G1ANT.Robot/blob/master/G1ANT.Robot/Panels/SymbolsPanel.md) |  |
 
-
-# All Wizards
-
-| Name | Description |
-| ---- | ----------- |
-| [RDP Controller](https://github.com/G1ANT-Robot/G1ANT.Robot/blob/master/G1ANT.Robot/Wizards/RdpControllerWizard.md) |  |
-
