@@ -1,5 +1,3 @@
-# Summary
-
 * [Introduction](introduction/DESCRIPTION.md)
   * [Overview](introduction/overview.md)
   * [Features](introduction/features.md)
