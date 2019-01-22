@@ -309,7 +309,7 @@
     * [Text](appendices/special-characters/text.md)
     * [Variable Index](appendices/special-characters/variable-index.md)
     * [Variable](appendices/special-characters/variable.md)
-  * [Special variables](appendices/special-variables.md)
+  * [Special Variables](appendices/special-variables.md)
   * [Common Arguments](appendices/common-arguments.md)
   * [Environment](appendices/environment.md)
   * [RDP Controller](appendices/rdp-controller.md)
