@@ -10,9 +10,9 @@
 
 Text special characters `‴‴` are required to declare text value containing spaces for arguments in all available commands. This text can be used for displaying messages, storing file paths, as an input in documents or dialog boxes etc., and can also be assigned to variables.
 
-There is no need to use these characters if text doesn&apos;t contain spaces.
+There is no need to use these characters if text doesn't contain spaces.
 
-You can insert these characters from `Insert/Text` menu or with **Ctrl+&apos;** (apostrophe) keyboard shortcut.
+You can insert these characters from `Insert/Text` menu or with **Ctrl+'** (apostrophe) keyboard shortcut.
 
 ### **Example**
 

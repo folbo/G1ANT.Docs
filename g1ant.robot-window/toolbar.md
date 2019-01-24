@@ -1,6 +1,6 @@
 # Toolbar
 
-G1ANT.Robot&apos;s toolbar is pretty simple and self-explanatory:
+G1ANT.Robot's toolbar is pretty simple and self-explanatory:
 
 ![](https://github.com/G1ANT-Robot/G1ANT.Manual/raw/develop/-assets/g1ant.robot-toolbar.jpg)
 

@@ -32,7 +32,7 @@ Alright, now you are able to use the script independently of the user account �
 ♥datafile1 = ‴♥environment⟦USERPROFILE⟧\Documents\Data\data.xlsx‴
 ```
 
-You have the path to your first Excel file specified in a variable. The second Excel file will be named *data2.xlsx*. Even if it doesn&apos;t exist at the moment, you can already set its future path in a new variable `♥datafile2`:
+You have the path to your first Excel file specified in a variable. The second Excel file will be named *data2.xlsx*. Even if it doesn't exist at the moment, you can already set its future path in a new variable `♥datafile2`:
 
 ```G1ANT
 ♥datafile2 = ♥environment⟦USERPROFILE⟧\Documents\Data\data2.xlsx
@@ -58,7 +58,7 @@ It’s time to tell your robot to open the *data.xlsx* file. Of course, there’
 excel.open ♥datafile1
 ```
 
-The robot will open a file specified in the variable. Now you would want the robot to read the values from this spreadsheet. Surprise: we got another command for that! It’s called `excel.getvalue` and you use it with `row` and `colname` arguments. The `row` argument is followed with the name or the number of the cell&apos;s row that you want to get value from. Similarly, the value for the `colname` argument specifies the number or the name of the cell&apos;s column. The `result` argument lets you choose the name of the variable,  which will store the value of the desired cell.
+The robot will open a file specified in the variable. Now you would want the robot to read the values from this spreadsheet. Surprise: we got another command for that! It’s called `excel.getvalue` and you use it with `row` and `colname` arguments. The `row` argument is followed with the name or the number of the cell's row that you want to get value from. Similarly, the value for the `colname` argument specifies the number or the name of the cell's column. The `result` argument lets you choose the name of the variable,  which will store the value of the desired cell.
 
 So, if you want to get the value of the cell in column A, row 1 and store it in the `♥cell1` variable, you enter:
 
