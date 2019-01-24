@@ -4,7 +4,7 @@ The previous exercise with G1ANT.Language was based on Excel and the Robot comma
 
 Imagine such a scenario: you run a company, which sends email newsletters to its subscribers. The subscribers list is stored in an ordinary CSV (comma separated values) file — it’s a plain text file with basic information: first name, last name, company name and email address of a subscriber. When your subscriber no longer wants to receive emails from you, he or she sends an email with “unsubscribe” in the subject field and you manually delete this address from your mailing list.
 
-![Sample mailing list CSV file in Notepad](https://github.com/G1ANT-Robot/blob/develop/G1ANT.Manual/-assets/mailing-list.jpg)
+![Sample mailing list CSV file in Notepad](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/develop/-assets/mailing-list.jpg)
 
 And here the G1ANT.Robot steps in and takes this job from you!
 
@@ -107,13 +107,13 @@ Now you want to check the subject of the `♥message` currently processed by the
 You could write the condition this way:
 
 ```G1ANT
-if ⊂♥message⟦subject⟧ == "unsubscribe"⊃
+if ⊂♥message⟦subject⟧ == &quot;unsubscribe&quot;⊃
 ```
 
 It would work perfectly — unless the message subject contains more characters or words, “unsubscribe me” for instance. The code above checks if the subject exactly matches the given text. If you want to be sure that any occurence of “unsubscribe” in the subject will make the condition true, use this snippet:
 
 ```G1ANT
-if ⊂♥message⟦subject⟧.Contains("unsubscribe")⊃
+if ⊂♥message⟦subject⟧.Contains(&quot;unsubscribe&quot;)⊃
 ```
 
 When the condition is true (a matching message is found), the Robot will execute the next lines of code (in this exercise, call `deleteaddress` procedure) until `end if` is reached. Then the next message will be checked by the `foreach` command.
@@ -125,7 +125,7 @@ The full `checksubject` procedure code should read:
 ```G1ANT
 procedure checksubject
     foreach ♥message in ♥emails
-    	if ⊂♥message⟦subject⟧.Contains("unsubscribe")⊃
+    	if ⊂♥message⟦subject⟧.Contains(&quot;unsubscribe&quot;)⊃
             call deleteaddress
         end if
     end foreach
@@ -136,13 +136,13 @@ end procedure
 
 It’s time for the final part: the `deleteaddress` procedure, which will find the email address in the mailing list file and then delete it. The `text.` family of commands will help you do that.
 
-The information about the sender is stored in the `from` field of the mail structure. In other words, to retrieve it from the message, you use `⟦from⟧` index of the variable that stores the mail information — in this exercise it’s the `♥message` variable, so the correct expression is `♥message⟦from⟧`. The problem is that the `from` field includes not only email address (embraced in angle brackets), but also the sender’s name (if provided), for example: `John Doe <john.doe@email.org>` or `Company <office@company.com>`. Therefore, the first thing to do is to filter the email address out.
+The information about the sender is stored in the `from` field of the mail structure. In other words, to retrieve it from the message, you use `⟦from⟧` index of the variable that stores the mail information — in this exercise it’s the `♥message` variable, so the correct expression is `♥message⟦from⟧`. The problem is that the `from` field includes not only email address (embraced in angle brackets), but also the sender’s name (if provided), for example: `John Doe &lt;john.doe@email.org&gt;` or `Company &lt;office@company.com&gt;`. Therefore, the first thing to do is to filter the email address out.
 
 You will use the `text.find` command for this purpose, feeding it with the text to be searched (sender information), the text to be searched for (everything within angle brackets) and the name of a variable that will store the result (the matching text — pure email address):
 
 ```G1ANT
 procedure deleteaddress
-	text.find ♥message⟦from⟧ search <✱> result ♥address
+	text.find ♥message⟦from⟧ search &lt;✱&gt; result ♥address
 ```
 
 Remember the asterisk called Search Place? You learned it in the [Basics](../02-language-basics.md): it serves as a wildcard for all characters. You can enter this character from `Insert/Search Place` menu, with **Ctrl+8** keyboard shortcut or by clicking the `✱` icon on the toolbar.
@@ -167,7 +167,7 @@ Now go back to the `deleteaddress` procedure where you have left off and replace
 
 ```G1ANT
 procedure deleteaddress
-	text.find ♥message⟦from⟧ search <✱> result ♥address
+	text.find ♥message⟦from⟧ search &lt;✱&gt; result ♥address
 	text.replace ♥mailinglist search ♥address replace ‴‴ result ♥mailinglist
 end procedure
 ```
@@ -197,14 +197,14 @@ end procedure
 
 procedure checksubject
     foreach ♥message in ♥emails
-        if ⊂♥message⟦subject⟧.Contains("unsubscribe")⊃
+        if ⊂♥message⟦subject⟧.Contains(&quot;unsubscribe&quot;)⊃
             call deleteaddress
         end if
     end foreach
 end procedure
 
 procedure deleteaddress
-    text.find ♥message⟦from⟧ search <✱> result ♥address
+    text.find ♥message⟦from⟧ search &lt;✱&gt; result ♥address
     text.replace ♥mailinglist search ♥address replace ‴‴ result ♥mailinglist
 end procedure
 ```

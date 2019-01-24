@@ -19,15 +19,15 @@ In this example, you will use a C# snippet to display current date and hour. In 
 dialog ♥macro
 ```
 
-![img](https://github.com/G1ANT-Robot/blob/develop/G1ANT.Manual/-assets/macro.png)
+![img](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/develop/-assets/macro.png)
 
 ### Example 2
 
 ```G1ANT
 ♥initial_number = 9
-♥factorial = ⊂(new Func<int, int>((n) => { int factorial = 1; for (int i = 1; i <= n; i++) factorial *= i; return factorial; })).Invoke(♥initial_number)⊃
+♥factorial = ⊂(new Func&lt;int, int&gt;((n) =&gt; { int factorial = 1; for (int i = 1; i &lt;= n; i++) factorial *= i; return factorial; })).Invoke(♥initial_number)⊃
 dialog ♥factorial
 ```
 
-Here, you are inserting a C# macro code straight into G1ANT.Robot — it's contained within `⊂⊃` characters. Using delegates `(new Func<object,object>((x)=>{ x ...; x...; return x;})).Invoke(♥value)` is a method enabling the insertion of more statements into one macro. Inserting C# macros is an advanced tool in G1ANT.Robot that expects prior knowledge of C#.
+Here, you are inserting a C# macro code straight into G1ANT.Robot — it&apos;s contained within `⊂⊃` characters. Using delegates `(new Func&lt;object,object&gt;((x)=&gt;{ x ...; x...; return x;})).Invoke(♥value)` is a method enabling the insertion of more statements into one macro. Inserting C# macros is an advanced tool in G1ANT.Robot that expects prior knowledge of C#.
 

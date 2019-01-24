@@ -16,9 +16,9 @@ How does it work? When you start typing, IntelliSense looks for matches in the l
 
 For example, start typing `program` in the script editor. With every letter, the suggested list of matching entries narrows down: five items in the list after you type “p”, then just three, when you press “r”, and when you reach “g”, there’s only `program` left to choose. But IntelliSense doesn’t stop there: after selecting an item from the suggested options, you are prompted with further language elements — arguments then their values. In case of the `program` command, when you pick it and press space, you will see a list of nine arguments available for that command along with their descriptions in tooltips:
 
-![](https://github.com/G1ANT-Robot/blob/develop/G1ANT.Manual/-assets/suggestions1.png)
+![](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/develop/-assets/suggestions1.png)
 
-![](https://github.com/G1ANT-Robot/blob/develop/G1ANT.Manual/-assets/suggestions2.png)
+![](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/develop/-assets/suggestions2.png)
 
 This way, not only you don’t make obvious typo mistakes, but also create code with correct syntax and learn how to use G1ANT.Language efficiently.
 
@@ -54,7 +54,7 @@ A command can be simple, one-word, like `dialog` or extended, like `selenium.ope
 
 Each family of commands has its special ‘activities’. Once you start typing the command inside the script editor window, a list of available activities will pop up, as you can see below:
 
-![](https://github.com/G1ANT-Robot/blob/develop/G1ANT.Manual/-assets/selenium.png)
+![](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/develop/-assets/selenium.png)
 
 ### Argument
 
@@ -68,7 +68,7 @@ The content of a field or a variable is called a *value*. It can refer to alphab
 selenium.open type ‴firefox‴ url ‴google.com‴ result ♥google
 ```
 
-the elements `‴firefox‴` and `‴google.com‴` are values. Note that text values are embraced with triple prime characters available by pressing **Ctrl+'** (apostrophe) keyboard shortcut or by clicking the text symbol icon on the toolbar.
+the elements `‴firefox‴` and `‴google.com‴` are values. Note that text values are embraced with triple prime characters available by pressing **Ctrl+&apos;** (apostrophe) keyboard shortcut or by clicking the text symbol icon on the toolbar.
 
 Values always belong to one type of structures, variables, and they can be any text, numbers and a mixture of both (URL address, for instance). Values are strictly related to their arguments.
 
@@ -88,7 +88,7 @@ Other examples of arguments that can be skipped and replaced by their values, in
 
 `window ✱chrome` instead of `window title ✱chrome`
 
-Note the special asterisk symbol before `chrome`: it's called Search Place and serves as a wildcard for all characters preceding the word “chrome”, so that any Google Chrome browser window would be selected no matter what its full title is. You can enter this character from `Insert/Search Place` menu, with **Ctrl+8** keyboard shortcut or by clicking the ✱ icon on the toolbar.
+Note the special asterisk symbol before `chrome`: it&apos;s called Search Place and serves as a wildcard for all characters preceding the word “chrome”, so that any Google Chrome browser window would be selected no matter what its full title is. You can enter this character from `Insert/Search Place` menu, with **Ctrl+8** keyboard shortcut or by clicking the ✱ icon on the toolbar.
 
 ## Using Variables
 
@@ -102,11 +102,11 @@ A variable is like a named box or a container, which can store values that may c
 
 Here in G1ANT we love variables and we decided to show our affection by adding hearts to them. So, if you want to declare or use a variable, you have to insert a heart symbol followed by the name of a variable: `♥number`.
 
-The special character ♥ is the prefix for all variables in G1ANT.Language. You can enter this symbol by pressing **Ctrl+4**, clicking on its icon in the toolbar or selecting it from `Insert/♥ Variable` menu. For those more experienced: it's like `$` in PHP language.
+The special character ♥ is the prefix for all variables in G1ANT.Language. You can enter this symbol by pressing **Ctrl+4**, clicking on its icon in the toolbar or selecting it from `Insert/♥ Variable` menu. For those more experienced: it&apos;s like `$` in PHP language.
 
 ### Example
 
-Copy and paste this code into the script editor, then run the robot by pressing **F9** key or clicking Run ![img](https://github.com/G1ANT-Robot/blob/develop/G1ANT.Manual/-assets/run.jpg) icon on the toolbar:
+Copy and paste this code into the script editor, then run the robot by pressing **F9** key or clicking Run ![img](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/develop/-assets/run.jpg) icon on the toolbar:
 
 ```G1ANT
 ♥number = 2
@@ -150,36 +150,36 @@ Try this script:
 
 ```G1ANT
 program notepad
-keyboard ‴Hello! I'm a robot.‴
+keyboard ‴Hello! I&apos;m a robot.‴
 ```
 
 The first line opens Windows Notepad and the second line enters a text into it.
 
-In case of the `program` command, the most obvious argument is a _name_ of the program to be launched by the robot. This name can be given in a short form such as `notepad`, `calc`, `chrome`, `word` (provided that these programs are installed in the system) or with a full path to the executable file, eg. `‴C:\Program Files\Internet Explorer\iexplore.exe‴` (again, note the triple prime character `‴` embracing the path — it's a special sign used in G1ANT.Robot for values containing spaces; to enter it, press **Ctrl** and apostrophe **'** key).
+In case of the `program` command, the most obvious argument is a _name_ of the program to be launched by the robot. This name can be given in a short form such as `notepad`, `calc`, `chrome`, `word` (provided that these programs are installed in the system) or with a full path to the executable file, eg. `‴C:\Program Files\Internet Explorer\iexplore.exe‴` (again, note the triple prime character `‴` embracing the path — it&apos;s a special sign used in G1ANT.Robot for values containing spaces; to enter it, press **Ctrl** and apostrophe **&apos;** key).
 
 Sending keyboard inputs to a program is easy and requires the `keyboard` command followed by the text to be entered or keyboard shortcuts/function keys to be mimicked by the robot.
 
 But what if you wanted to make the robot write the text from the example above in two lines instead of just one? Like this:
 
-> **Hello!**
-> **I’m a robot.**
+&gt; **Hello!**
+&gt; **I’m a robot.**
 
 The answer is simple: in the next line after your existing `program notepad` command, you would type
 
 
 ```G1ANT
-keyboard ‴Hello!⋘enter⋙I'm a robot.‴
+keyboard ‴Hello!⋘enter⋙I&apos;m a robot.‴
 ```
 
-Did you notice `⋘enter⋙`? These triple quotation angles (available with **Ctrl+<** and **Ctrl+>** keyboard shortcuts or from the toolbar) indicate a function key or a keyboard shortcut — **Enter** key in this example.
+Did you notice `⋘enter⋙`? These triple quotation angles (available with **Ctrl+&lt;** and **Ctrl+&gt;** keyboard shortcuts or from the toolbar) indicate a function key or a keyboard shortcut — **Enter** key in this example.
 
 The `keyboard` command is not that primitive as you might think. Well, it is, considering the way it works, but these simple keyboard inputs are much more powerful when you start using keyboard shortcuts. Why? Because every program uses keyboard alternatives for its menus, tools and functions. You only need to find them and pass to your robot.
 
-Let's go back to your simple Notepad robot. Its code looks like this:
+Let&apos;s go back to your simple Notepad robot. Its code looks like this:
 
 ```G1ANT
 program notepad
-keyboard ‴Hello!⋘enter⋙I'm a robot.‴
+keyboard ‴Hello!⋘enter⋙I&apos;m a robot.‴
 ```
 
 Now you could use common Windows shortcuts such as **Ctrl+C** (copy to clipboard), **Ctrl+S** (save to a file) or **Alt+F4** (close program) to make the robot perform respective tasks. But Notepad allows you to do many other things: all of its tools are accessible with keyboard alternatives, which show up after pressing **Alt** key.
@@ -190,7 +190,7 @@ Run your robot by pressing **F9**. With Notepad open, you can investigate availa
 keyboard ⋘alt+o⋙w
 ```
 
-Let's make something more powerful and robotized out of these keyboard inputs: select all notepad content and change its font size to 20. The keyboard shortcuts sequence would be:
+Let&apos;s make something more powerful and robotized out of these keyboard inputs: select all notepad content and change its font size to 20. The keyboard shortcuts sequence would be:
 
 1. Press **Alt+F** to open the `Format` menu.
 2. Press **O** to select Font tool and bring up its dialog.
@@ -226,7 +226,7 @@ Now, add the lines for changing the font, replacing words and saving a file to y
 
 ```G1ANT
 program notepad
-keyboard ‴Hello!⋘enter⋙I'm a robot.‴
+keyboard ‴Hello!⋘enter⋙I&apos;m a robot.‴
 keyboard ⋘alt+o⋙f⋘tab 2⋙20⋘enter⋙
 keyboard ⋘ctrl+h⋙robot⋘tab⋙G1ANT.Robot⋘alt+a⋙⋘alt+f4⋙
 keyboard ⋘ctrl+s⋙robot⋘enter⋙⋘alt+f4⋙
@@ -278,7 +278,7 @@ First, you have to select the right window:
 window ✱notepad
 ```
 
-> This command will work correctly only when there’s just one Notepad window open. If you have more of them, you must precisely specify the window you want to use, e.g. `window ‴Untitled - Notepad‴`. The full list of open windows titles is available in [All Windows](../g1ant.robot-window/auxiliary-windows/all-windows.md) tool (`Tools/Windows` menu or **Ctrl+W**).
+&gt; This command will work correctly only when there’s just one Notepad window open. If you have more of them, you must precisely specify the window you want to use, e.g. `window ‴Untitled - Notepad‴`. The full list of open windows titles is available in [All Windows](../g1ant.robot-window/auxiliary-windows/all-windows.md) tool (`Tools/Windows` menu or **Ctrl+W**).
 
 With Notepad window selected, tell the robot to move the cursor close to the letter “a”, click and start selecting.
 
@@ -288,7 +288,7 @@ Wait, how can you determine the mouse cursor position? Don’t worry, we have yo
 mouse.click ⟦point⟧41⫽70 type down
 ```
 
-> Note that your coordinate values can be a bit different from the ones given here.
+&gt; Note that your coordinate values can be a bit different from the ones given here.
 
 Confused with the lack of the `button` argument? You probably expected `mouse.click ⟦point⟧41⫽70 button left type down`, didn’t you? Well, you could use it, but it may be skipped in this case, because `left` is the default value. Likewise, if you wanted just to make a mouse click, you could also skip the `type` argument — `press` is its default value.
 
