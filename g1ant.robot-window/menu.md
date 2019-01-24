@@ -1,6 +1,6 @@
 # Menu
 
-![](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/develop/-assets/menu.jpg)
+![](https://github.com/G1ANT-Robot/G1ANT.Manual/raw/develop/-assets/menu.jpg)
 
 ### Process
 
