@@ -17,7 +17,7 @@
 | [database](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DatabaseCommand.md) | Command that sets currently used database connection string |
 | [delay](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DelayCommand.md) | This command allows to suspend robot for a demanded amount of time  (specified in seconds), before it proceeds to the next action. |
 | [dialog.ask](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogAskCommand.md) | This command allows to enter the text that will be assigned to the specified variable. |
-| [dialog](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogCommand.md) | This command allows to display Dialog Box with a custom message. Variables can be used within the message. |
+| [dialog](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogCommand.md) |  |
 | [dialog.multiask](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogMultiAskCommand.md) | This command allows to display dialog for user to enter values |
 | [directory](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DirectoryCommand.md) | This command allows to obtain directory content and attach it to the variable. |
 | [directory.filescount](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DirectoryFilesCountCommand.md) | Command allows to calculate the number of files of certain file extension,  file name or file directory in specified location |
@@ -93,6 +93,7 @@
 
 | Name | Description |
 | ---- | ----------- |
+| [attachment](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/AttachmentStructure.md) |  |
 | [bool](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/BooleanStructure.md) |  |
 | [date](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/DateStructure.md) |  |
 | [datetime](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Structures/DateTimeStructure.md) |  |

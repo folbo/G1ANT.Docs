@@ -20,7 +20,7 @@ This is how your filename variable would be declared in the script:
 
 Can you spot a problem in the code above? Yes: it’s your user name! When you use such expression on your machine — your account, to be precise — everything is fine. Things get tough when you try to port this robot script somewhere else: you would have to change the filepath to include a correct Windows user name. Imagine doing this on many PCs…
 
-We predicted this scenario and provided a special variable `♥environment⟦⟧`, which reads specified environment variables of the host system (environment variables store system information of different type; read more on the `♥environment⟦⟧` variable [here](../appendices/environment.md)). One of them, `USERPROFILE`, provides the full path to current user files. See what yours is:
+We predicted this scenario and provided a special variable `♥environment⟦⟧`, which reads specified environment variables of the host system (environment variables store system information of different type; read more on the `♥environment⟦⟧` variable [here](../../appendices/environment.md)). One of them, `USERPROFILE`, provides the full path to current user files. See what yours is:
 
 ```G1ANT
 dialog ♥environment⟦USERPROFILE⟧
@@ -51,6 +51,8 @@ Your robot should do the following steps in order to copy all cells with values 
 7. When the last variable’s value is inserted, save the target Excel file.
 
 Let’s start with a bit simplified version of the algorithm above limited to the first row only (step 4 skipped).
+
+> **Note:** In order to use `excel.` commands, the MSOffice addon needs to be enabled. Just click the check box next to `msoffice` entry in the Addons panel (by default, on the left of the workspace).
 
 It’s time to tell your robot to open the *data.xlsx* file. Of course, there’s a command for that: `excel.open`. Just pass the filepath to it, using your `♥datafile1` variable:
 
