@@ -211,13 +211,13 @@
       * [ping](G1ANT.Addons/G1ANT.Addon.Net/Commands/PingCommand.md)
       * [rest](G1ANT.Addons/G1ANT.Addon.Net/Commands/RestCommand.md)
       * [vnc.connect](G1ANT.Addons/G1ANT.Addon.Net/Commands/VncConnectCommand.md)
-  * G1ANT.Addon.Ocr
-    * [All Commands](G1ANT.Addons/G1ANT.Addon.Ocr/Addon.md)
+  * G1ANT.Addon.Ocr.Google
+    * [All Commands](G1ANT.Addons/G1ANT.Addon.Ocr.Google/Addon.md)
     * Commands
-      * [ocrgoogle.find](G1ANT.Addons/G1ANT.Addon.Ocr/Commands/OcrGoogleFindCommand.md)
-      * [ocrgoogle.findpoint](G1ANT.Addons/G1ANT.Addon.Ocr/Commands/OcrGoogleFindPointCommand.md)
-      * [ocrgoogle.fromscreen](G1ANT.Addons/G1ANT.Addon.Ocr/Commands/OcrGoogleFromScreenCommand.md)
-      * [ocrgoogle.login](G1ANT.Addons/G1ANT.Addon.Ocr/Commands/OcrGoogleLoginCommand.md)
+      * [ocrgoogle.find](G1ANT.Addons/G1ANT.Addon.Ocr.Google/Commands/OcrGoogleFindCommand.md)
+      * [ocrgoogle.findpoint](G1ANT.Addons/G1ANT.Addon.Ocr.Google/Commands/OcrGoogleFindPointCommand.md)
+      * [ocrgoogle.fromscreen](G1ANT.Addons/G1ANT.Addon.Ocr.Google/Commands/OcrGoogleFromScreenCommand.md)
+      * [ocrgoogle.login](G1ANT.Addons/G1ANT.Addon.Ocr.Google/Commands/OcrGoogleLoginCommand.md)
   * G1ANT.Addon.Ocr.Abbyyfinereader
     * [All Commands](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Addon.md)
     * Commands
