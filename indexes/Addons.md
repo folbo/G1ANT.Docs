@@ -8,8 +8,8 @@
 | [mscrm](https://github.com/G1ANT-Robot/mscrm/blob/master/mscrm/Addon.md) | MsCrm Commands | G1ANT LTD |
 | [MSOffice](https://github.com/G1ANT-Robot/MSOffice/blob/master/MSOffice/Addon.md) | MSOffice Commands | G1ANT LTD |
 | [Net](https://github.com/G1ANT-Robot/Net/blob/master/Net/Addon.md) | Net Commands | G1ANT LTD |
-| [Ocrgoogle](https://github.com/G1ANT-Robot/Ocrgoogle/blob/master/Ocrgoogle/Addon.md) | Ocr commands which use Google OCR Online engine | G1ANT LTD |
 | [Ocrabbyy](https://github.com/G1ANT-Robot/Ocrabbyy/blob/master/Ocrabbyy/Addon.md) | AbbyyFineReader Commands | G1ANT LTD |
+| [Ocrgoogle](https://github.com/G1ANT-Robot/Ocrgoogle/blob/master/Ocrgoogle/Addon.md) | Ocr commands which use Google OCR Online engine | G1ANT LTD |
 | [Ocrtesseract](https://github.com/G1ANT-Robot/Ocrtesseract/blob/master/Ocrtesseract/Addon.md) | Tesseract Commands | G1ANT LTD |
 | [Selenium](https://github.com/G1ANT-Robot/Selenium/blob/master/Selenium/Addon.md) | Selenium Commands | G1ANT LTD |
 | [UI](https://github.com/G1ANT-Robot/UI/blob/master/UI/Addon.md) | Addon which support desktop application automations | G1ANT LTD |
