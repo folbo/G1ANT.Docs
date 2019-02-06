@@ -283,6 +283,7 @@
   * G1ANT.Language
     * [All Commands](G1ANT.Addons/G1ANT.Language/Addon.md)
     * Structures
+      * [attachment](G1ANT.Addons/G1ANT.Language/Structures/AttachmentStructure.md)
       * [bool](G1ANT.Addons/G1ANT.Language/Structures/BooleanStructure.md)
       * [date](G1ANT.Addons/G1ANT.Language/Structures/DateStructure.md)
       * [datetime](G1ANT.Addons/G1ANT.Language/Structures/DateTimeStructure.md)
