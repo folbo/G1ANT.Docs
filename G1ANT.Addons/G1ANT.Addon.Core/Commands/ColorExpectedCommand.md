@@ -1,41 +1,39 @@
 # color.expected
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-color.expected  position ‴‴  color ‴‴
+color.expected position ⟦point⟧ color ⟦text⟧
 ```
 
-**Description:**
+## Description
 
-Command `color.expected` allows to wait until an RGB color appears in (X, Y) coordinates of the screen.
+The `color.expected` command waits until a given RGB color appears at the specified coordinates of the screen. The coordinates can be typed in or inserted automatically by the robot with the [Mouse Position](G1ANT.Manual/g1ant.robot-window/auxiliary-windows/mouse-position.md) tool.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`position`| [point](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/point.md) | yes |  | X,Y coordinates |
-|`color`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes |  | expected color in hex format defined as RRGGBB |
-|`relative`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | coordinates can be set in absolute position (argument relative false) or relatively (argument relative true) to the active window |
-|`result`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥result](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)   | name of a variable where returned value will be stored (in hexadecimal format described as RRGGBB)  |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcolorexpected](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md) | specifies time in milliseconds to wait for command to be executed |
-|`errorjump`| [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no |  | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no | | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`position`| [point](G1ANT.Language/G1ANT.Language/Structures/PointStructure.md) | yes |  | X,Y coordinates given in a `x⫽y` format (the `⫽` character called the [Point Separator](G1ANT.Manual/appendices/special-characters/point-separator.md) is available with the **Ctrl+?** keyboard shortcut) |
+|`color`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes |   | Expected color as a hexadecimal number in a RRGGBB format |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Language/G1ANT.Addon.Core/Variables/TimeoutCommandVariable.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll.**
+## Example
 
-**Example:**
-
-This example shows how to check if in provided pixel, the color is exactly as expected (see the screenshot below, we would like to find this green one). In case the pixel is having the expected color, `errorjump` argument will be omited. `errorjump` argument will only be performed if the script before the `errorjump` agrument is false- in our case if the pixel of certain colour does not exist in certain location.
+This example shows how to check if a color of the specified pixel is exactly as expected. If it is, the `errorcall` argument will be skipped and a *“Color found”* message box will be displayed. This argument will be executed only when the command result is false — in case of this example, if a pixel of the given color does not exist at the specified location. Then, a dialog box with *“Color not found”* message will be displayed.
 
 ```G1ANT
-color.expected position ‴610⫽507‴ color ‴06914C‴ relative true errorcall ➤notFound
+color.expected position 88⫽92 color 06914C relative true errorcall notFound
 dialog ‴Color found‴
--
-procedure ➤notFound
+
+procedure notFound
     dialog ‴Color not found‴
     stop silentmode true
-end procedure
+end
 ```
 

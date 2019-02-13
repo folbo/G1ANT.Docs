@@ -1,36 +1,36 @@
 # foreach
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-foreach element ‴‴ in ‴‴
-end foreach
+foreach element ⟦variable⟧ in ⟦list⟧
+end
 ```
 
-**Description:**
+## Description
 
-`foreach` command allows to create a loop which repeats inner block a specified number of times. It ends with `end foreach` command.
+The `foreach` command creates a loop, which repeats the inner block a specified number of times. The loop ends with the `end` command.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`element`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | yes |  | name of a variable which will store one element at a time from the specified list |
-|`in`| [list](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/list.md) | yes |  | name of a list where all elements will be processed one by one with every execution of a loop |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeout](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md) | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no |  | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`element`| [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | yes |  | Name of a variable, which will store one element at a time from the specified list |
+|`in`| [list](G1ANT.Language/G1ANT.Language/Structures/ListStructure.md) | yes |  | Name of a list, from which all elements will be processed one by one with every execution of a loop |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Manual/appendices/common-arguments.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll**.
+## Example
 
-**Example 1:**
-
-In this example there is a list ♥list specified which has three elements. Variable ♥element is initially set to the first element of the list, then the second etc. So this script should output all values from ♥list list in dialog boxes.
+In this example a `♥list` with three elements is declared. The `♥element` variable is initially set to the first element of the list, then to the second and finally to the third. The script will display all values from the `♥list` in consecutive dialog boxes.
 
 ```G1ANT
 ♥list = one❚two❚three
 foreach ♥element in ♥list
    dialog ♥element
-end foreach
+end
 ```

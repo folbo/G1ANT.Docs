@@ -1,45 +1,48 @@
 # if
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-if condition ‴‴
-end if
+if condition ⟦text⟧
+end
 ```
 
-**Description:**
+## Description
 
-`if` command allows to run some part of script depending on conditions set which return value true. It ends with `end if` command.
+This command allows to execute a block of commands if a given condition is true. The block ends with the `end` command.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`condition`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | yes |  | if the condition in C# snippet returns true, robot will execute everything that is between `if` and `end if` or `if` and `else if` or `if` and `else` |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeout](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md) | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no |  | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`condition`| [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | yes |  | If the condition expressed with a C# snippet returns true, the robot will execute everything that is between `if` and `end`, or `if` and `else if`, or `if` and `else` commands |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Manual/appendices/common-arguments.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll**.
+The `if` command may also contain other commands: `else if` and `else`.
 
-`if` command may also contain other commands: `else if` and `else`.
-If the first condition after `if` is not met, robot will check if the below condition after `else if` command is met. I will do it as many times as there are `else if` commands between `if` and `end if` or if one condition is finally met (then it will execute what is between elses). If not, then robot will execute everything that is between `else` and `end if`.
-See the example below for a clearer picture how it works.
+If the first condition after the `if` command is not met, the robot will check whether the next condition after the `else if` command is met. It will repeat these actions as many times as there are `else if` commands in the block between the `if` and `end` commands, or if one condition is finally met (then the robot will execute the block between the `else` commands).
 
-**Example 1:**
+If no condition is met, the robot will execute the command block between the `else` and `end` commands.
+See the example below for a clearer picture of how it works.
 
-In this example the variable ♥number is being checked for its value and depending on it, accurate dialog is displayed in the dialog box.
+## Example
+
+In the following example a user is asked to enter a digit, which is then stored in the `♥number` variable. This variable is checked for its value and depending on the result, an appropriate message is displayed in a dialog box:
 
 ```G1ANT
-♥number = 2
-if ♥number==1
+dialog.ask ‴Enter a digit (0-9):‴ result ♥number
+if ♥number=="1"
    dialog one
-else if ♥number==2
-   dialog two
-else if ♥number==3
-   dialog three
-else
-   dialog ‴number greater than 3 or less than 1‴
-end if
+  else if ♥number=="2"
+    dialog two
+  else if ♥number=="3"
+    dialog three
+  else
+    dialog ‴Your digit is greater than 3 or less than 1‴
+end
 ```

@@ -1,36 +1,33 @@
 # file.download
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-file.download  url ‴‴  filename ‴‴ 
+file.download url ⟦text⟧ filename ⟦text⟧
 ```
 
-**Description:**
+## Description
 
-Command `file.download` allows to download file from the web of FTP server and save it to chosen directory.
+This command downloads a file from a web of FTP server and saves it to the specified location.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`url`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes | | direct link to the file to be downloaded |
-|`filename`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes |  | destination path and filename for a downloaded file |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutfiledownload](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md) | maximal time for downloading a file from the server; negative value indicates infinite timeout |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`url`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes | | Direct link to the file to be downloaded |
+|`filename`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes |  | Destination path and filename for the downloaded file |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Manual/appendices/common-arguments.md) | Maximal time for downloading a file from a server; a negative value indicates infinite timeout |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll**.
+## Example
 
-**Example 1:**
-
-```G1ANT
-file.download url ‴http://download.teamviewer.com/download/TeamViewer_Setup_en.exe‴ filename ‴C:\G1ANT\TeamViewer_Setup_en.exe‴
-```
-
-**Example 2:**
+In the example below the script downloads the TeamViewer application installer file and saves it to a specified directory under a slightly changed filename:
 
 ```G1ANT
-file.download url ‴https://www.mozilla.org/en-US/firefox/new/?scene=2‴ filename ‴C:\test\firefox.html‴
+file.download url http://download.teamviewer.com/download/TeamViewer_Setup_en.exe filename ‴C:\G1ANT\TeamViewer Setup (EN).exe‴
 ```
+

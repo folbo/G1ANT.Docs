@@ -1,60 +1,58 @@
 # file.copy
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-file.copy  path ‴‴  destinationpath ‴‴
+file.copy path ⟦text⟧ destinationpath ⟦text⟧
 ```
 
-**Description:**
+## Description
 
-Command `file.copy` allows to copy specified file to the specified path (in `destinationpath`).
+This command copies the specified file to the location specified with the `destinationpath` argument.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`path`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes |  | a source path to copy from |
-|`destinationpath`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes |  | a path specifying where we are copying the file (can be absolute or relative) |
-|`overwrite`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command even if a file of the same name exists in the destination location |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`path`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes |  | Source path to the file to be copied |
+|`destinationpath`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes |  | Relative or absolute destination filepath |
+|`overwrite`| [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no | true | Executes the command even if a file of the same name exists in the destination location |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Manual/appendices/common-arguments.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll**.
+## Example 1
 
-**Example 1:**
-
-This example copies specified file using `file.copy` command.
+This example copies the specified file using absolute destination path:
 
 ```G1ANT
 file.copy path ‴D:\New folder\test.txt‴ destinationpath ‴D:\New folder\copied_file.txt‴
 ```
 
-Same results can be achieved by using:
+The same results can be achieved with relative destination path (when the destination path is the same as the source one):
 
 ```G1ANT
-file.copy path ‴D:\New folder\test.txt‴ destinationpath ‴copied_file.txt‴
+file.copy path ‴D:\New folder\test.txt‴ destinationpath copied_file.txt
 ```
 
-or, if the file needs to be copied to "D:\New Folder 1", however leave the file name unchanged:
+or, if you want the file to be copied to `D:\Test Folder`, leaving the filename unchanged:
 
 ```G1ANT
-file.copy path ‴D:\New folder\test.txt‴ destinationpath ‴..\New Folder 1‴
+file.copy path ‴D:\New folder\test.txt‴ destinationpath ‴..\Test Folder‴
 ```
 
-Before using the script:
+## Example 2
 
-After using the script:
-
-**Example 2:**
+In the script below the robot checks whether a `TestLogo.png` file exists in the specified location, and if so, a copy of the file is created in the same location. If there’s no source file, an appropriate dialog box is displayed.
 
 ```G1ANT
-file.exists C:\Tests\TestLogo.png timeout 1000 errorcall ➤noFile
-file.copy path ‴C:\Tests\TestLogo.png‴ destinationpath ‴C:\Tests\TestLogo2.png‴ overwrite true
--
-procedure ➤noFile
+file.exists C:\Tests\TestLogo.png timeout 1000 errorjump noFile
+file.copy C:\Tests\TestLogo.png destinationpath C:\Tests\TestLogo2.png overwrite true
+
+label noFile
     dialog ‴File not found‴
-end procedure
+end
 ```

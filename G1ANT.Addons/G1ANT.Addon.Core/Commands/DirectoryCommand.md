@@ -1,53 +1,43 @@
 # directory
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-directory  path ‴‴
+directory path ⟦text⟧
 ```
 
-**Description:**
+## Description
 
-Command `directory` allows to obtain directory content and attach it to the variable. 
+This command allows to retrieve directory content and assign it to a variable. 
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`path`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes |  | directory path |
-|`pattern`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | allows to filter results, e.g. file extensions, file names, type 'directory' to get only directories |
-|`result`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥result](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  | name of variable where results will be stored as a [list](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/list.md)  elements. To calculate number of elements, use `[count]` |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump`| [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no |  | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`path`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes |  | Directory path |
+|`pattern`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no |  | Allows to filter results, e.g. file extensions, file names etc. Type “directory” to get directories only |
+| `result`       | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       | `♥result`                                                   | Name of a variable where the command's result will be stored as [list](G1ANT.Language/G1ANT.Language/Structures/ListStructure.md) elements. To calculate the number of list elements, use the `⟦count⟧` index |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Manual/appendices/common-arguments.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll**.
+## Example 1
 
-**Example 1:**
-
-This example shows how to easily list what provided directory contains.  In our case we are searching for files starting with '2017-12', there are only two in chosen path. After the script is executed, dialog window will pop up showing a list of results. The list is separated with list separators: ❚.
+This example shows how to easily list the contents of a specified directory.  The script searches for robot’s log files starting with *“2019-01”* (the [`♥environment⟦USERPROFILE⟧`](G1ANT.Manual/appendices/environment.md) variable reads the path to the current Windows user profile). After the process is finished, a dialog box will pop up showing the results: a list with its elements separated with the [list separator](G1ANT.Manual/appendices/special-characters/array-separator.md) character (❚).
 
 ```G1ANT
-directory path ‴C:\Users\ania\Documents\G1ANT.Robot\logs‴ pattern ‴2017-12**‴
+directory path ♥environment⟦USERPROFILE⟧\Documents\G1ANT.Robot\logs pattern 2019-01**
 dialog ♥result
 ```
 
-**Example 2:**
+## Example 2
 
-in this example the path argument is specified using variables- when you do that, G1ant.Robot will automatically retrieve all environment variable names and their values from the current process.
-The information displayed in dialog windows indicates that there is one file with .txt extension is specified location and it is called '3rd video'.
-
-```G1ANT
-directory path ‴♥environment⟦HOMEDRIVE⟧♥environment⟦HOMEPATH⟧\Desktop‴  pattern ‴**.txt‴ result ♥res1
-dialog ♥res1
-```
-
-**Example 3:**
-
-In this case, G1ANT.Robot will calculate the number of specified items in specified directory thanks to `dialog ♥res1⟦count⟧` line.
+Here, G1ANT.Robot calculates the number of filtered items in the specified directory, using `♥files⟦count⟧` index.
 
 ```G1ANT
-directory path ‴♥environment⟦HOMEDRIVE⟧♥environment⟦HOMEPATH⟧\Desktop‴  pattern ‴**.txt‴ result ♥res1
-dialog ♥res1⟦count⟧
+directory path ♥environment⟦USERPROFILE⟧\Desktop pattern *.txt result ♥files
+dialog ♥files⟦count⟧
 ```

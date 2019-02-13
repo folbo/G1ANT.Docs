@@ -1,53 +1,38 @@
 # file.delete
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-file.delete 
+file.delete filename ⟦text⟧
 ```
 
-**Description:**
+## Description
 
-Command `file.delete` aims to delete the file specified by filename. It waits given timeout and when the expected file does not appear or cannot be deleted, it jumps to the defined label or stops the process.
+This command deletes the specified file. Bear in mind though that in order to delete a file, you need to have permission to access it.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`filename`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | path and filename of the expected file |
-|`result`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥result](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  | name of variable where execution status will be stored |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`filename`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no |  | Path and a name of the file to be deleted |
+| `result`       | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       | `♥result`                                                   | Name of a variable where the command's result will be stored |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Manual/appendices/common-arguments.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll**.
+## Example
 
-**Example 1:**
-
-This example shows how to check if expected file will appear in given timeout, and delete the file when it appears.
-
-```G1ANT
-try errorcall ➤notfound
-    file.exists C:\G1ANT\test.txt timeout 1000
-    dialog ‴File exists‴
-    call ➤delete
-end try
--
-procedure ➤delete
-    file.delete C:\G1ANT\test.txt
-    dialog ♥result
-end procedure
--
-procedure ➤notfound
-    dialog ‴File doesn't exists‴
-end procedure
-```
-
-**Example 2:**
-
-Please, bear in mind that in order to delete a file, you need to have permission to access it.
+This example shows how to check if a given file appears within a specified timeout, and to delete the file when it does.
 
 ```G1ANT
-file.delete filename C:\Tests\TestLogo.png
+file.exists C:\G1ANT\test.txt timeout 1000 errorjump notFound
+dialog ‴File exists and will be deleted‴
+file.delete C:\G1ANT\test.txt
+dialog ♥result
+
+label notFound
+dialog ‴File doesn't exist‴
 ```

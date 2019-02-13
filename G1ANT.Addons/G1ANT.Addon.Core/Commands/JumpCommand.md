@@ -1,56 +1,36 @@
 # jump
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-jump  label ‴‴
+jump label ⟦label⟧
 ```
 
-**Description:**
+## Description
 
-Execution control flow command `jump` allows to move G1ANT.Robot's action to previously defined label or procedure located in a process. Please note: after doing the jump, the script will not go back to the previous line unless you specify another jump, back to another label.
+The `jump` execution flow control command moves the robot to a defined label in a script, where the process is continued until its end. Please note that all lines between the line from which the jump was performed and the labeled line will be skipped (if the jump is “forward” in a script) or repeated (if the jump is “back” in a script). If you want to execute some code — a repetitive set of commands, for example — and then return to the previous point in a script to continue the process, use procedures and the  [`call`](CallCommand.md) commands.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`label`| [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | yes| | label name (preceded with "➜") |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`label`| [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | yes| | Label name to jump to |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Manual/appendices/common-arguments.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-**Example 1:**
+## Example
 
 ```G1ANT
-program name ‴notepad‴
-jump ➜start
+program notepad
+jump start
 keyboard ‴Jump over this text‴
-➜start
-keyboard ‴Congratulation! You've made a jump!‴
+
+label start
+keyboard ‴Congratulations! You've made a jump!‴
 ```
 
-In this example G1ANT.Robot opens notepad, then instead of typing ‴Jump over this text‴, it types ‴Congratulation! You've made a jump!‴  because we defined a jump command
-
-```G1ANT
-jump ➜start
-keyboard ‴Jump over this text‴
-➜start
-```
-
-which enables to omit certain part of the script between `jump ➜start` and `➜start `. In our case: `keyboard ‴Jump over this text‴`
-
-**Video example 1:**
-
-!{YOUTUBE-LINK+jump-command}!
-
-**Example 2:**
-
-```G1ANT
-➜robot
-dialog message ‴something to display‴
-jump ➜end
-jump label robot
-➜end
-dialog message ‴end‴
-```
+In the example above, the robot opens Notepad, then, instead of typing *“Jump over this text”*, it types *“Congratulations! You've made a jump!”*, because of the `jump` command, which tells the robot to move to the `start` label and skip the lines in between.

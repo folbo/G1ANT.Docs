@@ -1,35 +1,35 @@
 # delay
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-delay
+delay ⟦integer⟧
 ```
 
-**Description:**
+## Description
 
-Command `delay` allows to suspend robot for a specified time in seconds and milliseconds, before it proceeds to the next action.
+The `delay` command allows to suspend robot for a specified time in seconds and milliseconds before it proceeds to the next action.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`seconds`| [integer](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/integer.md) | no | 1 | time in seconds for a robot to wait before it proceeds to the next line of code |
-|`milliseconds`| [integer](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/integer.md) | no | 0 | time in milliseconds added to previously specified time in seconds for a robot to wait before it proceeds to the next line of code |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump`| [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no |  | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`seconds`| [integer](G1ANT.Language/G1ANT.Language/Structures/IntegerStructure.md) | no | 1 | Time in seconds for a robot to wait before it proceeds to the next line of code |
+|`milliseconds`| [integer](G1ANT.Language/G1ANT.Language/Structures/IntegerStructure.md) | no | 0 | Time in milliseconds added to the previously specified time in seconds for a robot to wait before it proceeds to the next line of code |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Manual/appendices/common-arguments.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll.**
+## Example
 
-**Example:**
-
-This example opens notepad program ("program":{TOPIC-LINK+command-program} command) and writes "Hello" ("keyboard":{TOPIC-LINK+command-keyboard} command) after 4 seconds and 500 milliseconds.
+This example launches Notepad and writes *“Hello”* after 4 seconds and 500 milliseconds.
 
 ```G1ANT
-program name ‴notepad‴
+program notepad
 delay 4 milliseconds 500
-keyboard text ‴Hello!‴
+keyboard Hello!
 ```
 
