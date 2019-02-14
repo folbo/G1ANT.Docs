@@ -118,7 +118,7 @@
       * [File Trigger](G1ANT.Addons/G1ANT.Addon.Core/Triggers/FileTrigger.md)
       * [Mail Trigger](G1ANT.Addons/G1ANT.Addon.Core/Triggers/MailTrigger.md)
       * [Schedule Trigger](G1ANT.Addons/G1ANT.Addon.Core/Triggers/ScheduleTrigger.md)
-	* Variables
+    * Variables
       * [activewindow](G1ANT.Addons/G1ANT.Addon.Core/Variables/ActiveWindowVariable.md)
       * [capslock](G1ANT.Addons/G1ANT.Addon.Core/Variables/CapsLockVariable.md)
       * [clipboard](G1ANT.Addons/G1ANT.Addon.Core/Variables/ClipboardVariable.md)
@@ -130,7 +130,7 @@
       * [environment](G1ANT.Addons/G1ANT.Addon.Core/Variables/EnvironmentVariable.md)
       * [executingtime](G1ANT.Addons/G1ANT.Addon.Core/Variables/ExecutingTimeVariable.md)
       * [keydelay](G1ANT.Addons/G1ANT.Addon.Core/Variables/KeyDelayVariable.md)
-	  * [mousedelay](G1ANT.Addons/G1ANT.Addon.Core/Variables/MouseDelayVariable.md)
+      * [mousedelay](G1ANT.Addons/G1ANT.Addon.Core/Variables/MouseDelayVariable.md)
       * [numlock](G1ANT.Addons/G1ANT.Addon.Core/Variables/NumLockVariable.md)
       * [programwait](G1ANT.Addons/G1ANT.Addon.Core/Variables/ProgramWaitVariable.md)
       * [screen](G1ANT.Addons/G1ANT.Addon.Core/Variables/ScreenVariable.md)
@@ -151,27 +151,26 @@
       * [googlesheet.settitle](G1ANT.Addons/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetSetTitleCommand.md)
       * [googlesheet.setvalue](G1ANT.Addons/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetSetValueCommand.md)
       * [googlesheet.switch](G1ANT.Addons/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetSwitchCommand.md)
-  * G1ANT.Addon.Ie
-    * Commands
-      * [ie.activatetab](G1ANT.Addons/G1ANT.Addon.IE/Commands/IEActivateTabCommand.md)
-      * [ie.attach](G1ANT.Addons/G1ANT.Addon.IE/Commands/IEAttachCommand.md)
-      * [ie.click](G1ANT.Addons/G1ANT.Addon.IE/Commands/IEClickCommand.md)
-      * [ie.close](G1ANT.Addons/G1ANT.Addon.IE/Commands/IECloseCommand.md)
-      * [ie.detach](G1ANT.Addons/G1ANT.Addon.IE/Commands/IEDetachCommand.md)
-      * [ie.fireevent](G1ANT.Addons/G1ANT.Addon.IE/Commands/IEFireEventCommand.md)
-      * [ie.getattribute](G1ANT.Addons/G1ANT.Addon.IE/Commands/IEGetAttributeCommand.md)
-      * [ie.gettitle](G1ANT.Addons/G1ANT.Addon.IE/Commands/IEGetTitleCommand.md)
-      * [ie.open](G1ANT.Addons/G1ANT.Addon.IE/Commands/IEOpenCommand.md)
-      * [ie.refresh](G1ANT.Addons/G1ANT.Addon.IE/Commands/IERefreshCommand.md)
-      * [ie.runscript](G1ANT.Addons/G1ANT.Addon.IE/Commands/IERunScriptCommand.md)
-      * [ie.saveas](G1ANT.Addons/G1ANT.Addon.IE/Commands/IESaveAsCommand.md)
-      * [ie.setattribute](G1ANT.Addons/G1ANT.Addon.IE/Commands/IESetAttributeCommand.md)
-      * [ie.seturl](G1ANT.Addons/G1ANT.Addon.IE/Commands/IESetUrlCommand.md)
-      * [ie.switch](G1ANT.Addons/G1ANT.Addon.IE/Commands/IESwitchCommand.md)
-      * [ie.waitforcomplete](G1ANT.Addons/G1ANT.Addon.IE/Commands/IEWaitForCompleteCommand.md)
-      * [ie.waitforvalue](G1ANT.Addons/G1ANT.Addon.IE/Commands/IEWaitForValueCommand.md)
-  * G1ANT.Addon.Iexplorer
+  * G1ANT.Addon.IExplorer
     * [All Commands](G1ANT.Addons/G1ANT.Addon.IExplorer/Addon.md)
+    * Commands
+      * [ie.activatetab](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IEActivateTabCommand.md)
+      * [ie.attach](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IEAttachCommand.md)
+      * [ie.click](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IEClickCommand.md)
+      * [ie.close](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IECloseCommand.md)
+      * [ie.detach](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IEDetachCommand.md)
+      * [ie.fireevent](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IEFireEventCommand.md)
+      * [ie.getattribute](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IEGetAttributeCommand.md)
+      * [ie.gettitle](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IEGetTitleCommand.md)
+      * [ie.open](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IEOpenCommand.md)
+      * [ie.refresh](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IERefreshCommand.md)
+      * [ie.runscript](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IERunScriptCommand.md)
+      * [ie.saveas](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IESaveAsCommand.md)
+      * [ie.setattribute](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IESetAttributeCommand.md)
+      * [ie.seturl](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IESetUrlCommand.md)
+      * [ie.switch](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IESwitchCommand.md)
+      * [ie.waitforcomplete](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IEWaitForCompleteCommand.md)
+      * [ie.waitforvalue](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IEWaitForValueCommand.md)
   * G1ANT.Addon.Images
     * [All Commands](G1ANT.Addons/G1ANT.Addon.Images/Addon.md)
     * Commands
@@ -222,10 +221,10 @@
       * [word.runmacro](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/WordRunMacroCommand.md)
       * [word.save](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/WordSaveCommand.md)
       * [word.switch](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/WordSwitchCommand.md)
-	* Structures
-	  * [outlookfolder](G1ANT.Addons/G1ANT.Addon.MSOffice/Structures/OutlookFolderStructure.md"
-      * [outlookmail](G1ANT.Addons/G1ANT.Addon.MSOffice/Structures/OutlookMailStructure.md"
-      * [outlookattachment](G1ANT.Addons/G1ANT.Addon.MSOffice/Structures/OutlookAttachmentStructure.md"
+    * Structures
+      * [outlookfolder](G1ANT.Addons/G1ANT.Addon.MSOffice/Structures/OutlookFolderStructure.md)
+      * [outlookmail](G1ANT.Addons/G1ANT.Addon.MSOffice/Structures/OutlookMailStructure.md)
+      * [outlookattachment](G1ANT.Addons/G1ANT.Addon.MSOffice/Structures/OutlookAttachmentStructure.md)
   * G1ANT.Addon.Net
     * [All Commands](G1ANT.Addons/G1ANT.Addon.Net/Addon.md)
     * Commands
@@ -333,7 +332,7 @@
     * [Comment](appendices/special-characters/comment.md)
     * [Key Code](appendices/special-characters/key-code.md)
     * [Macro](appendices/special-characters/macro.md)
-	* [Point Separator](appendices/special-characters/point-separator.md)
+    * [Point Separator](appendices/special-characters/point-separator.md)
     * [Search Place](appendices/special-characters/search-place.md)
     * [Text](appendices/special-characters/text.md)
     * [Variable Index](appendices/special-characters/variable-index.md)
