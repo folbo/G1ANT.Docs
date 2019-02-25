@@ -1,45 +1,37 @@
 # random.string
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-random.string  length ‴‴
+random.string length ⟦integer⟧ useletters ⟦bool⟧ usenumbers ⟦bool⟧ usechars ⟦bool⟧ casesensitivity ⟦bool⟧
 ```
 
-**Description:**
+## Description
 
-Command `random.string` allows to get random string with specified length. String can be generated using letters (uppercase too), numbers or various chars and it can be specified by user.
+This command generates a random string of a specified length. The string can be generated using letters (lower- and uppercase), numbers or various characters, and these attributes can be specified by a user.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`length`| [integer](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/integer.md)  | yes | | length of random generated string |
-|`useletters`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no| true | allows to generate string using letters |
-|`usenumbers`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no| true | allows to generate string using numbers |
-|`usechars`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no| false | allows to generate string using chars |
-|`casesensitivity`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no| false | allows to generate string using uppercase letters |
-|`result`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md)  | no | [♥result](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  | name of variable where string from random string will be stored |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`length`| [integer](G1ANT.Language/G1ANT.Language/Structures/IntegerStructure.md) | yes | | Length of the random generated string |
+|`useletters`| [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no| true | Allows to generate string using letters |
+|`usenumbers`| [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no| true | Allows to generate string using numbers |
+|`usechars`| [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no| false | Allows to generate string using all non-control UTF characters |
+|`casesensitivity`| [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no| false | Allows to generate string using uppercase letters |
+| `result`       | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       | `♥result`                                                   | Name of a variable where the random string will be stored |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Language/G1ANT.Addon.Core/Variables/TimeoutCommandVariable.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll**.
+## Example
 
-**Example 1**:
-
-This example generates random string using `random.string` command, generated string is 23 characters long and it is case sensitivity (uses uppercase letters). Then result is displayed on a `dialog` window using `dialog` command.
+This example generates a random string, which is 23 characters long and case sensitive (uses uppercase letters). The result is displayed in a dialog box:
 
 ```G1ANT
-random.string length 23  casesensitivity true
+random.string length 23 casesensitivity true
 dialog ♥result
 ```
-
-**Example 2:**
-
-```G1ANT
-random.string length 10 useletters true usenumbers true usechars false casesensitivity true result ♥ranStr
-dialog ♥ranStr
-```
-

@@ -1,72 +1,39 @@
 # list.add
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-list.add  list1 ‴‴  list2 ‴‴
+list.add list ⟦list⟧ toadd ⟦list⟧
 ```
 
-**Description:**
+## Description
 
-Command `list.add` allows to create a new list by adding two existing. Required arguments: list1, list2
+This command creates a new list by adding an element or a list to the existing one.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`list1`| [list](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/list.md) | yes | | first list to add|
-|`list2`| [list](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/list.md) | yes |  | second list to add |
-|`result`| "string":{TOPIC-LINK+variable} | no | [♥result](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)   | name of variable where new list will be stored|
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`list`| [list](G1ANT.Language/G1ANT.Language/Structures/ListStructure.md) | yes | | First list to be added |
+|`toadd`|  | yes |  | An element or a list to be added |
+| `result`       | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       | `♥result`                                                   | Name of a variable where the command's result will be stored |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Language/G1ANT.Addon.Core/Variables/TimeoutCommandVariable.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Addon.Language.dll**.
+## Example
 
-**Example 1**:
+This example adds two lists using the `list.add` command. First, two lists are created, and then, with the `list.add` command, they are added together. The resulting list is displayed with the `dialog` command.
 
-This example adds two lists using `list.add` command. First we create two lists and then using `list.add` command we add them together. Afterwards we display added list (result) using `dialog` command.
+>**Note:** As a result of the `list.add` command, the original list (`♥list1`) is modified as well, and becomes equal to the variable specified by the `result` argument (which is the default `♥result` variable in case of this example).
 
 ```G1ANT
-♥list1 = ‴foo1‴❚‴foo2‴❚‴foo3‴❚123❚‴45‴
-♥list2 = ‴a‴❚‴b‴❚‴c‴
+♥list1 = foo1❚foo2❚foo3❚123❚45
+♥list2 = a❚b❚c
 list.add list ♥list1 toadd ♥list2
 dialog ♥result
-```
-
-**Example 2:**
-
-```G1ANT
-♥nameList = ‴John‴❚‴Alba‴❚‴Tom‴
-list.add list ♥nameList toadd ‴Abraham‴❚‴Sammy‴ result ♥newList
-dialog ♥newList
-```
-
-**Example 3:**
-
-```G1ANT
-♥nameList = ‴John‴❚‴Alba‴❚‴Tom‴
-list.create text ‴Eggs-Flour-Milk‴ separator ‴-‴ result ♥foodList
-list.add list ♥nameList toadd ♥foodList result ♥newList
-dialog ♥newList
-```
-
-**Example 4:**
-
-```G1ANT
-list.add list ‴Leia‴❚‴Anakin‴❚‴Obi Wan‴ toadd ‴Vader‴❚‴Palpatine‴ result ♥newList
-dialog ♥newList
-```
-
-**Example 5:**
-
-This example shows another way of creating list using `list.create` command.
-
-```G1ANT
-list.create text ‴Johan,Samanta,Aren,Eve,Michael‴ separator ‴,‴ result ♥nameList
-list.create text ‴Eggs-Flour-Milk‴ separator ‴-‴ result ♥foodList
-list.add list ♥nameList toadd ♥foodList result ♥newList
-dialog ♥newList
 ```
 

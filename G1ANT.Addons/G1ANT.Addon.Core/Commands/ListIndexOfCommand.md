@@ -1,48 +1,49 @@
 # list.indexof
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-list.indexof  list ‴‴ value ‴‴
+list.indexof list ⟦list⟧ value ⟦undefined⟧
 ```
 
-**Description:**
+## Description
 
-Command `list.indexof` returns index of specified value in defined list.
+This command returns an index of a specified value in the provided list.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`list`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md)  | yes | | variable holding a list or a list to search through |
-|`value`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md)   | yes |  | variable holding a list or a list to find |
-|`alloccurances`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md)  | no | true | if set to true it will return all indexes of specified value, if set to false, it will return only first occurrence |
-|`result`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md)  | no | [♥result](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  | name of variable where command's result will be stored |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`list`| [list](G1ANT.Language/G1ANT.Language/Structures/ListStructure.md) | yes | | A list variable to be searched |
+|`value`|    | yes |  | Value or a variable to be searched for in a list |
+|`alloccurances`| [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no | false | If set to `true`, the command will return all indexes of the specified value; if set to false, the command will return only the first occurrence |
+| `result`       | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       | `♥result`                                                   | Name of a variable where the command's result will be stored |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Language/G1ANT.Addon.Core/Variables/TimeoutCommandVariable.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Addon.Language.dll**.
-
-**Example 1**:
-
-```G1ANT
-list.create text ‴Johan,Samanta,Aren,Eve,Michael‴ separator ‴,‴ result ♥nameList
-♥Sam = ‴Samanta‴
-list.indexof list ♥nameList value ♥Sam alloccurances true result ♥position
-dialog ♥position
-```
-
-in order to use `list.indexof` command, create a list `list.create` and give it a `result` argument so that it is stored in a variable. You can assign certain value to a variable, as we did `♥Sam = ‴Samanta‴`.
-Then type `list.indexof` giving it `list` argument. The value of the argument is `♥nameList`, bacause we are storing the list in a variable. We did that while creating the list in `list.create` command.
-
-**Example 2:**
+## Example 1
 
 ```G1ANT
-list.create text ‴Eggs-Flour-Milk-Eggs‴ separator ‴-‴ result ♥foodList
-list.indexof list ♥foodList value ‴Eggs‴ alloccurances true result ♥position1
-dialog ♥position1
+♥nameList = John❚Samantha❚Adam❚Eve❚Michael
+♥name = Samantha
+list.indexof list ♥nameList value ♥name result ♥index
+dialog ♥index
 ```
 
-The dialog window will give you two indexes of 'Eggs' value, because the `alloccurances` is true. If it is set on false, you will only get one index of the first 'Egg' value in the list.
+In the script above, the robot looks for the name *Samantha* (stored in the `♥name` variable) in the list of names stored in the `♥nameList` variable. The search result is saved in the `♥index` variable and then displayed in a dialog box. In this case, the result will be 2, since *Samantha* is the second element in the list.
+
+## Example 2
+
+Here the robot will display `2❚4`, because the word *Apples* is the second and the fourth element in the list. If you set the `alloccurances` argument to `false` (or omit it altogether as it’s a default value), the robot will return only the first occurrence of the searched value.
+
+```G1ANT
+♥foodList = Carrots❚Apples❚Oranges❚Apples❚Avocados
+list.indexof list ♥foodList value Apples alloccurances true result ♥index
+dialog ♥index
+```
+
+

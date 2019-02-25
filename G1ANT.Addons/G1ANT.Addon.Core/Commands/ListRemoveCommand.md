@@ -1,54 +1,47 @@
 # list.remove
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-list.remove  list ‴‴ toremove ‴‴
+list.remove list ⟦list⟧ toremove ⟦undefined⟧
 ```
 
-**Description:**
+## Description
 
-Command `list.remove` allows to remove all specified elements from list.
+This command removes all specified elements from a list. You can remove single element or several using a list.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`list`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | yes|  | list to be reduced |
-|`toremove`| [list](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/list.md)  | yes|  | list of elements to be removed|
-|`result`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md)  | no | [♥result](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  | name of variable where new list will be stored |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`list`| [list](G1ANT.Language/G1ANT.Language/Structures/ListStructure.md) | yes|  | List to be reduced |
+|`toremove`|                                                              | yes|  | Elements to be removed |
+| `result`       | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       | `♥result`                                                   | Name of a variable where the command's result will be stored |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Language/G1ANT.Addon.Core/Variables/TimeoutCommandVariable.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Addon.Language.dll**.
+## Example
 
-**Example 1**:
-
-In this example we are first creating a list using ';' separator and assigning it to a variable called ♥riverNames. In the next step we are creating a list using `list.create` argument.
+In this example the robot removes one element stored in the `♥toRemove` variable from the `♥riverNames` list variable:
 
 ```G1ANT
-list.create text ‴Quiet Run;Moaning Beck;Gleaming Brook;Cirq Tributary‴ separator ‴;‴ result ♥riverNames
+♥riverNames = Quiet Run❚Moaning Beck❚Gleaming Brook❚Cirq Tributary
 dialog ♥riverNames
-list.create text ‴Moaning Beck‴ separator ‴,‴ result ♥toRemove
-list.remove list ♥riverNames toremove ♥toRemove result ♥cleanList
-dialog ♥cleanList
+♥toRemove = Moaning Beck
+list.remove list ♥riverNames toremove ♥toRemove result ♥newList
+dialog ♥newList
 ```
 
-**Example 2:**
+The same example, but with two elements removed at once, using a list as a value for the `toremove` argument:
 
 ```G1ANT
-list.create text ‴Quiet Run;Moaning Beck;Gleaming Brook;Cirq Tributary‴ separator ‴;‴ result ♥riverNames
+♥riverNames = Quiet Run❚Moaning Beck❚Gleaming Brook❚Cirq Tributary
 dialog ♥riverNames
-list.remove list ♥riverNames toremove ‴Moaning Beck❚‴ result ♥cleanList
-dialog ♥cleanList
-```
-
-**Example 3:**
-
-```G1ANT
-♥MB = ‴Moaning Beck❚‴
-list.remove list ‴Quiet Run❚Moaning Beck❚Gleaming Brook❚Cirq Tributary‴ toremove ♥MB result ♥cleanList
-dialog ♥cleanList
+♥toRemove = Moaning Beck❚Cirq Tributary
+list.remove list ♥riverNames toremove ♥toRemove result ♥newList
+dialog ♥newList
 ```

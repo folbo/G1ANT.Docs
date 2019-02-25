@@ -1,38 +1,43 @@
 # process.kill
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-process.kill  name ‴‴
+process.kill name ⟦text⟧
 ```
 
-**Description:**
+## Description
 
-Command `process.kill` kills all processes running on your computer.
+This command kills all processes of a specified name running on your computer.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`name`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes |  | name of the process to kill |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`name`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes |  | Name of a process(es) to kill |
+| `result`       | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       | `♥result`                                                   | Name of a variable where the command's result will be stored |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Language/G1ANT.Addon.Core/Variables/TimeoutCommandVariable.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll**.
+## Example
 
-**Example 1:**
+The following script starts four processes and then kills them instantly all one by one, even if they were not originally launched by the robot. In other words, the `process.kill` command in this example will close **ALL** Firefox windows and tabs, as well as Notepad, Excel and Internet Explorer windows. **Be sure to save all your work in these applications before running this script, otherwise your data will be lost!**
 
-This command ends all the processes running on your computer, whether they were launched by robot or not. `process.kill name ‴firefox‴` will close all windows of Firefox.
+>**Note:** The `process.kill` command will not kill processes specified as filenames with extensions, e.g. `iexplore.exe`.
+
+> **Note:** The `excel.open`, `ie.open` and `selenium.open` commands require the MSOffice, IExplorer and Selenium addons enabled, respectively. You can do that in the Addons [panel](G1ANT.Manual/g1ant.robot-window/panels.md).
 
 ```G1ANT
-program name ‴notepad‴
+program notepad
 excel.open
 ie.open
-selenium.open type ‴firefox‴ url ‴google.com‴
-process.kill name ‴notepad‴
-process.kill name ‴excel‴
-process.kill name ‴iexplorer‴
-process.kill name ‴firefox‴
+selenium.open firefox url google.com
+process.kill notepad
+process.kill excel
+process.kill iexplorer
+process.kill firefox
 ```

@@ -1,50 +1,50 @@
 # list.create
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-list.create  text ‴‴  separator ‴‴
+list.create text ⟦text⟧ separator ⟦text⟧
 ```
 
-**Description:**
+## Description
 
-Command `list.create` creates new list based on provided string which contains separators like \";'/[]\".
+The `list.create` command creates a new list based on provided text and separators such as \";'/[]\". You can also use multiple characters as separators: whole words, repeatable strings, or even special characters available with C# snippets, for example a new line character expressed with this snippet `⊂"\r\n"⊃`.
+
+It's also possible to create an empty list with this command.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`text`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md)  | yes |  | string to be parsed to list |
-|`separator`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md)  | yes|  | separator used to create list |
-|`type`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md)  | no |  | the expected "type of structure":{TOPIC-LINK+types-of-variables} the list consists of  (lists can be of one type only) |
-|`result`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md)  | no | [♥result](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  | name of variable where command's result will be stored |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`text`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes |  | String to be converted to a list |
+|`separator`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes|  | Separator character used to create a list |
+|`type`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no |  | Expected structure (type) of elements in a list (lists can be of one type only) |
+| `result`       | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       | `♥result`                                                   | Name of a variable where the command's result will be stored |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Language/G1ANT.Addon.Core/Variables/TimeoutCommandVariable.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Addon.Language.dll**.
+## Example
 
-**Example 1**:
+This is a simple example of creating a list of names separated with a comma:
 
 ```G1ANT
-list.create text ‴Johan, Samanta, Aren, Eve, Michael‴ separator ‴,‴ result ♥nameList
+list.create text John,Samantha,Adam,Eve,Michael separator , result ♥nameList
 dialog ♥nameList
 ```
 
-**Example 2:**
+And this is the method for creating an empty list:
 
 ```G1ANT
-list.create text ‴Eggs-Flour-Milk‴ separator ‴-‴ result ♥foodList
-dialog ♥foodList
+list.create ‴‴ separator ,
 ```
 
-**Example 3:**
+Another way to create a list is to declare a list variable with its elements separated with the [array separator](G1ANT.Manual/appendices/special-characters/array-separator.md) character (available with **Ctrl+\\** keyboard shortcut):
 
 ```G1ANT
-♥list1 = ‴John‴❚‴Alba‴❚‴Tom‴
-dialog ♥list1
+♥nameList = John❚Samantha❚Adam❚Eve❚Michael
 ```
 
-Another way to create a list is  by simply typing `♥list1 = ‴John‴❚‴Alba‴❚‴Tom‴`.
-Then you would always have to use one type of separator- array separator (you can access it by CTRL + |)

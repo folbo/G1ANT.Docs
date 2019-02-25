@@ -1,37 +1,39 @@
 # task.include
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-task.include filepath ‴‴
+task.include filepath ⟦text⟧
 ```
 
-**Description:**
+## Description
 
-Command `task.include` allows to include a script from different task located on disk. The script will be populated in the place where command task.include is called. The full directory path can be passed or just the filename - the command by default tries to find the filename in the folder %currentuser%/My Documents/G1ANT.Robot. Please note that all lines from the script will be imported, so if there is something more than just procedures it will be executed in the current script.
+This command includes a script read from a file. The script will be inserted into the place where the `task.include` command was executed.
+
+The full filepath can be specified or just the filename — by default, the command tries to find the file in the *%currentuser%/[My ]Documents/G1ANT.Robot* folder. Please note that all lines from the script will be imported, so if there is something more than just procedures, it will be executed in the current script.
 
 | Name | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`filepath`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes |  | file path or filename if it's in G1ANT.Robot folder |
+|`filepath`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes |  | Full path or a name (if a file is located in G1ANT.Robot folder) to a file with the script to be included |
 
-**Example 1:**
-Procedure from different file can be added to use in current script.
+## Example
+
+The following script will import the contents of the *forloop.G1ANT* file, which is a simple procedure, and then calls it with `start` and `end` parameters.
+
+The external `forLoop` procedure normally has two iterations of the `for` loop defined by the `start` and `end` parameters with the values of 0 and 1, respectively. But when it’s called from the current script, new `start` and `end` values are passed to it — 3 and 6, respectively — so the loop will be executed four times, displaying dialog boxes with numbers from 3 to 6.
 
 ```G1ANT
-task.include ‴_aforprocedure.robot‴
-dialog ‴Do something using the procedure from external robot file‴
-jump ⏭forloop start 0 end 3
+task.include forloop.G1ANT
+dialog ‴Now call a procedure from the external script file‴
+call forLoop start 3 end 6
 ```
 
-Content of the file _aforprocedure.robot
+The contents of the *forloop.G1ANT* file:
 
 ```G1ANT
-procedure ⏭forloop start 0 end 1
-    ♥loopindex = ♥start
-    jump ‴➜startforloop‴
-    ➜startforloop
-    dialog ♥loopindex
-    ♥loopindex = ♥loopindex + 1
-    jump ‴➜startforloop‴ if ⊂♥loopindex &lt; ♥end⊃
+procedure forLoop start 0 end 1
+  for ♥loopCount from ♥start to ♥end
+    dialog ♥loopCount
+  end
 end
 ```

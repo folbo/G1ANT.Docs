@@ -16,6 +16,7 @@
 
 | Name | Description |
 | ---- | ----------- |
+| [timeoutconnect](https://github.com/G1ANT-Robot/G1ANT.Addon.Net/blob/master/G1ANT.Addon.Net/Variables/TimeoutConnectVariable.md) | Defines timeout for connecting; the default value is 1000 ms. |
 | [timeoutmailsmtp](https://github.com/G1ANT-Robot/G1ANT.Addon.Net/blob/master/G1ANT.Addon.Net/Variables/TimeoutMailSmtpVariable.md) | Determines the timeout value for the mail.smtp command; the default value is 10000 ms. |
 | [timeoutremotedesktop](https://github.com/G1ANT-Robot/G1ANT.Addon.Net/blob/master/G1ANT.Addon.Net/Variables/TimeoutRemoteDesktopVariable.md) | Determines the timeout value for the vnc.connect command; the default value is 10000 ms. |
 | [timeoutrest](https://github.com/G1ANT-Robot/G1ANT.Addon.Net/blob/master/G1ANT.Addon.Net/Variables/TimeoutRestVariable.md) | Determines the timeout value for the rest command; the default value is 5000 ms. |

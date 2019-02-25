@@ -1,36 +1,38 @@
 # string.getsimilarity
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-string.getsimilarity  phrase1 ‴‴  phrase2 ‴‴ 
+string.getsimilarity phrase1 ⟦text⟧ phrase2 ⟦text⟧ ignorecase ⟦bool⟧ normalize ⟦bool⟧
 ```
 
-**Description:**
+## Description
 
-Command `string.getsimilarity` calculates percentage similarity of two strings.
+This command calculates a percentage similarity of two words based on the [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance).
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`phrase1`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes |  | phrase to compare |
-|`phrase2`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes |  | phrase to compare |
-|`ignorecase`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | determines whether to ignore case, true by default |
-|`normalize`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | normalises phrases before comparison by replacing diacritic characters with their equivalents, true by default |
-|`result`| "variable":{TOPIC-LINK+string}| no |  [♥result](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  | name of variable where command's result will be stored |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`phrase1`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes |  | First phrase to be compared |
+|`phrase2`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes |  | Second phrase to be compared |
+|`ignorecase`| [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no | true | Determines whether to ignore case |
+|`normalize`| [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no | true | Normalizes phrases before comparison by replacing diacritic characters with their Latin equivalents |
+| `result`       | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       | `♥result`                                                   | Name of a variable where the command's result will be stored |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Language/G1ANT.Addon.Core/Variables/TimeoutCommandVariable.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll**.
+## Example
 
-**Example 1:**
-
-The example below shows comparison between two identical phrases. The result in dialog window will show '100'.
+The example below shows the results of two comparisons: two identical phrases give 100 percent of similarity, so *100* is displayed in the first dialog box, whereas in the second case the similarity drops to 62 percent:
 
 ```G1ANT
-string.getsimilarity phrase1 ‴robot‴ phrase2 ‴robot‴ ignorecase false normalize false result ♥myvar                    
-dialog ♥myvar
+string.getsimilarity phrase1 robot phrase2 robot
+dialog ♥result
+string.getsimilarity phrase1 robot phrase2 robotize
+dialog ♥result
 ```

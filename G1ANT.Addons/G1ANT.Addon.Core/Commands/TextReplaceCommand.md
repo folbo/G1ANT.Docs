@@ -1,61 +1,48 @@
 # text.replace
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-text.replace  text ‴‴ replace ‴‴
+text.replace text ⟦text⟧ search ⟦text⟧ regex ⟦text⟧ replace ⟦text⟧
 ```
 
-**Description:**
+## Description
 
-Command `text.replace` allows to replace a string with other value within text or variable and assigns result to another variable.
+This command replaces text with other value and assigns the result to another variable.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`text`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes|  | inputs text or variable |
-|`search`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |   | defines text to be searched within a variable or text |
-|`regex`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no|   | defines regular expression to be found within a variable or text |
-|`replace`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | yes|   | defines value to replace to |
-|`result`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md)  | no |  [♥result](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  | variable name for command’s result |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`text`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes|  | Source text or a variable |
+|`search`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no |   | Specifies text to be replaced in the source text |
+|`regex`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no|   | Specifies regular expression to be applied for the search in the source text |
+|`replace`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | yes|   | Text to be used as a replacement |
+| `result`       | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       | `♥result`                                                   | Name of a variable where the command's result will be stored |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Language/G1ANT.Addon.Core/Variables/TimeoutCommandVariable.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll**.
+## Example 1
 
-**Example 1:**
+This simple script replaces “John” with “Tom” in the source text stored in a variable:
 
 ```G1ANT
-♥source = ‴Name: John Surname: Smith‴
-text.replace ♥source search ‴John‴ replace ‴Tom‴ result ♥name
+♥source = Name: John Surname: Smith
+text.replace ♥source search John replace Tom result ♥name
 dialog ♥name
 ```
 
-**Example 2:**
+## Example 2
 
-In order to use `text.replace` command, first open a file with some text and assign its content to the `result` argument in a variable to use it later.
-
-```G1ANT
-text.read filename ‴C:\Users\user1\Desktop\tests\textwritetest.txt‴ result ♥read
-dialog ♥read
-text.replace text ♥read search ‴distributing‴ replace ‴flying‴ result ♥newText
-dialog ♥newText
-```
-
-This is some text from our file:
-
-`text.replace` command replaces word 'distributing' with 'flying'.
-
-**Example 3:**
-
-In this example, G1ANT.Robot searches for a word using regex expression and exchanges it with the word 'fox'.
+In this example G1ANT.Robot searches for all 3-letter words using regex expression (`\b\w{3}\b`) and then replaces them with the word “fox”.
 
 ```G1ANT
-♥loremIpsum = ‴It's a fez. I wear a fez now. Fezes are cool. You hit me with a cricket bat. Saving the world with meals on wheels. I hate yogurt. It's just stuff with bits in.‴
-text.replace text ♥loremIpsum regex ‴\b\w{3}\b‴ replace ‴fox‴ result ♥NN1
-dialog ♥NN1
+♥loremIpsum = It's a fez. I wear a fez now. Fezes are cool. You hit me with a cricket bat. Saving the world with meals on wheels. I hate yogurt. It's just stuff with bits in.
+text.replace ♥loremIpsum regex \b\w{3}\b replace fox result ♥new
+dialog ♥new
 ```
 

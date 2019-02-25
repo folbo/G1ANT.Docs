@@ -15,8 +15,8 @@
 
 | Name | Description |
 | ---- | ----------- |
-| [Windows Tree](https://github.com/G1ANT-Robot/G1ANT.Addon.UI/blob/master/G1ANT.Addon.UI/Panels/UIControlsPanel.md) |  |
 | [UI Applications](https://github.com/G1ANT-Robot/G1ANT.Addon.UI/blob/master/G1ANT.Addon.UI/Panels/UIControlsPanel.md) |  |
+
 
 # All Structures
 

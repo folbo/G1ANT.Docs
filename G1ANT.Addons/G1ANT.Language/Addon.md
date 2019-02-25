@@ -11,7 +11,7 @@
 | [color.expected](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ColorExpectedCommand.md) | This command allows to check if specified color is on specified position. |
 | [color.find](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ColorFindCommand.md) | This command allows to capture first pixel in specified direction staring from position that matches specified color |
 | [-](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/CommentCommand.md) |  |
-| [contains](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ContainsCommand.md) | This coomand allows to chec if specified dictionary contains item at specified key |
+| [contains](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ContainsCommand.md) | This command allows to check if a specified dictionary contains an item at a specified key |
 | [continue](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ContinueCommand.md) | Stops executing current block and goes to next itereation |
 | [dashboard.progress](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DashboardProgressCommand.md) | This command sets progres of a bot (currently executing process) |
 | [database](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DatabaseCommand.md) | Command that sets currently used database connection string |
@@ -83,12 +83,6 @@
 | [error](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ErrorCommand.md) | Command which throws an error. |
 
 
-# All Panels
-
-| Name | Description |
-| ---- | ----------- |
-| [Watch](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Panels/WatchPanel.md) |  |
-
 # All Structures
 
 | Name | Description |
@@ -124,9 +118,9 @@
 
 | Name | Description |
 | ---- | ----------- |
-| [FileTrigger](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Triggers/FileTrigger.md) |  |
-| [MailTrigger](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Triggers/MailTrigger.md) |  |
-| [ScheduleTrigger](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Triggers/ScheduleTrigger.md) |  |
+| [file](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Triggers/FileTrigger.md) |  |
+| [mail](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Triggers/MailTrigger.md) |  |
+| [schedule](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Triggers/ScheduleTrigger.md) |  |
 
 
 # All Variables
@@ -138,7 +132,7 @@
 | [clipboard](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/ClipboardVariable.md) | Reads Windows clipboard content. |
 | [context](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/ContextVariable.md) | Context of current process instance. |
 | [VariableName, ReadOnly = true, Tooltip = Reads the value of a specified key stored in the Credential Container.](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/CredentialVariable.md) | Reads the value of a specified key stored in the Credential Container. |
-| [dateformat](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DateFormatVariable.md) | Defines a date display format (eg. dd-MM-yyyy, dd.MM.yy, MM\\/dd\\/yy - note that the slash separator should be preceded with backslash or embraced with apostrophes: &apos;/&apos;). |
+| [dateformat](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DateFormatVariable.md) | Defines the display format (eg. dd-MM-yyyy, dd.MM.yy, MM/dd/yy for the date special variable |
 | [date](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DateVariable.md) | Gives current date in the format defined with the dateformat variable. |
 | [delayseconds](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DelaySecondsVariable.md) | Determines the time value (in s) for the delay command; the default value is 1 |
 | [delaystep](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DelayStepVariable.md) | Determines the delay value (in ms) for a command to proceed; the default value is 500 |
@@ -174,6 +168,6 @@
 
 | Name | Description |
 | ---- | ----------- |
-| [RDP Controller](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Wizards/RdpControllerWizard.md) |  |
-| [Windows Defender](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Wizards/WindowsDefenderWizard.md) |  |
+| [RDP Controller](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Wizards/RdpControllerWizard.md) | Runs the Installer of the Remote Desktop Controller |
+| [Windows Defender](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Wizards/WindowsDefenderWizard.md) | Adds Windows Defender Exclusion for G1ANT.Robot |
 

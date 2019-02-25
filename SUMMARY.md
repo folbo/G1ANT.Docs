@@ -54,7 +54,6 @@
     * [Shortcuts](g1ant.robot-window/auxiliary-windows/shortcuts.md)
   * [System Tray Menu](g1ant.robot-window/system-tray.md)
 * G1ANT.Addons
-  * [UI Addon concept](G1ANT.Addons/UIAddonConcept.md)
   * G1ANT.Addon.Core
     * Commands
       * [break](G1ANT.Addons/G1ANT.Addon.Core/Commands/BreakCommand.md)
@@ -124,7 +123,7 @@
       * [clipboard](G1ANT.Addons/G1ANT.Addon.Core/Variables/ClipboardVariable.md)
       * [credential](G1ANT.Addons/G1ANT.Addon.Core/Variables/CredentialVariable.md)
       * [dateformat](G1ANT.Addons/G1ANT.Addon.Core/Variables/DateFormatVariable.md)
-      * [datevariable](G1ANT.Addons/G1ANT.Addon.Core/Variables/DateVariable.md)
+      * [date](G1ANT.Addons/G1ANT.Addon.Core/Variables/DateVariable.md)
       * [delayseconds](G1ANT.Addons/G1ANT.Addon.Core/Variables/DelaySecondsVariable.md)
       * [delaystep](G1ANT.Addons/G1ANT.Addon.Core/Variables/DelayStepVariable.md)
       * [environment](G1ANT.Addons/G1ANT.Addon.Core/Variables/EnvironmentVariable.md)
@@ -136,8 +135,8 @@
       * [screen](G1ANT.Addons/G1ANT.Addon.Core/Variables/ScreenVariable.md)
       * [scrolllock](G1ANT.Addons/G1ANT.Addon.Core/Variables/ScrollLockVariable.md)
       * [timeformat](G1ANT.Addons/G1ANT.Addon.Core/Variables/TimeFormatVariable.md)
-      * [time](G1ANT.Addons/G1ANT.Addon.Core/Variables/TimeVariable.md)
       * [timeoutchrome](G1ANT.Addons/G1ANT.Addon.Core/Variables/TimeoutChromeVariable.md)
+      * [time](G1ANT.Addons/G1ANT.Addon.Core/Variables/TimeVariable.md)
   * G1ANT.Addon.Googledocs
     * [All Commands](G1ANT.Addons/G1ANT.Addon.GoogleDocs/Addon.md)
     * Commands
@@ -151,7 +150,7 @@
       * [googlesheet.settitle](G1ANT.Addons/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetSetTitleCommand.md)
       * [googlesheet.setvalue](G1ANT.Addons/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetSetValueCommand.md)
       * [googlesheet.switch](G1ANT.Addons/G1ANT.Addon.GoogleDocs/Commands/GoogleSheetSwitchCommand.md)
-  * G1ANT.Addon.IExplorer
+  * G1ANT.Addon.Iexplorer
     * [All Commands](G1ANT.Addons/G1ANT.Addon.IExplorer/Addon.md)
     * Commands
       * [ie.activatetab](G1ANT.Addons/G1ANT.Addon.IExplorer/Commands/IEActivateTabCommand.md)
@@ -204,13 +203,9 @@
       * [excel.switch](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/ExcelSwitchCommand.md)
       * [outlook.close](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/OutlookCloseCommand.md)
       * [outlook.findmails](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/OutlookFindMailsCommand.md)
-      * [outlook.getfolder](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/OutlookGetFolderCommand.md)
-      * [outlook.getrootfolders](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/OutlookGetRootFoldersCommand.md)
       * [outlook.moveto](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/OutlookMoveToCommand.md)
       * [outlook.newmessage](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/OutlookNewMessageCommand.md)
       * [outlook.open](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/OutlookOpenCommand.md)
-      * [outlook.reply](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/OutlookReplyCommand.md)
-      * [outlook.selectitem](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/OutlookSelectItemCommand.md)
       * [outlook.send](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/OutlookSendCommand.md)
       * [word.close](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/WordCloseCommand.md)
       * [word.export](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/WordExportCommand.md)
@@ -222,19 +217,35 @@
       * [word.save](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/WordSaveCommand.md)
       * [word.switch](G1ANT.Addons/G1ANT.Addon.MSOffice/Commands/WordSwitchCommand.md)
     * Structures
+      * [outlookattachment](G1ANT.Addons/G1ANT.Addon.MSOffice/Structures/OutlookAttachmentStructure.md)
       * [outlookfolder](G1ANT.Addons/G1ANT.Addon.MSOffice/Structures/OutlookFolderStructure.md)
       * [outlookmail](G1ANT.Addons/G1ANT.Addon.MSOffice/Structures/OutlookMailStructure.md)
-      * [outlookattachment](G1ANT.Addons/G1ANT.Addon.MSOffice/Structures/OutlookAttachmentStructure.md)
   * G1ANT.Addon.Net
     * [All Commands](G1ANT.Addons/G1ANT.Addon.Net/Addon.md)
     * Commands
       * [as400.open](G1ANT.Addons/G1ANT.Addon.Net/Commands/As400OpenCommand.md)
       * [is.accessible](G1ANT.Addons/G1ANT.Addon.Net/Commands/IsAccessibleCommand.md)
       * [mail.imap](G1ANT.Addons/G1ANT.Addon.Net/Commands/MailImapCommand.md)
+      * [mail.moveto](G1ANT.Addons/G1ANT.Addon.Net/Commands/MailMoveToCommand.md)
       * [mail.smtp](G1ANT.Addons/G1ANT.Addon.Net/Commands/MailSmtpCommand.md)
       * [ping](G1ANT.Addons/G1ANT.Addon.Net/Commands/PingCommand.md)
       * [rest](G1ANT.Addons/G1ANT.Addon.Net/Commands/RestCommand.md)
       * [vnc.connect](G1ANT.Addons/G1ANT.Addon.Net/Commands/VncConnectCommand.md)
+  * G1ANT.Addon.Ocr.Abbyyfinereader
+    * [All Commands](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Addon.md)
+    * Commands
+      * [ocrabbyy.close](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyCloseCommand.md)
+      * [ocrabbyy.filter](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyFilterCommand.md)
+      * [ocrabbyy.find](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyFindCommand.md)
+      * [ocrabbyy.fromscreen](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyFromScreenCommand.md)
+      * [ocrabbyy.getcellinfo](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyGetCellInfoCommand.md)
+      * [ocrabbyy.getdocument](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyGetDocumentCommand.md)
+      * [ocrabbyy.gettableposition](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyGetTablePositionCommand.md)
+      * [ocrabbyy.plaintext](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyPlainTextCommand.md)
+      * [ocrabbyy.processfile](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyProcessFileCommand.md)
+      * [ocrabbyy.processscreen](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyProcessScreenCommand.md)
+      * [ocrabbyy.readcell](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyReadCellCommand.md)
+      * [ocrabbyy.readtables](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyReadTablesCommand.md)
   * G1ANT.Addon.Ocr.Google
     * [All Commands](G1ANT.Addons/G1ANT.Addon.Ocr.Google/Addon.md)
     * Commands
@@ -242,23 +253,6 @@
       * [ocrgoogle.findpoint](G1ANT.Addons/G1ANT.Addon.Ocr.Google/Commands/OcrGoogleFindPointCommand.md)
       * [ocrgoogle.fromscreen](G1ANT.Addons/G1ANT.Addon.Ocr.Google/Commands/OcrGoogleFromScreenCommand.md)
       * [ocrgoogle.login](G1ANT.Addons/G1ANT.Addon.Ocr.Google/Commands/OcrGoogleLoginCommand.md)
-  * G1ANT.Addon.Ocr.Abbyyfinereader
-    * [All Commands](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Addon.md)
-    * Commands
-      * [ocrabbyy.close](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyCloseCommand.md)
-      * [ocrabbyy.exporttoxml](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyExportToXmlCommand.md)
-      * [ocrabbyy.filter](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyFilterCommand.md)
-      * [ocrabbyy.find](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyFindCommand.md)
-      * [ocrabbyy.fromscreen](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyFromScreenCommand.md)
-      * [ocrabbyy.getcellinfo](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyGetCellInfoCommand.md)
-      * [ocrabbyy.getdocument](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyGetDocumentCommand.md)
-      * [ocrabbyy.gettableposition](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyGetTablePositionCommand.md)
-      * [ocrabbyy.gettextinparagraphs](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyGetTextInParagraphsCommand.md)
-      * [ocrabbyy.plaintext](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyPlainTextCommand.md)
-      * [ocrabbyy.processfile](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyProcessFileCommand.md)
-      * [ocrabbyy.processscreen](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyProcessScreenCommand.md)
-      * [ocrabbyy.readcell](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyReadCellCommand.md)
-      * [ocrabbyy.readtables](G1ANT.Addons/G1ANT.Addon.Ocr.AbbyyFineReader/Commands/OcrAbbyyReadTablesCommand.md)
   * G1ANT.Addon.Ocr.Tesseract
     * [All Commands](G1ANT.Addons/G1ANT.Addon.OCR.Tesseract/Addon.md)
     * Commands
@@ -271,7 +265,6 @@
       * [selenium.callfunction](G1ANT.Addons/G1ANT.Addon.Selenium/Commands/SeleniumCallFunctionCommand.md)
       * [selenium.click](G1ANT.Addons/G1ANT.Addon.Selenium/Commands/SeleniumClickCommand.md)
       * [selenium.close](G1ANT.Addons/G1ANT.Addon.Selenium/Commands/SeleniumCloseCommand.md)
-      * [selenium.closetab](G1ANT.Addons/G1ANT.Addon.Selenium/Commands/SeleniumCloseTabCommand.md)
       * [selenium.getattribute](G1ANT.Addons/G1ANT.Addon.Selenium/Commands/SeleniumGetAttributeCommand.md)
       * [selenium.gettitle](G1ANT.Addons/G1ANT.Addon.Selenium/Commands/SeleniumGetTitleCommand.md)
       * [selenium.newtab](G1ANT.Addons/G1ANT.Addon.Selenium/Commands/SeleniumNewTabCommand.md)
@@ -286,17 +279,16 @@
       * [selenium.waitforvalue](G1ANT.Addons/G1ANT.Addon.Selenium/Commands/SeleniumWaitForValueCommand.md)
   * G1ANT.Addon.Ui
     * [All Commands](G1ANT.Addons/G1ANT.Addon.UI/Addon.md)
+    * [UI Addon concept](G1ANT.Addons/G1ANT.Addon.UI/UIAddonConcept.md)
   * G1ANT.Addon.Watson
     * [All Commands](G1ANT.Addons/G1ANT.Addon.Watson/Addon.md)
     * Commands
       * [watson.classifyimage](G1ANT.Addons/G1ANT.Addon.Watson/Commands/WatsonClassifyImageCommand.md)
-      * [WatsonLoginCommand](G1ANT.Addons/G1ANT.Addon.Watson/Commands/WatsonLoginCommand.md)
       * [watson.speechtotext](G1ANT.Addons/G1ANT.Addon.Watson/Commands/WatsonSpeechToTextCommand.md)
   * G1ANT.Addon.Xlsx
     * [All Commands](G1ANT.Addons/G1ANT.Addon.Xlsx/Addon.md)
     * Commands
       * [xlsx.close](G1ANT.Addons/G1ANT.Addon.Xlsx/Commands/XlsxCloseCommand.md)
-      * [xlsx.countrow](G1ANT.Addons/G1ANT.Addon.Xlsx/Commands/XlsxCountRowCommand.md)
       * [xlsx.find](G1ANT.Addons/G1ANT.Addon.Xlsx/Commands/XlsxFindCommand.md)
       * [xlsx.getvalue](G1ANT.Addons/G1ANT.Addon.Xlsx/Commands/XlsxGetValueCommand.md)
       * [xlsx.open](G1ANT.Addons/G1ANT.Addon.Xlsx/Commands/XlsxOpenCommand.md)
@@ -324,8 +316,6 @@
       * [string](G1ANT.Addons/G1ANT.Language/Structures/TextStructure.md)
       * [time](G1ANT.Addons/G1ANT.Language/Structures/TimeStructure.md)
       * [xml](G1ANT.Addons/G1ANT.Language/Structures/XmlStructure.md)
-  * G1ANT.Robot
-    * [All Panels](G1ANT.Addons/G1ANT.Robot/Addon.md)
 * Appendices
   * [Special Characters](appendices/special-characters/DESCRIPTION.md)
     * [Array Separator](appendices/special-characters/array-separator.md)
@@ -346,11 +336,10 @@
   * [Windows Keyboard Shortcuts](appendices/windows-keyboard-shortcuts.md)
   * [Additional Information](appendices/additional-information.md)
 * Indexes
-  * [All Addons](indexes/Addons.md)
-  * [All Commands](indexes/Commands.md)
-  * [All Panels](indexes/Panels.md)
-  * [All Structures](indexes/Structures.md)
-  * [All Triggers](indexes/Triggers.md)
-  * [All Variables](indexes/Variables.md)
-  * [All Wizards](indexes/Wizards.md)
-
+  * [All Addons](Indexes/Addons.md)
+  * [All Commands](Indexes/Commands.md)
+  * [All Panels](Indexes/Panels.md)
+  * [All Structures](Indexes/Structures.md)
+  * [All Triggers](Indexes/Triggers.md)
+  * [All Variables](Indexes/Variables.md)
+  * [All Wizards](Indexes/Wizards.md)

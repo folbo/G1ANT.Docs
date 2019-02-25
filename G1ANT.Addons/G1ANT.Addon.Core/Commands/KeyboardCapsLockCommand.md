@@ -1,38 +1,39 @@
 # keyboard.capslock
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-keyboard.capslock
+keyboard.capslock state ⟦text⟧
 ```
 
-**Description:**
+## Description
 
-Command `keyboard.capslock` allows to either turn on or off the CapsLock key.
+This command switches the **CapsLock** key on or off. You can also use the [`♥capslock`](G1ANT.Addon.Core/Variables/CapsLockVariable.md) special variable to achieve the same results.
+
+> **Note:** The text input executed with the [`keyboard`](KeyboardCommand.md) command will only be affected with this setting if keystrokes are used (individual keys specified within the `⋘⋙` [key code special characters](G1ANT.Manual/appendices/special-characters/key-code.md)), not text strings (text within the `‴‴` [text special characters](G1ANT.Manual/appendices/special-characters/text.md)) — see the example below.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`state`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no | | accepts 2 values, either ‴on‴ or ‴off‴ |
-|`result`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | [♥result](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  | name of variable where current state will be stored |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`state`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no | | The value can be either `on` or `off` |
+| `result`       | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       | `♥result`                                                   | Name of a variable where the command's result will be stored |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Language/G1ANT.Addon.Core/Variables/TimeoutCommandVariable.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Addon.Language.dll**.
+## Example
 
-**Example 1:**
-
-```G1ANT
-program name ‴notepad‴
-keyboard.capslock state ‴on‴
-keyboard text ‴keep calm and use g1ant.Robot‴
-```
-
-**Example 2:**
+The following script shows the difference between the same text input sent with the `keyboard` command using two methods and how they are affected by the `keyboard.capslock` command: with this command set to `on`, the first `keyboard` command output will be *aAbB*, whereas the `off` setting changes the output to *aabb*.
 
 ```G1ANT
-keyboard.capslock state ‴off‴
+program notepad
+keyboard.capslock on
+keyboard ‴a‴⋘a⋙‴b‴⋘b⋙⋘ENTER⋙
+keyboard.capslock off
+keyboard ‴a‴⋘a⋙‴b‴⋘b⋙
 ```
+

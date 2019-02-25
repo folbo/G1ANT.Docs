@@ -1,48 +1,40 @@
 # window
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-window  title ‴‴
+window title ⟦text⟧ style ⟦text⟧
 ```
 
-**Description:**
+## Description
 
-Command `window` brings selected window to the front and activates it.
+This command brings the specified window to the front and activates it.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`title`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no|  | name of the window to activate. It can be obtained from menu Tools/Windows.|
-|`style`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no|  |  arguments style defines the style of a window – maximized, minimized or restored (restore from minimized state)|
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutwindow](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md) | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`title`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no|  | Title of a window to activate. It can be obtained from `Tools/Windows` menu or with **Ctrl+W** keyboard shortcut |
+|`style`| [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no| normal | Action to perform on the style of a window: `maximize`, `minimize` or `normal` (restore from minimized or maximized state) |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutwindow](G1ANT.Language/G1ANT.Addon.Core/Variables/TimeoutWindowVariable.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Language.dll**.
+In order to see titles of all opened windows, use [All Windows](G1ANT.Manual/g1ant.robot-window/auxiliary-windows/all-windows.md) tool.
 
-In order to access the names of all opened windows, you can use  `CTRL+W` shortcut.
+## Example
 
-**Example 1:**
+In this example Notepad is launched and then Calculator. In order to bring Notepad to the foreground again, you can use different variations of “Notepad” word inclusion with the [search place](G1ANT.Manual/appendices/special-characters/search-place.md) character (`✱`), because the window title of this application always includes its name, as it’s the case with many other apps.
 
-In this example we want to activate Notepad window. In order to do this, despite the name of the Notepad file, there is always a "Notepad" word so we can bring this window to the front just by using `✱` sign in the following lines of code. Note that some names of windows might differ due to one's Operating System language.
-
-```G1ANT
-window ‴✱Notepad‴
-window  ‴✱Notepad✱‴
-window ‴filename✱pad‴
-```
-
-**Example 2:**
+> **Note:** Windows titles may differ depending on your system’s language version.
 
 ```G1ANT
-window ‴✱notepad✱‴ style minimize
-window ‴✱notepad✱‴ style restore
-window ‴✱notepad✱‴ style maximize
+program notepad
+program calc
+window ✱Notepad style maximized
 ```
 
-**Video example 1:**
 
-!{YOUTUBE-LINK+window-command}!

@@ -1,42 +1,36 @@
 # mouse.move
 
-**Syntax:**
+## Syntax
 
 ```G1ANT
-mouse.move  position ‴‴
+mouse.move position ⟦point⟧ relative ⟦bool⟧ wait ⟦integer⟧
 ```
 
-**Description:**
+## Description
 
-Command `mouse.move` allows to move mouse cursor to a specified position.
+This command moves a mouse cursor to the specified position.
 
 | Argument | Type | Required | Default Value | Description |
 | -------- | ---- | -------- | ------------- | ----------- |
-|`position`| [point](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/point.md) | yes |  | position to move mouse to in screen pixels |
-|`relative`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | if true position is specified relative to active window. |
-|`wait`| [integer](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/integer.md) | no |  | determines time in milliseconds between mouse 'jumps' to the specified position |
-|`if`| [bool](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/bool.md) | no | true | runs the command only if condition is true |
-|`timeout`| [variable](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Special-Characters/variable.md) | no | [♥timeoutcommand](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Variables/Special-Variables.md)  | specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
-|`errorjump` | [label](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/label.md) | no | | name of the label to jump to if given `timeout` expires |
-|`errormessage`| [string](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/string.md) | no |  | message that will be shown in case error occurs and no `errorjump` argument is specified |
+|`position`| [point](G1ANT.Language/G1ANT.Language/Structures/PointStructure.md) | yes |  | XY coordinates of a pixel to move a mouse cursor to |
+|`relative`| [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no | true | If set to `true`, the position is relative to the active window |
+|`wait`| [integer](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Structures/integer.md) | no |  | Determines time in milliseconds between mouse 'jumps' to the specified position |
+| `if`           | [bool](G1ANT.Language/G1ANT.Language/Structures/BooleanStructure.md) | no       | true                                                        | Executes the command only if a specified condition is true   |
+| `timeout`      | [timespan](G1ANT.Language/G1ANT.Language/Structures/TimeSpanStructure.md) | no       | [♥timeoutcommand](G1ANT.Language/G1ANT.Addon.Core/Variables/TimeoutCommandVariable.md) | Specifies time in milliseconds for G1ANT.Robot to wait for the command to be executed |
+| `errorcall`    | [procedure](G1ANT.Language/G1ANT.Language/Structures/ProcedureStructure.md) | no       |                                                             | Name of a procedure to call when the command throws an exception or when a given `timeout` expires |
+| `errorjump`    | [label](G1ANT.Language/G1ANT.Language/Structures/LabelStructure.md) | no       |                                                             | Name of the label to jump to when the command throws an exception or when a given `timeout` expires |
+| `errormessage` | [text](G1ANT.Language/G1ANT.Language/Structures/TextStructure.md) | no       |                                                             | A message that will be shown in case the command throws an exception or when a given `timeout` expires, and no `errorjump` argument is specified |
+| `errorresult`  | [variable](G1ANT.Language/G1ANT.Language/Structures/VariableStructure.md) | no       |                                                             | Name of a variable that will store the returned exception. The variable will be of [error](G1ANT.Language/G1ANT.Language/Structures/ErrorStructure.md) structure  |
 
-For more information about `if`, `timeout`, `errorjump` and `errormessage` arguments, please visit [Common Arguments](https://github.com/G1ANT-Robot/G1ANT.Manual/blob/master/G1ANT-Language/Common-Arguments.md)  manual page.
+For more information about `if`, `timeout`, `errorcall`, `errorjump`, `errormessage` and `errorresult` arguments, see [Common Arguments](G1ANT.Manual/appendices/common-arguments.md) page.
 
-This command is contained in **G1ANT.Addon.Language.dll**.
+## Example
 
-**Example 1:**
-
-```G1ANT
-mouse.move position 300⫽300 relative true
-```
-
-**Example 2:**
-
-In this example we are using the `mouse.click` command to click a certain position on the desktop with a left button (we set the value for **button** argument to 'left'). In order to see how exactly `mouse.click` command works, please go to "mouse.click":{TOPIC-LINK+command-mouse-click} command.
-In another step, we are using `mouse.move` command to move the mouse cursor with left button still down as the previous script line provides- it enables us to mark certain fragment on the screen. As you can see on the video, the cursor of the mouse moves in steps, **wait** argument is the time in milliseconds between mouse steps.
+This is a modified example from the [`mouse.click`](MouseClickCommand.md) command to make a rectangular selection on the Windows Desktop. With a mouse cursor set at the starting position, the left mouse button is clicked and hold. Then the cursor is moved to an intermediate position, and the `wait` argument slows down the movement so that you can see the effects. When this intermediate position is reached, the second `mouse.click` command moves the cursor farther to the destination point and the left mouse button is released.
 
 ```G1ANT
-mouse.click position 39⫽89 button ‴left‴ type ‴down‴ relative ‴false‴
-mouse.move position 240⫽810 wait 3000 relative ‴false‴
-mouse.click position 240⫽810 button ‴right‴ relative ‴false‴
+keyboard ⋘WIN+D⋙
+mouse.click 664⫽346 relative false type down
+mouse.move 1100⫽500 wait 1000 relative false
+mouse.click 1362⫽671 relative false type up
 ```
