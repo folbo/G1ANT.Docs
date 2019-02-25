@@ -316,6 +316,8 @@
       * [string](G1ANT.Addons/G1ANT.Language/Structures/TextStructure.md)
       * [time](G1ANT.Addons/G1ANT.Language/Structures/TimeStructure.md)
       * [xml](G1ANT.Addons/G1ANT.Language/Structures/XmlStructure.md)
+  * G1ANT.Robot
+    * [All Panels](G1ANT.Addons/G1ANT.Robot/Addon.md)
 * Appendices
   * [Special Characters](appendices/special-characters/DESCRIPTION.md)
     * [Array Separator](appendices/special-characters/array-separator.md)

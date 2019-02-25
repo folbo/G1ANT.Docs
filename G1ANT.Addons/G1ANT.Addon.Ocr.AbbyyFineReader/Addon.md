@@ -24,5 +24,5 @@
 | ---- | ----------- |
 | [abbycell](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader/blob/master/G1ANT.Addon.Ocr.AbbyyFineReader/Structures/AbbyCellStructure.md) |  |
 | [abbydocument](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader/blob/master/G1ANT.Addon.Ocr.AbbyyFineReader/Structures/AbbyDocumentStructure.md) |  |
-| [abbypage ](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader/blob/master/G1ANT.Addon.Ocr.AbbyyFineReader/Structures/AbbyPageStructure.md) |  |
+| [abbypage](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader/blob/master/G1ANT.Addon.Ocr.AbbyyFineReader/Structures/AbbyPageStructure.md) |  |
 | [abbyrow](https://github.com/G1ANT-Robot/G1ANT.Addon.Ocr.AbbyyFineReader/blob/master/G1ANT.Addon.Ocr.AbbyyFineReader/Structures/AbbyRowStructure.md) |  |

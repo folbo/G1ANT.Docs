@@ -17,11 +17,11 @@
 | [database](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DatabaseCommand.md) | Command that sets currently used database connection string |
 | [delay](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DelayCommand.md) | This command allows to suspend robot for a demanded amount of time  (specified in seconds), before it proceeds to the next action. |
 | [dialog.ask](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogAskCommand.md) | This command allows to enter the text that will be assigned to the specified variable. |
-| [dialog](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogCommand.md) |  |
+| [dialog](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogCommand.md) | This command allows to display Dialog Box with a custom message. Variables can be used within the message. |
 | [dialog.multiask](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DialogMultiAskCommand.md) | This command allows to display dialog for user to enter values |
 | [directory](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DirectoryCommand.md) | This command allows to obtain directory content and attach it to the variable. |
 | [directory.filescount](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/DirectoryFilesCountCommand.md) | Command allows to calculate the number of files of certain file extension,  file name or file directory in specified location |
-| [CommandName, Tooltip = Testing condition.](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ElseCommand.md) | Testing condition. |
+| [else](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ElseCommand.md) | Testing condition. |
 | [variable](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ExplicitVariableCommand.md) | This command allows to declare new variable and initialize the variable with a value |
 | [file.copy](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/FileCopyCommand.md) | This command allows to copy specified file to the specified path (in destination path). |
 | [file.delete](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/FileDeleteCommand.md) | This command tries to delete the file specified by filename. |
@@ -36,8 +36,7 @@
 | [keyboard.numlock](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/KeyboardNumLockCommand.md) | This command allows to either turn on or off the NumLock key. |
 | [keyboard.scrolllock](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/KeyboardScrollLockCommand.md) | This command allows to either turn on or off the ScrollLock key. |
 | [label](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/LabelCommand.md) | This command allows to navigate and perform &apos;jump&apos; actions within entire process. |
-| [SpecialChars.Label,
-        Tooltip = This command allows to navigate and perform &apos;jump&apos; actions within entire process.](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/LabelWithSpecialCharCommand.md) | This command allows to navigate and perform &apos;jump&apos; actions within entire process. |
+| [➜](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/LabelWithSpecialCharCommand.md) | This command allows to navigate and perform &apos;jump&apos; actions within entire process. |
 | [list.add](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ListAddCommand.md) | Creates new list by adding two existing. |
 | [list.create](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ListCreateCommand.md) | Creates new list based on provided string which contains separators like \&quot;;&apos;/[]\&quot; |
 | [list.indexof](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ListIndexOfCommand.md) | This command returs index of specified value in defined list. |
@@ -61,7 +60,7 @@
 | [sql](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/SqlQueryCommand.md) | Query to execute |
 | [stop](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/StopCommand.md) | This command breaks the process and shows the dialog box message. |
 | [string.getsimilarity](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/StringGetSimilarityCommand.md) | Calculates percentage similarity of two strings. |
-| [task.include](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/TaskIncludeCommand.md) | This command allows to include a script from different process located on disk.  The script will be populated in the place where command task.include is called. |
+| [task.include](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/TaskIncludeCommand.md) | This command allows to include a script from different process located on disk.   The script will be populated in the place where command task.include is called. |
 | [test](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/TestCommand.md) | Testing condition. |
 | [text.download](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/TextDownloadCommand.md) | This command allows to download text content from the website and attach it to the variable. |
 | [text.find](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/TextFindCommand.md) | This command allows to search for text within text or variable and assign result to another variable. |
@@ -78,10 +77,16 @@
 | [waitfor.window](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/WaitForWindowCommand.md) | Command allows to force window to become foreground window and wait for this action to happens |
 | [while](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/WhileCommand.md) | Repeats inner block until the test condition is false. |
 | [window](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/WindowCommand.md) | This command brings selected window to the front and activates it. |
-| [CommandName, Tooltip = Command which defining addon used in the script.](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/AddonCommand.md) | Command which defining addon used in the script. |
+| [addon](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/AddonCommand.md) | Command which defining addon used in the script. |
 | [end](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/EndCommand.md) | Ends the block command. |
 | [error](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Commands/ErrorCommand.md) | Command which throws an error. |
 
+
+# All Panels
+
+| Name | Description |
+| ---- | ----------- |
+| [Watch](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Panels/WatchPanel.md) | Allows to watch variables and expressions in debug mode. |
 
 # All Structures
 
@@ -131,7 +136,7 @@
 | [capslock](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/CapsLockVariable.md) | Switches CapsLock on/off. |
 | [clipboard](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/ClipboardVariable.md) | Reads Windows clipboard content. |
 | [context](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/ContextVariable.md) | Context of current process instance. |
-| [VariableName, ReadOnly = true, Tooltip = Reads the value of a specified key stored in the Credential Container.](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/CredentialVariable.md) | Reads the value of a specified key stored in the Credential Container. |
+| [credential](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/CredentialVariable.md) | Reads the value of a specified key stored in the Credential Container. |
 | [dateformat](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DateFormatVariable.md) | Defines the display format (eg. dd-MM-yyyy, dd.MM.yy, MM/dd/yy for the date special variable |
 | [date](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DateVariable.md) | Gives current date in the format defined with the dateformat variable. |
 | [delayseconds](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/DelaySecondsVariable.md) | Determines the time value (in s) for the delay command; the default value is 1 |
@@ -161,7 +166,7 @@
 | [timeoutwindow](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/TimeoutWindowVariable.md) | Determines the timeout value for the window command; the default value is 1000 ms. |
 | [time](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/TimeVariable.md) | Provides current time in the format defined with the timeformat variable. |
 | [context](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/TriggerVariableManager.md) | Context of current process instance. |
-| [VariableName, ReadOnly = true, Tooltip = Dictionary of parameters passed by an invoking trigger.](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/TaskVariable.md) | Dictionary of parameters passed by an invoking trigger. |
+| [task](https://github.com/G1ANT-Robot/G1ANT.Language/blob/master/G1ANT.Language/Variables/TaskVariable.md) | Dictionary of parameters passed by an invoking trigger. |
 
 
 # All Wizards
